@@ -16,7 +16,7 @@
         "nci.org.au"
     ],
     "initializationUrls" : [
-        "nm"
+        "geoglam"
     ],
     "parameters": {
         "bingMapsKey": null,
@@ -24,7 +24,7 @@
         "googleAnalyticsKey": null,
         "googleAnalyticsOptions": null,
         "disclaimer": {
-            "text": "Disclaimer: The NationalMap must not be used for navigation or precise spatial analysis",
+            "text": "Disclaimer: GEOGLAM Map must not be used for navigation or precise spatial analysis",
             "url": "about.html"
         }
     }

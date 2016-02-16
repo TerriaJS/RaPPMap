@@ -22,12 +22,6 @@
 
 var version = require('./version');
 
-var terriaOptions = {
-    appName: 'NationalMap',
-    supportEmail: 'data@pmc.gov.au',
-    baseUrl: 'build/TerriaJS',
-    cesiumBaseUrl: undefined // use default
-};
 var configuration = {
     bingMapsKey: undefined // use Cesium key
 };
@@ -94,10 +88,15 @@ registerKnockoutBindings();
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 
-terriaOptions.analytics = new GoogleAnalytics();
-
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
-var terria = new Terria(terriaOptions);
+var terria = new Terria({
+    appName: "GEOGLAM Map",
+    supportEmail: "geoglam_support@somedomain.com.au",
+    baseUrl: "build/TerriaJS",
+    cesiumBaseUrl: undefined, // for default
+    regionMappingDefinitionsUrl: "data/regionMapping.json",
+    analytics: new GoogleAnalytics()
+});
 
 terria.error.addEventListener(function(e) {
     PopupMessageViewModel.open('ui', {
@@ -154,8 +153,14 @@ terria.start({
     BrandBarViewModel.create({
         container: ui,
         elements: [
-            '<a target="_blank" href="about.html"><img src="images/NationalMap_Logo_RGB72dpi_REV_Blue text.png" height="50" alt="National Map" title="Version: ' + version + '" /></a>',
-            '<a target="_blank" href="http://www.gov.au/"><img src="images/AG-Rvsd-Stacked-Press.png" height="45" alt="Australian Government" /></a>'
+             '<div class="geoglam-title">\
+                 <a target="_blank" href="http://www.geo-rapp.org/"><img src="images/rapp_logo.jpg" height="50" alt="GEOGLAM Map" title="Version: ' + version + '" /></a>\
+                 <br/>\
+                 <strong>GEOGLAM Map</strong>\
+                 <br/>\
+                 <small>Rangeland and Pasture Productivity</small>\
+                 <br/>\
+              </div>'
         ]
     });
 
@@ -217,7 +222,7 @@ terria.start({
             }),
             new MenuBarItemViewModel({
                 label: 'About',
-                tooltip: 'About National Map.',
+                tooltip: 'About GEOGLAM Map.',
                 svgPath: svgInfo,
                 svgPathWidth: 18,
                 svgPathHeight: 18,
