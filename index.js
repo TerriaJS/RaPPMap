@@ -154,11 +154,11 @@ terria.start({
         container: ui,
         elements: [
              '<div class="geoglam-title">\
-                 <a target="_blank" href="http://www.geo-rapp.org/"><img src="images/rapp_logo.jpg" height="50" alt="GEOGLAM Map" title="Version: ' + version + '" /></a>\
                  <br/>\
-                 <strong>GEOGLAM Map</strong>\
+                 <strong>GEOGLAM</strong><small>Rangeland and Pasture Productivity Map</small>\
                  <br/>\
-                 <small>Rangeland and Pasture Productivity</small>\
+                 <a target="_blank" href="http://www.geo-rapp.org/"><img class="rapp" src="images/rapp_logo.svg" height="50px" alt="GEOGLAM Map" title="Version: ' + version + '" /></a>\
+                 <a href="https://www.nicta.com.au/" target="_blank"><img class="nicta" src="images/DATA61_CSIRO.png" alt="NICTA" width="53px" height="31px"/></a>\
                  <br/>\
               </div>'
         ]
