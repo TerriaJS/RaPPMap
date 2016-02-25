@@ -19,17 +19,69 @@
             "items" : [
               {
                   "name": "Fractional Cover",
-                  "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items" : [
+                    {
+                      "name": "Absolute",
+                      "type": "wms",
+                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                      "layers": "fractcover_monthly",
+                      "ignoreUnknownTileErrors": true,
+                      "dataCustodian": "",
+
+                      "featureInfoTemplate": {
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
+                        "name": "Exposed proportion of PV, NPV or BS within each pixel"
+                       },
+                      "info": [
+                        {
+                          "content": "Data are MODIS NBAR-derived 16-days fractional cover of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS). Fractional cover represents the exposed proportion of PV, NPV or BS within each pixel. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. For more information, see [http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW](http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW).",
+                          "name": "Description"
+                        },
+                        {
+                          "content": "AusCover is the data custodian of the data displayed on GEOGLAM Map. Please refer to attribution, licensing and copyrights provisions further on this page. <br/> <br/>More information on Auscover here: <br/> <br/>[http://www.auscover.org.au/](http://www.auscover.org.au/)",
+                          "name": "Data Custodian"
+                        },
+                        {
+                          "content": "Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
+                          "name": "Licensing, Terms & Conditions"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Anomaly",
+                      "type": "wms",
+                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                      "layers": "fractcover_anomaly",
+                      "ignoreUnknownTileErrors": true,
+                      "dataCustodian": "",
+                      "featureInfoTemplate": {
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}}%</td>  </tr></tbody></table>",
+                        "name": "Difference in vegetation cover from mean"
+                       },
+                      "info": [
+                        {
+                          "content": "The difference in vegetation cover, for photosynthetic and non-photosynthetic fractions, for the period in question relative to mean vegetation cover fractions estimated for the average of all years since 2000 at the same time of year.",
+                          "name": "Description"
+                        },
+                        {
+                          "content": "AusCover is the data custodian of the data displayed on GEOGLAM Map. Please refer to attribution, licensing and copyrights provisions further on this page. <br/> <br/>More information on Auscover here: <br/> <br/>[http://www.auscover.org.au/](http://www.auscover.org.au/)",
+                          "name": "Data Custodian"
+                        },
+                        {
+                          "content": "Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
+                          "name": "Licensing, Terms & Conditions"
+                        }
+                      ]
+                    }
+                  ]
+              },
+              {
+                  "name": "Auscover Geoserver extra layers (temp)",
+                  "type": "wms-getCapabilities",
+                  "url": "http://qld.auscover.org.au/geoserver/ows",
                   "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
                   "featureInfoTemplate": {
                     "name": "{{#value}}{{value}} MJ/m2{{/value}}",
                     "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
@@ -37,21 +89,32 @@
               },
               {
                   "name": "Total Cover",
-                  "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
-                  "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items" : [
+                    {
+                      "name": "Absolute",
+                      "type": "wms",
+                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                      "layers": "fractcover_monthly",
+                      "ignoreUnknownTileErrors": true,
+                      "featureInfoTemplate": {
+                        "name": "{{#value}}{{value}} MJ/m2{{/value}}",
+                        "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                       }
+                    },
+                    {
+                      "name": "Anomaly",
+                      "type": "wms",
+                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                      "layers": "fractcover_anomaly",
+                      "ignoreUnknownTileErrors": true,
+                      "featureInfoTemplate": {
+                        "name": "{{#value}}{{value}} MJ/m2{{/value}}",
+                        "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                       }
+                    }
+                  ]
               }
             ]
           },
