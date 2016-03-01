@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Create or update a stack.
+#
+# Before running this script update the 'user-data' and/or 'stack.json' files in this directory as appropriate.
+#
+# This script takes 2 parameters, in this order:
+#
+#   ./stack <create|update> <stack-name>
+#
+# Once a stack has been updated, you may have to manually terminate/restart
+# all instances in order for things like new instance user-data to actually
+# be used.
+#
+
+# encode the 'user-data' file into a BASE64 string (use Perl since the Linux(GNU)/OSX(BSD) 'base64' utils are different
+BASE64_USERDATA=$(perl -MMIME::Base64 -0777ne 'print encode_base64($_, "")' user-data)
+echo "Length of the BASE64 encoded user-data is ${#BASE64_USERDATA} (max size allowed is 4096.)"
+
+# run the AWS CloudFormation command to take action
+aws cloudformation $1-stack \
+    --profile geoglam-nm \
+    --region ap-southeast-2 \
+    --stack-name "$2" \
+    --template-body file://stack.json \
+    --capabilities CAPABILITY_IAM \
+    --parameters \
+      ParameterKey=ImageId,ParameterValue='ami-1f30167c' \
+      ParameterKey=InstanceType,ParameterValue='t2.medium' \
+      ParameterKey=KeyName,ParameterValue='rdengate' \
+      ParameterKey=RootVolumeSize,ParameterValue='16' \
+      ParameterKey=UserDataBase64,ParameterValue="${BASE64_USERDATA}" \

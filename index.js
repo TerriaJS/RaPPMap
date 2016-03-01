@@ -91,7 +91,7 @@ registerCatalogMembers();
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria({
     appName: "GEOGLAM Map",
-    supportEmail: "geoglam_support@somedomain.com.au",
+    supportEmail: "geoglam_support@lists.nicta.com.au",
     baseUrl: "build/TerriaJS",
     cesiumBaseUrl: undefined, // for default
     regionMappingDefinitionsUrl: "data/regionMapping.json",
