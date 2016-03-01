@@ -85,7 +85,7 @@ write_files:
     console log
     exec bash -c "cd /opt/geoglam_nm && /opt/geoglam_nm/run_server.sh 2>&1 | logger -t geoglam"
 
- - path: /opt/geoglam-nm/wwwroot/robots.txt
+ - path: /opt/geoglam_nm/wwwroot/robots.txt
    content: |
     User-agent: *
     Disallow: /
@@ -101,9 +101,9 @@ runcmd:
 
 # natmap
  - mount -t ramfs ramfs /tmp/ramfs
- - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-03-01-1-g02ea17d.tar.gz /tmp/ramfs/
+ - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-03-01.tar.gz /tmp/ramfs/
  - mkdir /opt/geoglam_nm
- - tar xzf /tmp/ramfs/geoglam-nm-master-2016-03-01-1-g02ea17d.tar.gz -C /opt/geoglam_nm
+ - tar xzf /tmp/ramfs/geoglam-nm-master-2016-03-01.tar.gz -C /opt/geoglam_nm
  - umount /tmp/ramfs
 
 # start/restart services
