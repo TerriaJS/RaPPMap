@@ -33,8 +33,8 @@ var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCom
 checkBrowserCompatibility('ui');
 
 var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
+var fs = require('fs');
 
-var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
@@ -62,6 +62,7 @@ var NavigationViewModel = require('terriajs/lib/ViewModels/NavigationViewModel')
 var NowViewingAttentionGrabberViewModel = require('terriajs/lib/ViewModels/NowViewingAttentionGrabberViewModel');
 var NowViewingTabViewModel = require('terriajs/lib/ViewModels/NowViewingTabViewModel');
 var PopupMessageViewModel = require('terriajs/lib/ViewModels/PopupMessageViewModel');
+var PopupMessageConfirmationViewModel = require('terriajs/lib/ViewModels/PopupMessageConfirmationViewModel');
 var SearchTabViewModel = require('terriajs/lib/ViewModels/SearchTabViewModel');
 var SettingsPanelViewModel = require('terriajs/lib/ViewModels/SettingsPanelViewModel');
 var SharePopupViewModel = require('terriajs/lib/ViewModels/SharePopupViewModel');
@@ -90,7 +91,7 @@ registerCatalogMembers();
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria({
-    appName: "GEOGLAM Map",
+    appName: "GEOGLAM RAPP",
     supportEmail: "geoglam_support@lists.nicta.com.au",
     baseUrl: "build/TerriaJS",
     cesiumBaseUrl: undefined, // for default
@@ -110,7 +111,7 @@ terria.start({
     // as well as the call to "updateApplicationOnHashChange" further down.
     applicationUrl: window.location,
     configUrl: 'config.json',
-    defaultTo2D: isCommonMobilePlatform(),
+    defaultTo2D: true,
     urlShortener: new GoogleUrlShortener({
         terria: terria
     })
@@ -126,7 +127,7 @@ terria.start({
     // Create the map/globe.
     TerriaViewer.create(terria, {
         developerAttribution: {
-            text: 'NICTA',
+            text: 'Data61',
             link: 'http://www.nicta.com.au'
         }
     });
@@ -154,11 +155,8 @@ terria.start({
         container: ui,
         elements: [
              '<div class="geoglam-title">\
-                 <br/>\
-                 <strong>GEOGLAM</strong><small>Rangeland and Pasture Productivity Map</small>\
-                 <br/>\
-                 <a target="_blank" href="http://www.geo-rapp.org/"><img class="rapp" src="images/rapp_logo.svg" height="50px" alt="GEOGLAM Map" title="Version: ' + version + '" /></a>\
-                 <a href="https://www.nicta.com.au/" target="_blank"><img class="nicta" src="images/DATA61_CSIRO.png" alt="NICTA" width="53px" height="31px"/></a>\
+                 <a target="_blank" href="http://www.geo-rapp.org/"><img class="rapp" src="images/rapp_logo.svg" height="75px" alt="GEOGLAM RAPP" title="Version: ' + version + '" /></a>\
+                 <a href="https://www.nicta.com.au/" target="_blank"><img class="nicta" src="images/DATA61_CSIRO_OnBlack_RGB_trans.png" alt="NICTA" width="53px" height="31px"/></a>\
                  <br/>\
               </div>'
         ]
@@ -222,7 +220,7 @@ terria.start({
             }),
             new MenuBarItemViewModel({
                 label: 'About',
-                tooltip: 'About GEOGLAM Map.',
+                tooltip: 'About GEOGLAM RAPP.',
                 svgPath: svgInfo,
                 svgPathWidth: 18,
                 svgPathHeight: 18,
@@ -329,6 +327,21 @@ terria.start({
             featureInfoPanel
         ]
     });
+
+    // While GEOGLAM is in progress, create a disclaimer that the site isn't finished.
+    var message = '';
+    message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
+    var options = {
+      title: 'Disclaimer',
+      confirmText: "I Agree",
+      width: 600,
+      height: 290,
+      message: message,
+      horizontalPadding : 100
+    };
+    // To account for confirmation buttons
+    options.height += 30;
+    PopupMessageConfirmationViewModel.open(ui, options);
 
     MapProgressBarViewModel.create({
         container: document.getElementById('cesiumContainer'),

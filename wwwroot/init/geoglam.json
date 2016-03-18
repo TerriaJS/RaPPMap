@@ -1,9 +1,9 @@
 {
     "homeCamera": {
-        "west": 112,
-        "south": -48,
-        "east": 155,
-        "north": -5
+        "west": 166,
+        "south": 72,
+        "east": 230,
+        "north": -60
     },
     "services": [],
     "catalog": [
@@ -18,66 +18,6 @@
             "preserveOrder": true,
             "items" : [
               {
-                  "name": "Fractional Cover",
-                  "type": "group",
-                  "preserveOrder": true,
-                  "items" : [
-                    {
-                      "name": "Absolute",
-                      "type": "wms",
-                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                      "layers": "fractcover_monthly",
-                      "ignoreUnknownTileErrors": true,
-                      "dataCustodian": "",
-
-                      "featureInfoTemplate": {
-                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
-                        "name": "Exposed proportion of PV, NPV or BS within each pixel"
-                       },
-                      "info": [
-                        {
-                          "content": "Data are MODIS NBAR-derived 16-days fractional cover of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS). Fractional cover represents the exposed proportion of PV, NPV or BS within each pixel. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. For more information, see [http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW](http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW).",
-                          "name": "Description"
-                        },
-                        {
-                          "content": "AusCover is the data custodian of the data displayed on GEOGLAM Map. Please refer to attribution, licensing and copyrights provisions further on this page. <br/> <br/>More information on Auscover here: <br/> <br/>[http://www.auscover.org.au/](http://www.auscover.org.au/)",
-                          "name": "Data Custodian"
-                        },
-                        {
-                          "content": "Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
-                          "name": "Licensing, Terms & Conditions"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Anomaly",
-                      "type": "wms",
-                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                      "layers": "fractcover_anomaly",
-                      "ignoreUnknownTileErrors": true,
-                      "dataCustodian": "",
-                      "featureInfoTemplate": {
-                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}}%</td>  </tr></tbody></table>",
-                        "name": "Difference in vegetation cover from mean"
-                       },
-                      "info": [
-                        {
-                          "content": "The difference in vegetation cover, for photosynthetic and non-photosynthetic fractions, for the period in question relative to mean vegetation cover fractions estimated for the average of all years since 2000 at the same time of year.",
-                          "name": "Description"
-                        },
-                        {
-                          "content": "AusCover is the data custodian of the data displayed on GEOGLAM Map. Please refer to attribution, licensing and copyrights provisions further on this page. <br/> <br/>More information on Auscover here: <br/> <br/>[http://www.auscover.org.au/](http://www.auscover.org.au/)",
-                          "name": "Data Custodian"
-                        },
-                        {
-                          "content": "Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
-                          "name": "Licensing, Terms & Conditions"
-                        }
-                      ]
-                    }
-                  ]
-              },
-              {
                   "name": "Auscover Geoserver extra layers (temp)",
                   "type": "wms-getCapabilities",
                   "url": "http://qld.auscover.org.au/geoserver/ows",
@@ -88,15 +28,42 @@
                   }
               },
               {
+                  "name": "Fractional Cover",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "fractcover_monthly",
+                  "ignoreUnknownTileErrors": true,
+                  "dataCustodian": "",
+
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
+                    "name": "Exposed proportion of PV, NPV or BS within each pixel"
+                   },
+                  "info": [
+                    {
+                      "content": "Data are MODIS NBAR-derived 16-days fractional cover of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS). Fractional cover represents the exposed proportion of PV, NPV or BS within each pixel. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. For more information, see [http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW](http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW).",
+                      "name": "Description"
+                    },
+                    {
+                      "content": "AusCover is the data custodian of the data displayed on GEOGLAM RAPP. Please refer to attribution, licensing and copyrights provisions further on this page. <br/> <br/>More information on Auscover here: <br/> <br/>[http://www.auscover.org.au/](http://www.auscover.org.au/)",
+                      "name": "Data Custodian"
+                    },
+                    {
+                      "content": "Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
+                      "name": "Licensing, Terms & Conditions"
+                    }
+                  ]
+              },
+              {
                   "name": "Total Cover",
                   "type": "group",
                   "preserveOrder": true,
                   "items" : [
                     {
-                      "name": "Absolute",
+                      "name": "Absolute_TODO",
                       "type": "wms",
-                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                      "layers": "fractcover_monthly",
+                      "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
+                      "layers": "mean_exposure",
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
                         "name": "{{#value}}{{value}} MJ/m2{{/value}}",
@@ -119,37 +86,12 @@
             ]
           },
           {
-            "name": "Biomass",
-            "type": "group",
-            "preserveOrder": true,
-            "items" : [
-              {
-                  "name": "TODO",
-                  "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
-                  "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
-              }
-            ]
-          },
-          {
             "name": "NDVI",
             "type": "group",
             "preserveOrder": true,
             "items" : [
               {
-                  "name": "Absolute",
+                  "name": "Absolute_TODO",
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
@@ -167,7 +109,7 @@
                   }
               },
               {
-                  "name": "Anomalies",
+                  "name": "Anomalies_TODO",
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
@@ -189,100 +131,6 @@
         ]
     },
       {
-        "name": "Vegetation Type",
-        "type": "group",
-        "preserveOrder": true,
-        "items": [
-          {
-            "name": "Global",
-            "type": "group",
-            "preserveOrder": true,
-            "items" : [
-              {
-                  "name": "Global Livestock Production Systems",
-                  "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
-                  "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
-              },
-              {
-                  "name": "Global Pastures",
-                  "attribution": "Global Pastures data by Trustees of Columbia University in the City of New York.",
-                  "type": "wms",
-                  "url": "http://sedac.ciesin.columbia.edu/geoserver/wms",
-                  "layers": "aglands:aglands-pastures-2000",
-                  "ignoreUnknownTileErrors": true,
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
-              }
-            ]
-          },
-          {
-            "name": "Australia",
-            "type": "group",
-            "preserveOrder": true,
-            "items" : [
-              {
-                  "name": "Australian Rangelands",
-                  "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
-                  "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
-              }
-            ]
-          },
-          {
-            "name": "OTHER COUNTRIES",
-            "type": "group",
-            "preserveOrder": true,
-            "items" : [
-              {
-                  "name": "TODO",
-                  "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
-                  "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
-              }
-            ]
-          }
-        ]
-    },
-      {
         "name": "Climate",
         "type": "group",
         "preserveOrder": true,
@@ -293,7 +141,7 @@
             "preserveOrder": true,
             "items" : [
               {
-                  "name": "Absolute",
+                  "name": "Absolute_TODO",
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
@@ -311,7 +159,7 @@
                   }
               },
               {
-                  "name": "Anomalies",
+                  "name": "Anomalies_TODO",
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
@@ -336,7 +184,7 @@
             "preserveOrder": true,
             "items" : [
               {
-                  "name": "Absolute",
+                  "name": "Absolute_TODO",
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
@@ -354,7 +202,7 @@
                   }
               },
               {
-                  "name": "Anomalies",
+                  "name": "Anomalies_TODO",
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
@@ -376,112 +224,127 @@
         ]
     },
       {
-        "name": "Livestock",
+        "name": "Livestock and Rangelands",
         "type": "group",
         "preserveOrder": true,
         "items": [
           {
-              "name": "Cattle Density",
-              "type": "wms",
-              "url": "http://5.9.51.84/cgi-bin/livestockwms?SERVICE=WMS&VERSION=1.3.0",
-              "layers": "Glb_Cattle_CC2006_AD",
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-              }
-            },
-          {
-              "name": "Sheep Density",
-              "type": "wms",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-              "layers": "mean_exposure",
-              "ignoreUnknownTileErrors": true,
-              "clipToRectangle": true,
-              "rectangle": [
-                "112.0",
-                "-48.0",
-                "155.0",
-                "-5.0"
-              ],
-              "featureInfoTemplate": {
-                "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-              }
-            },
-          {
-              "name": "Goats Density",
-              "type": "wms",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-              "layers": "mean_exposure",
-              "ignoreUnknownTileErrors": true,
-              "clipToRectangle": true,
-              "rectangle": [
-                "112.0",
-                "-48.0",
-                "155.0",
-                "-5.0"
-              ],
-              "featureInfoTemplate": {
-                "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-              }
-            },
-          {
-              "name": "Energy Intake by Ruminants",
-              "type": "wms",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-              "layers": "mean_exposure",
-              "ignoreUnknownTileErrors": true,
-              "clipToRectangle": true,
-              "rectangle": [
-                "112.0",
-                "-48.0",
-                "155.0",
-                "-5.0"
-              ],
-              "featureInfoTemplate": {
-                "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-              }
-            },
-          {
-              "name": "Greenhouse Gas Emissions from Ruminants",
-              "type": "wms",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-              "layers": "mean_exposure",
-              "ignoreUnknownTileErrors": true,
-              "clipToRectangle": true,
-              "rectangle": [
-                "112.0",
-                "-48.0",
-                "155.0",
-                "-5.0"
-              ],
-              "featureInfoTemplate": {
-                "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-              }
-           },
-          {
-              "name": "Other global layers from Herrero et al 2013",
-              "type": "wms",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-              "layers": "mean_exposure",
-              "ignoreUnknownTileErrors": true,
-              "clipToRectangle": true,
-              "rectangle": [
-                "112.0",
-                "-48.0",
-                "155.0",
-                "-5.0"
-              ],
-              "featureInfoTemplate": {
-                "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-              }
-           }
-        ]
-      }
-    ]
+              "name": "Global",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+              {
+                  "name": "Global Livestock and Production Systems TODO",
+                  "type": "wms",
+                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
+                  "layers": "mean_exposure",
+                  "ignoreUnknownTileErrors": true,
+                  "clipToRectangle": true,
+                  "rectangle": [
+                    "112.0",
+                    "-48.0",
+                    "155.0",
+                    "-5.0"
+                  ],
+                  "featureInfoTemplate": {
+                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
+                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                  }
+                },
+              {
+                  "name": "Global Pastures TODO",
+                  "type": "wms",
+                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
+                  "layers": "mean_exposure",
+                  "ignoreUnknownTileErrors": true,
+                  "clipToRectangle": true,
+                  "rectangle": [
+                    "112.0",
+                    "-48.0",
+                    "155.0",
+                    "-5.0"
+                  ],
+                  "featureInfoTemplate": {
+                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
+                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                  }
+                },
+              {
+                  "name": "Cattle Density",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Cattle-density",
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Cattle density in 2006"
+                  }
+                },
+              {
+                  "name": "Sheep Density TODO",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Sheep-density",
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Sheep density in 2006"
+                  }
+                },
+              {
+                  "name": "Goat Density",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Goat-density",
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Goat density in 2006"
+                  }
+                },
+              {
+                  "name": "Pigs Density TODO",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Pigs-density",
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Pigs density in 2006"
+                  }
+                },
+              {
+                  "name": "Cattle Equivalents TODO",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Cattle-equivalents-density",
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Cattle equivalents density in 2006"
+                  }
+                },
+              {
+                  "name": "Rangeland/Pastures Classification TODO",
+                  "type": "wms",
+                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
+                  "layers": "mean_exposure",
+                  "ignoreUnknownTileErrors": true,
+                  "clipToRectangle": true,
+                  "rectangle": [
+                    "112.0",
+                    "-48.0",
+                    "155.0",
+                    "-5.0"
+                  ],
+                  "featureInfoTemplate": {
+                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
+                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                  }
+               }
+             ]
+          }
+      ]
+    }
+  ]
 }

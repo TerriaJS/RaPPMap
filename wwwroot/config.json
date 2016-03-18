@@ -24,7 +24,7 @@
         "googleAnalyticsKey": null,
         "googleAnalyticsOptions": null,
         "disclaimer": {
-            "text": "Disclaimer: GEOGLAM Map must not be used for navigation or precise spatial analysis",
+            "text": "Disclaimer: GEOGLAM RAPP must not be used for navigation or precise spatial analysis",
             "url": "about.html"
         }
     }

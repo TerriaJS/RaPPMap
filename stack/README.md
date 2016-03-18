@@ -1,4 +1,4 @@
-# GEOGLAM Map CloudFormation Stack, or, how to deploy GEOGLAM Map
+# GEOGLAM RAPP CloudFormation Stack, or, how to deploy GEOGLAM RAPP
 # This is based on National Map CloudFormation Stack.
 
 ## Prerequisites; skip if already installed.
