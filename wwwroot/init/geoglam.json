@@ -1,9 +1,9 @@
 {
     "homeCamera": {
-        "west": 166,
-        "south": 72,
-        "east": 230,
-        "north": -60
+        "west": -126,
+        "south": -78,
+        "east": 182,
+        "north": 81
     },
     "services": [],
     "catalog": [
@@ -11,11 +11,13 @@
         "name": "Vegetation Dynamics",
         "type": "group",
         "preserveOrder": true,
+        "isOpen": true,
         "items": [
           {
             "name": "Vegetation Cover",
             "type": "group",
             "preserveOrder": true,
+            "isOpen": true,
             "items" : [
               {
                   "name": "Auscover Geoserver extra layers (temp)",
@@ -33,8 +35,6 @@
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "fractcover_monthly",
                   "ignoreUnknownTileErrors": true,
-                  "dataCustodian": "",
-
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
                     "name": "Exposed proportion of PV, NPV or BS within each pixel"
@@ -45,10 +45,6 @@
                       "name": "Description"
                     },
                     {
-                      "content": "AusCover is the data custodian of the data displayed on GEOGLAM RAPP. Please refer to attribution, licensing and copyrights provisions further on this page. <br/> <br/>More information on Auscover here: <br/> <br/>[http://www.auscover.org.au/](http://www.auscover.org.au/)",
-                      "name": "Data Custodian"
-                    },
-                    {
                       "content": "Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
                       "name": "Licensing, Terms & Conditions"
                     }
@@ -57,6 +53,7 @@
               {
                   "name": "Total Cover",
                   "type": "group",
+                  "isOpen": true,
                   "preserveOrder": true,
                   "items" : [
                     {
@@ -66,20 +63,32 @@
                       "layers": "mean_exposure",
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
-                        "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                        "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
+                        "name": "Exposed proportion of PV, NPV or BS within each pixel"
                        }
                     },
                     {
                       "name": "Anomaly",
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                      "nowViewingIndex" : 0,
+                      "isEnabled" : true,
+                      "isShown" : true,
+                      "isLegendVisible" : true,
+                      "opacity" : 0.95,
+                      "keepOnTop" :false,
                       "layers": "fractcover_anomaly",
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
-                        "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                        "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}}</td>  </tr>  </tbody></table>",
+                        "name": "Difference in vegetation cover"
+                       },
+                       "info": [
+                       {
+                          "content": "The anomaly map shows the difference in vegetation cover (the photosynthetic plus non-photosynthetic fractions) for the period in question relative to mean vegetation cover fractions estimated for the average of all years since 2000 at the same time of year.",
+                          "name": "Description"
                        }
+                      ]
                     }
                   ]
               }

@@ -8,6 +8,7 @@
 * Name of map changed from GEOGLAM Map to GEOGLAM RAPP
 * Logo rearranged: GEOGLAM RAPP bigger and to the left, with Data61 on the right
 * Added site disclaimer to declare GEOGLAM RAPP as under development
+* Start map with Vegetation Dynamics > Vegetation Cover > Total Cover > Anomaly active
 
 #### 2016-03-01
 
