@@ -1,5 +1,10 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-03-21
+
+* Fixed layer display issue with Anomaly
+* Layers added, mostly livestock density
+
 #### 2016-03-18
 
 * Layers renamed and rearranged

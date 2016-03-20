@@ -33,7 +33,7 @@
                   "name": "Fractional Cover",
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                  "layers": "fractcover_monthly",
+                  "layers": "global:fractcover_monthly",
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
@@ -57,10 +57,10 @@
                   "preserveOrder": true,
                   "items" : [
                     {
-                      "name": "Absolute_TODO",
+                      "name": "Absolute TODO",
                       "type": "wms",
-                      "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                      "layers": "mean_exposure",
+                      "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                      "layers": "global:totcover_monthly",
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
                         "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
@@ -71,13 +71,9 @@
                       "name": "Anomaly",
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                      "nowViewingIndex" : 0,
                       "isEnabled" : true,
-                      "isShown" : true,
-                      "isLegendVisible" : true,
                       "opacity" : 0.95,
-                      "keepOnTop" :false,
-                      "layers": "fractcover_anomaly",
+                      "layers": "global:fractcover_anomaly",
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
                         "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}}</td>  </tr>  </tbody></table>",
@@ -243,21 +239,14 @@
               "preserveOrder": true,
               "items": [
               {
-                  "name": "Global Livestock and Production Systems TODO",
+                  "name": "Global Livestock and Production Systems",
                   "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Livestock-prodsys",
                   "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
                   "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Classification</td>    <td>{{Classification}}</td>  </tr></tbody></table>",
+                    "name": "Classification"
                   }
                 },
               {
@@ -290,13 +279,13 @@
                   }
                 },
               {
-                  "name": "Sheep Density TODO",
+                  "name": "Sheep Density",
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Sheep-density",
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
                     "name": "Sheep density in 2006"
                   }
                 },
@@ -307,48 +296,41 @@
                   "layers": "global:Goat-density",
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
                     "name": "Goat density in 2006"
                   }
                 },
               {
-                  "name": "Pigs Density TODO",
+                  "name": "Pigs Density",
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Pigs-density",
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
                     "name": "Pigs density in 2006"
                   }
                 },
               {
-                  "name": "Cattle Equivalents TODO",
+                  "name": "Cattle Equivalents",
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                  "layers": "global:Cattle-equivalents-density",
+                  "layers": "global:Cattle-equivalents",
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
-                    "name": "Cattle equivalents density in 2006"
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "FAO Livestock Unit North America density in 2006"
                   }
                 },
               {
-                  "name": "Rangeland/Pastures Classification TODO",
+                  "name": "Rangeland/Pastures Classification",
                   "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
+                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "layers": "global:Rangelands-classification",
                   "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
                   "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Classification</td>    <td>{{Classification}}</td>  </tr></tbody></table>",
+                    "name": "Classification"
                   }
                }
              ]
