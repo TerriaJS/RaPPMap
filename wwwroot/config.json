@@ -20,8 +20,8 @@
     ],
     "parameters": {
         "bingMapsKey": null,
-        "googleUrlShortenerKey": null,
-        "googleAnalyticsKey": null,
+        "googleUrlShortenerKey": "AIzaSyCPSYR8WOf6Kz35L5J9duZYYr_bqZ-5bHg",
+        "googleAnalyticsKey": "UA-75366509-1",
         "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: GEOGLAM RAPP must not be used for navigation or precise spatial analysis",
