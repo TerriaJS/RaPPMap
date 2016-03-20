@@ -92,3 +92,7 @@ Once you're satisfied the release is working, change the staging environment DNS
 map.geo-rapp.org value ALIAS http://gg-2016-01-15.map.geo-rapp.org/
 ```
 
+### Delete old stack
+
+Locate the previous stack in CloudFormation, and delete it so that only once instance is running.
+
