@@ -60,7 +60,7 @@
                       "name": "Absolute TODO",
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                      "layers": "global:totcover_monthly",
+                      "layers": "global:total_cover",
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
                         "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
