@@ -57,7 +57,7 @@
                   "preserveOrder": true,
                   "items" : [
                     {
-                      "name": "Absolute TODO",
+                      "name": "Absolute",
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                       "layers": "global:total_cover",
