@@ -1,5 +1,15 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-04-05
+
+* Name change for total cover layer
+* Added google analytics
+* Added google url shortener key
+* Added bing maps key
+* Made all layers 60% opacity by default
+* Using Positron base map
+* Start in paused mode
+
 #### 2016-03-21
 
 * Fixed layer display issue with Anomaly
