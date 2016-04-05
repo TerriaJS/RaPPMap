@@ -34,9 +34,10 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:fractcover_monthly",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}} %</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}} %</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}} %</td>  </tr></tbody></table>",
                     "name": "Exposed proportion of PV, NPV or BS within each pixel"
                    },
                   "info": [
@@ -61,10 +62,11 @@
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                       "layers": "global:total_cover",
+                      "opacity" : 0.6,
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
-                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}}</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}}</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}}</td>  </tr></tbody></table>",
-                        "name": "Exposed proportion of PV, NPV or BS within each pixel"
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Total Cover</td>    <td>{{Total_Cover}} %</td>  </tr></tbody></table>",
+                        "name": "Total vegetation cover as a percentage"
                        }
                     },
                     {
@@ -72,12 +74,12 @@
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                       "isEnabled" : true,
-                      "opacity" : 0.95,
                       "layers": "global:fractcover_anomaly",
+                      "opacity" : 0.6,
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
-                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}}</td>  </tr>  </tbody></table>",
-                        "name": "Difference in vegetation cover"
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
+                        "name": "Difference in vegetation cover from mean"
                        },
                        "info": [
                        {
@@ -100,6 +102,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -118,6 +121,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -150,6 +154,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -168,6 +173,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -193,6 +199,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -211,6 +218,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -243,6 +251,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Livestock-prodsys",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Classification</td>    <td>{{Classification}}</td>  </tr></tbody></table>",
@@ -254,6 +263,7 @@
                   "type": "wms",
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -272,6 +282,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Cattle-density",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
@@ -283,6 +294,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Sheep-density",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -294,6 +306,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Goat-density",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -305,6 +318,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Pigs-density",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -316,6 +330,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Cattle-equivalents",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -327,6 +342,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:Rangelands-classification",
+                  "opacity" : 0.6,
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Classification</td>    <td>{{Classification}}</td>  </tr></tbody></table>",

@@ -95,7 +95,6 @@ var terria = new Terria({
     supportEmail: "geoglam_support@lists.nicta.com.au",
     baseUrl: "build/TerriaJS",
     cesiumBaseUrl: undefined, // for default
-    regionMappingDefinitionsUrl: "data/regionMapping.json",
     analytics: new GoogleAnalytics()
 });
 
@@ -140,7 +139,7 @@ terria.start({
     var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
     var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-    selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels', true);
+    selectBaseMap(terria, allBaseMaps, 'Positron (Light)', false);
 
     // Create the Settings / Map panel.
     var settingsPanel = SettingsPanelViewModel.create({
@@ -253,6 +252,7 @@ terria.start({
     AnimationViewModel.create({
         container: document.getElementById('cesiumContainer'),
         terria: terria,
+        autoPlay: false,
         mapElementsToDisplace: [
             'cesium-widget-credits',
             'leaflet-control-attribution',
