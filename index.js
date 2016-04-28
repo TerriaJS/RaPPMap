@@ -69,11 +69,13 @@ var SharePopupViewModel = require('terriajs/lib/ViewModels/SharePopupViewModel')
 var MapProgressBarViewModel = require('terriajs/lib/ViewModels/MapProgressBarViewModel');
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
+var DisclaimerViewModel = require('terriajs/lib/ViewModels/DisclaimerViewModel');
 
 var Terria = require('terriajs/lib/Models/Terria');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
+var defaultValue = require('terriajs-cesium/Source/Core/defaultValue');
 
 var svgInfo = require('terriajs/lib/SvgPaths/svgInfo');
 var svgPlus = require('terriajs/lib/SvgPaths/svgPlus');
@@ -105,6 +107,11 @@ terria.error.addEventListener(function(e) {
     });
 });
 
+DisclaimerViewModel.create({
+    container: 'ui',
+    terria: terria
+});
+
 terria.start({
     // If you don't want the user to be able to control catalog loading via the URL, remove the applicationUrl property below
     // as well as the call to "updateApplicationOnHashChange" further down.
@@ -124,12 +131,7 @@ terria.start({
     updateApplicationOnMessageFromParentWindow(terria, window);
 
     // Create the map/globe.
-    TerriaViewer.create(terria, {
-        developerAttribution: {
-            text: 'Data61',
-            link: 'http://www.nicta.com.au'
-        }
-    });
+    TerriaViewer.create(terria, { developerAttribution: terria.configParameters.developerAttribution });
 
     // We'll put the entire user interface into a DOM element called 'ui'.
     var ui = document.getElementById('ui');
@@ -211,7 +213,7 @@ terria.start({
                 callback: function() {
                     PopupMessageViewModel.open(ui, {
                         title: 'Related Maps',
-                        message: require('fs').readFileSync(__dirname + '/lib/Views/RelatedMaps.html', 'utf8'),
+                        message: require('./lib/Views/RelatedMaps.html'),
                         width: 600,
                         height: 430
                     });
