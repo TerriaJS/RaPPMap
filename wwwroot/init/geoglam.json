@@ -20,21 +20,17 @@
             "isOpen": true,
             "items" : [
               {
-                  "name": "Auscover Geoserver extra layers (temp)",
-                  "type": "wms-getCapabilities",
-                  "url": "http://qld.auscover.org.au/geoserver/ows",
-                  "ignoreUnknownTileErrors": true,
-                  "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                  }
-              },
-              {
                   "name": "Fractional Cover",
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:fractcover_monthly",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}} %</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}} %</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}} %</td>  </tr></tbody></table>",
@@ -63,6 +59,12 @@
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                       "layers": "global:total_cover",
                       "opacity" : 0.6,
+                      "timesliderInitTime": "end",
+                      "dateFormat":
+                       {
+                         "currentTime": "mmmm yyyy",
+                         "timelineTic": "yyyy"
+                       },
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
                         "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Total Cover</td>    <td>{{Total_Cover}} %</td>  </tr></tbody></table>",
@@ -76,6 +78,12 @@
                       "isEnabled" : true,
                       "layers": "global:fractcover_anomaly",
                       "opacity" : 0.6,
+                      "timesliderInitTime": "end",
+                      "dateFormat":
+                       {
+                         "currentTime": "mmmm yyyy",
+                         "timelineTic": "yyyy"
+                       },
                       "ignoreUnknownTileErrors": true,
                       "featureInfoTemplate": {
                         "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
@@ -103,6 +111,12 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -122,6 +136,12 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -155,6 +175,12 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -174,6 +200,12 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -200,6 +232,12 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
@@ -219,6 +257,12 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
+                  "timesliderInitTime": "end",
+                  "dateFormat":
+                   {
+                     "currentTime": "mmmm yyyy",
+                     "timelineTic": "yyyy"
+                   },
                   "ignoreUnknownTileErrors": true,
                   "clipToRectangle": true,
                   "rectangle": [
