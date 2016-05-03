@@ -1,5 +1,12 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-05-03
+
+* Removed temporary Auscover layers
+* Timeslider labels now formatted more clearly
+* When animated layers are opened, time slider set to latest available data
+* Soil moisture layers added
+
 #### 2016-04-05
 
 * Name change for total cover layer
