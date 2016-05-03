@@ -227,53 +227,39 @@
             "preserveOrder": true,
             "items" : [
               {
-                  "name": "Absolute_TODO",
+                  "name": "Absolute",
                   "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
+                  "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
+                  "layers": "soilm",
                   "opacity" : 0.6,
                   "timesliderInitTime": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
-                     "timelineTic": "yyyy"
+                     "timelineTic": "mmmm yyyy"
                    },
                   "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
                   "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                    "name": "{{#value}}{{value}} {{/value}}",
+                    "template": "{{#value}}{{value}}{{/value}}"
                   }
               },
               {
-                  "name": "Anomalies_TODO",
+                  "name": "Anomalies",
                   "type": "wms",
-                  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                  "layers": "mean_exposure",
+                  "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
+                  "layers": "soilm_anomaly",
                   "opacity" : 0.6,
                   "timesliderInitTime": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
-                     "timelineTic": "yyyy"
+                     "timelineTic": "mmmm yyyy"
                    },
                   "ignoreUnknownTileErrors": true,
-                  "clipToRectangle": true,
-                  "rectangle": [
-                    "112.0",
-                    "-48.0",
-                    "155.0",
-                    "-5.0"
-                  ],
                   "featureInfoTemplate": {
-                    "name": "{{#value}}{{value}} MJ/m2{{/value}}",
-                    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
+                    "name": "{{#value}}{{value}} {{/value}}",
+                    "template": "{{#value}}{{value}}{{/value}}"
                   }
               }
             ]
