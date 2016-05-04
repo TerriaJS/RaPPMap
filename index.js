@@ -33,7 +33,6 @@ var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCom
 checkBrowserCompatibility('ui');
 
 var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
-var fs = require('fs');
 
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
@@ -332,7 +331,7 @@ terria.start({
 
     // While GEOGLAM is in progress, create a disclaimer that the site isn't finished.
     var message = '';
-    message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
+    message += require('./lib/Views/DevelopmentDisclaimer.html');
     var options = {
       title: 'Disclaimer',
       confirmText: "I Agree",
