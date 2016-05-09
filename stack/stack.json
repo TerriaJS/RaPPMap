@@ -26,13 +26,18 @@
       "Type": "String"
     },
     "HostedZoneName": {
-      "Default": "map.geo-rapp.org",
+      "Default": "map.geo-rapp.org.",
       "Type": "String"
     },
     "ImageId": {
       "Type": "String"
     },
     "InstanceType": {
+      "Type": "String"
+    },
+    "KeyName": {
+      "Description": "The EC2 Key Pair to allow SSH access to the instances",
+      "Default": "rdengate",
       "Type": "String"
     },
     "MaxSize": {
@@ -54,7 +59,7 @@
       "Type": "Number"
     },
     "StatusNotificationTopic": {
-      "Default": "arn:aws:sns:ap-southeast-2:101059522789:geoglam_service_status",
+      "Default": "arn:aws:sns:ap-southeast-2:242476885589:geoglam_service_status",
       "Type": "String"
     },
     "UserDataBase64a": {
