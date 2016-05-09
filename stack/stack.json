@@ -1,18 +1,4 @@
 {
-  "Conditions": {
-    "UseSpotInstances": {
-      "Fn::Not": [
-        {
-          "Fn::Equals": [
-            {
-              "Ref": "SpotPrice"
-            },
-            "0"
-          ]
-        }
-      ]
-    }
-  },
   "Outputs": {
     "URL": {
       "Value": {
@@ -31,8 +17,16 @@
     }
   },
   "Parameters": {
+    "ElbIdleTimeout": {
+      "Default": "120",
+      "Type": "Number"
+    },
+    "HealthCheck": {
+      "Default": "HTTP:80/",
+      "Type": "String"
+    },
     "HostedZoneName": {
-      "Default": "map.geo-rapp.org.",
+      "Default": "map.geo-rapp.org",
       "Type": "String"
     },
     "ImageId": {
@@ -41,16 +35,11 @@
     "InstanceType": {
       "Type": "String"
     },
-    "KeyName": {
-      "Type": "String"
-    },
     "MaxSize": {
-      "Type": "Number",
-      "Default": "2"
+      "Type": "Number"
     },
     "MinSize": {
-      "Type": "Number",
-      "Default": "1"
+      "Type": "Number"
     },
     "RootVolumeSize": {
       "Default": "8",
@@ -64,22 +53,41 @@
       "Default": "600",
       "Type": "Number"
     },
-    "UserDataBase64": {
-        "Type": "String"
+    "StatusNotificationTopic": {
+      "Default": "arn:aws:sns:ap-southeast-2:101059522789:geoglam_service_status",
+      "Type": "String"
+    },
+    "UserDataBase64a": {
+      "Type": "String"
+    },
+    "UserDataBase64b": {
+      "Type": "String"
     },
     "WebServerPort": {
-      "Default": "80",
+      "Default": "8080",
       "Type": "Number"
+    }
+  },
+  "Conditions": {
+    "UseSpotInstances": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "SpotPrice"
+            },
+            "0"
+          ]
+        }
+      ]
     }
   },
   "Resources": {
     "AutoScalingGroup": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
       "Properties": {
         "AvailabilityZones": {
           "Fn::GetAZs": ""
-        },
-        "DesiredCapacity": {
-          "Ref": "MinSize"
         },
         "HealthCheckGracePeriod": {
           "Ref": "StartupGracePeriod"
@@ -99,7 +107,17 @@
         "MinSize": {
           "Ref": "MinSize"
         },
+        "DesiredCapacity": {
+          "Ref": "MinSize"
+        },
         "Tags": [
+          {
+            "Key": "Name",
+            "PropagateAtLaunch": true,
+            "Value": {
+              "Ref": "AWS::StackName"
+            }
+          },
           {
             "Key": "Stack",
             "PropagateAtLaunch": true,
@@ -107,51 +125,62 @@
               "Ref": "AWS::StackName"
             }
           }
-        ]
-      },
-      "Type": "AWS::AutoScaling::AutoScalingGroup",
-      "UpdatePolicy": {
-        "AutoScalingRollingUpdate": {
-          "MaxBatchSize": "1",
-          "MinInstancesInService": {
-            "Fn::If": [
-              "UseSpotInstances",
-              0,
-              1
-            ]
+        ],
+        "NotificationConfiguration": {
+          "TopicARN": {
+            "Ref": "StatusNotificationTopic"
           },
-          "PauseTime": "PT0M5S"
+          "NotificationTypes": [
+            "autoscaling:EC2_INSTANCE_LAUNCH",
+            "autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+            "autoscaling:EC2_INSTANCE_TERMINATE",
+            "autoscaling:EC2_INSTANCE_TERMINATE_ERROR"
+          ]
         }
       }
     },
     "ElasticLoadBalancer": {
+      "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
       "Properties": {
+        "AccessLoggingPolicy": {
+          "EmitInterval": 5,
+          "Enabled": true,
+          "S3BucketName": "geoglam-logs",
+          "S3BucketPrefix": {
+            "Fn::Join": [
+              "",
+              [
+                "stacks/",
+                {
+                  "Ref": "AWS::StackName"
+                },
+                "/elb"
+              ]
+            ]
+          }
+        },
         "AvailabilityZones": {
           "Fn::GetAZs": ""
+        },
+        "HealthCheck": {
+          "Target": {
+            "Ref": "HealthCheck"
+          },
+          "HealthyThreshold": "2",
+          "Interval": "30",
+          "Timeout": "10",
+          "UnhealthyThreshold": "5"
         },
         "ConnectionDrainingPolicy": {
           "Enabled": "true",
           "Timeout": "300"
         },
-        "CrossZone": "true",
-        "HealthCheck": {
-          "HealthyThreshold": "2",
-          "Interval": "30",
-          "Target": {
-            "Fn::Join": [
-              "",
-              [
-                "HTTP:",
-                {
-                  "Ref": "WebServerPort"
-                },
-                "/"
-              ]
-            ]
-          },
-          "Timeout": "10",
-          "UnhealthyThreshold": "5"
+        "ConnectionSettings": {
+          "IdleTimeout": {
+            "Ref": "ElbIdleTimeout"
+          }
         },
+        "CrossZone": "true",
         "Listeners": [
           {
             "InstancePort": {
@@ -161,10 +190,10 @@
             "Protocol": "HTTP"
           }
         ]
-      },
-      "Type": "AWS::ElasticLoadBalancing::LoadBalancer"
+      }
     },
     "LaunchConfiguration": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
       "Properties": {
         "BlockDeviceMappings": [
           {
@@ -194,7 +223,7 @@
           }
         ],
         "IamInstanceProfile": {
-          "Ref": "S3ReadInstanceProfile"
+          "Ref": "InstanceProfile"
         },
         "ImageId": {
           "Ref": "ImageId"
@@ -223,12 +252,22 @@
           ]
         },
         "UserData": {
-            "Ref": "UserDataBase64"
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "UserDataBase64a"
+              },
+              {
+                "Ref": "UserDataBase64b"
+              }
+            ]
+          ]
         }
-      },
-      "Type": "AWS::AutoScaling::LaunchConfiguration"
+      }
     },
     "RecordSetGroup": {
+      "Type": "AWS::Route53::RecordSetGroup",
       "Properties": {
         "HostedZoneName": {
           "Ref": "HostedZoneName"
@@ -265,61 +304,14 @@
             "Type": "A"
           }
         ]
-      },
-      "Type": "AWS::Route53::RecordSetGroup"
-    },
-    "S3ReadInstanceProfile": {
-      "Properties": {
-        "Path": "/",
-        "Roles": [
-          {
-            "Ref": "S3ReadRole"
-          }
-        ]
-      },
-      "Type": "AWS::IAM::InstanceProfile"
-    },
-    "S3ReadRole": {
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Statement": [
-            {
-              "Action": [
-                "sts:AssumeRole"
-              ],
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com"
-                ]
-              }
-            }
-          ]
-        },
-        "Path": "/",
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:Get*",
-                    "s3:List*"
-                  ],
-                  "Effect": "Allow",
-                  "Resource": "*"
-                }
-              ]
-            },
-            "PolicyName": "S3Read"
-          }
-        ]
-      },
-      "Type": "AWS::IAM::Role"
+      }
     },
     "SecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupDescription": "SecurityGroup",
+        "GroupDescription": {
+          "Ref": "AWS::StackName"
+        },
         "SecurityGroupIngress": [
           {
             "CidrIp": "0.0.0.0/0",
@@ -349,8 +341,66 @@
             }
           }
         ]
-      },
-      "Type": "AWS::EC2::SecurityGroup"
+      }
+    },
+    "InstanceRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": ["ec2.amazonaws.com"]
+              },
+              "Action": ["sts:AssumeRole"]
+            }
+          ]
+        },
+        "Path": "/",
+        "Policies": [
+          {
+            "PolicyName": "S3Read",
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:Get*",
+                    "s3:List*"],
+                  "Resource": "*"
+                }
+              ]
+            }
+          },
+          {
+            "PolicyName": "CloudWatch",
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "cloudwatch:*",
+                    "logs:*"],
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "InstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Path": "/",
+        "Roles": [
+          {
+            "Ref": "InstanceRole"
+          }
+        ]
+      }
     }
   }
 }
+

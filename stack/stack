@@ -15,7 +15,13 @@
 
 # encode the 'user-data' file into a BASE64 string (use Perl since the Linux(GNU)/OSX(BSD) 'base64' utils are different
 BASE64_USERDATA=$(perl -MMIME::Base64 -0777ne 'print encode_base64($_, "")' user-data)
-echo "Length of the BASE64 encoded user-data is ${#BASE64_USERDATA} (max size allowed is 4096.)"
+if [[ ${#BASE64_USERDATA} -gt 8192 ]]; then
+  echo "Base64 encoded user-data is ${#BASE64_USERDATA} characters - max is 8192!"
+  exit 1
+fi
+BASE64_USERDATA1=${BASE64_USERDATA:0:4096}
+BASE64_USERDATA2=${BASE64_USERDATA:4096:8192}
+echo "Length of the BASE64 encoded user-data is ${#BASE64_USERDATA1} and ${#BASE64_USERDATA2} (max size allowed for either is 4096.)"
 
 # run the AWS CloudFormation command to take action
 aws cloudformation $1-stack \
@@ -25,8 +31,16 @@ aws cloudformation $1-stack \
     --template-body file://stack.json \
     --capabilities CAPABILITY_IAM \
     --parameters \
-      ParameterKey=ImageId,ParameterValue='ami-1f30167c' \
+      ParameterKey=ImageId,ParameterValue='ami-2a644649' \
       ParameterKey=InstanceType,ParameterValue='t2.medium' \
-      ParameterKey=KeyName,ParameterValue='rdengate' \
-      ParameterKey=RootVolumeSize,ParameterValue='16' \
-      ParameterKey=UserDataBase64,ParameterValue="${BASE64_USERDATA}" \
+      ParameterKey=MaxSize,ParameterValue='2' \
+      ParameterKey=MinSize,ParameterValue='1' \
+      ParameterKey=UserDataBase64a,ParameterValue="${BASE64_USERDATA1}" \
+      ParameterKey=UserDataBase64b,ParameterValue="${BASE64_USERDATA2}" \
+      ParameterKey=WebServerPort,ParameterValue='80' \
+      ParameterKey=StartupGracePeriod,ParameterValue='1200' \
+      ParameterKey=HealthCheck,ParameterValue='HTTP:80/' \
+      ParameterKey=KeyName,ParameterValue='rdengate'
+
+
+

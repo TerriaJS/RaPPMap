@@ -13,6 +13,10 @@ packages:
  - npm
  - varnish
  - gdal-bin
+ - unzip
+ - libwww-perl
+ - libdatetime-perl
+ - nginx
 
 # any files to create
 write_files:
@@ -21,47 +25,18 @@ write_files:
    content: |
     backend default {
         .host = "127.0.0.1";
-        .port = "3001";
+        .port = "81";
     }
-
-    acl purge {
-      "localhost";
-      "127.0.0.1";
-    }
-
-
     sub vcl_recv {
-    #  if (req.request == "GET" && req.http.cookie || req.http.authorization) {
-    #    return (lookup);
-    #  }
-      if (req.request == "PURGE") {
-        if (!client.ip ~ purge) {
-          error 405 "Method Not Allowed";
-        }
-        return(lookup);
-      }
       if (req.url ~ "^/proxy"){
         return (lookup);
       }
     }
-
-    sub vcl_hit {
-      if (req.request == "PURGE") {
-        purge;
-        error 200 "Purged";
-      }
-    }
-
-    sub vcl_miss {
-      if (req.request == "PURGE") {
-        purge;
-        error 200 "Purged";
-      }
-    }
-
     sub vcl_fetch
     {
-      if ( beresp.status >= 400 ) {
+      remove beresp.http.Expires;
+      if ( beresp.status != 200 ) {
+        set beresp.http.Cache-Control = "no-cache";
         set beresp.ttl = 0s;
       }
     }
@@ -71,11 +46,22 @@ write_files:
     START=yes
     NFILES=131072
     MEMLOCK=82000
-    DAEMON_OPTS="-a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s memcache=malloc,2G -s filecache=file,/tmp/varnish_storage.bin,10G"
+    DAEMON_OPTS="-a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s memcache=malloc,2G -s filecache=file,/mnt/varnish_storage.bin,3G"
 
- - path: /etc/rsyslog.d/30-natmap.conf
+ - path: /etc/nginx/sites-enabled/default
    content: |
-    :syslogtag, isequal, "natmap:" /var/log/natmap.log
+    server {
+      listen 81;
+      real_ip_header X-Forwarded-For;
+      root /opt/nginx;
+      index r.html;
+      error_page 404 /r.html;
+      location / { proxy_pass http://localhost:3001/; proxy_set_header Host $http_host; }
+    }
+
+ - path: /etc/rsyslog.d/30-geoglam-nm.conf
+   content: |
+    :syslogtag, isequal, "geoglam-nm:" /var/log/geoglam-nm.log
     & ~
 
  - path: /etc/init/geoglam-nm.conf
@@ -83,9 +69,12 @@ write_files:
     start on (net-device-up and local-filesystems and runlevel [2345])
     stop on runlevel [016]
     console log
-    exec bash -c "cd /opt/geoglam_nm && /opt/geoglam_nm/run_server.sh 2>&1 | logger -t geoglam"
+    chdir /opt/geoglam-nm
+    setuid nobody
+    setgid nogroup
+    exec bash -c "npm start 2>&1 | logger -t geoglam-nm"
 
- - path: /opt/geoglam_nm/wwwroot/robots.txt
+ - path: /opt/geoglam-nm/wwwroot/robots.txt
    content: |
     User-agent: *
     Disallow: /
@@ -96,17 +85,20 @@ runcmd:
  - pip install awscli
  - npm install -g forever
 
-# copy and extract the webapps from S3
- - mkdir /tmp/ramfs
+# cloudwatch monitoring scripts
+ - curl -so /tmp/CloudWatchMonitoringScripts-1.2.1.zip http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip
+ - unzip -d /opt /tmp/CloudWatchMonitoringScripts-1.2.1.zip
+ - echo '*/5 * * * * ubuntu /opt/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --disk-space-util --disk-path=/ --from-cron' > /etc/cron.d/cloudwatch
 
-# natmap
- - mount -t ramfs ramfs /tmp/ramfs
- - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-03-01-1-gb2dbcd8.tar.gz /tmp/ramfs/
- - mkdir /opt/geoglam_nm
- - tar xzf /tmp/ramfs/geoglam-nm-master-2016-03-01-1-gb2dbcd8.tar.gz -C /opt/geoglam_nm
- - umount /tmp/ramfs
+# geoglam-nm
+ - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-04-22-14-gf57d751.tar.gz /opt/geoglam-nm.tar.gz
+ - mkdir /opt/geoglam-nm
+ - tar xzf /opt/geoglam-nm.tar.gz -C /opt/geoglam-nm
+ - touch /opt/geoglam-nm/terriajs.pid /opt/geoglam-nm/terriajs-server.log
+ - chown nobody:nogroup /opt/geoglam-nm/terriajs.pid /opt/geoglam-nm/terriajs-server.log
 
 # start/restart services
  - service rsyslog restart
  - service varnish restart
  - service geoglam-nm start
+
