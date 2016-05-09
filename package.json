@@ -26,7 +26,7 @@
     "nationalmap-catalog": "git://github.com/TerriaJS/NationalMap-Catalog",
     "node-notifier": "^4.5.0",
     "raw-loader": "^0.5.1",
-    "terriajs": "git://github.com/TerriaJS/terriajs.git#rd_timeslider_init_time",
+    "terriajs": "git://github.com/TerriaJS/terriajs.git#e8b75a7891b773e707a4c350d74c3b4698d50609",
     "terriajs-catalog-editor": "^0.2.0",
     "terriajs-cesium": "1.20.0",
     "terriajs-schema": "latest",
