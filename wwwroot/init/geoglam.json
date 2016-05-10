@@ -25,7 +25,7 @@
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:fractcover_monthly",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
@@ -59,7 +59,7 @@
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                       "layers": "global:total_cover",
                       "opacity" : 0.6,
-                      "timesliderInitTime": "end",
+                      "initialTimeSource": "end",
                       "dateFormat":
                        {
                          "currentTime": "mmmm yyyy",
@@ -78,7 +78,7 @@
                       "isEnabled" : true,
                       "layers": "global:fractcover_anomaly",
                       "opacity" : 0.6,
-                      "timesliderInitTime": "end",
+                      "initialTimeSource": "end",
                       "dateFormat":
                        {
                          "currentTime": "mmmm yyyy",
@@ -111,7 +111,7 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
@@ -136,7 +136,7 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
@@ -175,7 +175,7 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
@@ -200,7 +200,7 @@
                   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
                   "layers": "mean_exposure",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
@@ -232,7 +232,7 @@
                   "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
                   "layers": "soilm",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
@@ -250,7 +250,7 @@
                   "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
                   "layers": "soilm_anomaly",
                   "opacity" : 0.6,
-                  "timesliderInitTime": "end",
+                  "initialTimeSource": "end",
                   "dateFormat":
                    {
                      "currentTime": "mmmm yyyy",
