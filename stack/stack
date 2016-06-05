@@ -34,7 +34,7 @@ aws cloudformation $1-stack \
       ParameterKey=ImageId,ParameterValue='ami-2a644649' \
       ParameterKey=InstanceType,ParameterValue='t2.medium' \
       ParameterKey=MaxSize,ParameterValue='2' \
-      ParameterKey=MinSize,ParameterValue='1' \
+      ParameterKey=MinSize,ParameterValue='2' \
       ParameterKey=UserDataBase64a,ParameterValue="${BASE64_USERDATA1}" \
       ParameterKey=UserDataBase64b,ParameterValue="${BASE64_USERDATA2}" \
       ParameterKey=WebServerPort,ParameterValue='80' \
