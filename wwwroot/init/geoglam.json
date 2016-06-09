@@ -75,7 +75,7 @@
                       "name": "Anomaly",
                       "type": "wms",
                       "url": "http://qld.auscover.org.au/geoserver-dev/ows",
-                      "isEnabled" : true,
+                      "isEnabled" : false,
                       "layers": "global:fractcover_anomaly",
                       "opacity" : 0.6,
                       "initialTimeSource": "end",

@@ -4,6 +4,9 @@
     ],
     "parameters": {
         "feedbackUrl": "feedback",
+        "bingMapsKey": "AuonfVnd4_iwDtpsUyt97Em5AVFoF60qo-_naGQd2c97fvk7YYbd-dIc9AdBTMY5",
+        "googleUrlShortenerKey": "AIzaSyCPSYR8WOf6Kz35L5J9duZYYr_bqZ-5bHg",
+        "googleAnalyticsKey": "UA-75366509-1",
         "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: GEOGLAM RAPP must not be used for navigation or precise spatial analysis",
@@ -14,10 +17,10 @@
             "link": "http://www.csiro.au/en/Research/D61"
         },
         "appName": "NationalMap",
-        "supportEmail": "data@pmc.gov.au",
-        "brandBarElements(Remove this bit in parentheses for production deployment)": [
-            "<a target=\"_blank\" href=\"https://github.com/NICTA/nationalmap/wiki/New-User-Interface-Preview\"><img src=\"images/NationalMap_Logo_RGB72dpi_REV_Blue text_BETA.png\" height=\"50\" alt=\"National Map\" title=\"Version: {{version}}\" /></a>",
-            "<a target=\"_blank\" href=\"http://www.gov.au/\"><img src=\"images/AG-Rvsd-Stacked-Press.png\" height=\"45\" alt=\"Australian Government\" /></a>"
+        "supportEmail": "geoglam_support@lists.nicta.com.au",
+        "brandBarElements": [
+             "<a target=\"_blank\" href=\"http://www.geo-rapp.org/\"><img class=\"rapp\" src=\"images/rapp_logo.svg\" height=\"75px\" alt=\"GEOGLAM RAPP\" title=\"Version: {{version}}\"/></a>",
+             "<a href=\"https://www.nicta.com.au/\" target=\"_blank\"><img class=\"nicta\" src=\"images/DATA61_CSIRO_OnBlack_RGB_trans.png\" alt=\"NICTA\" width=\"53px\" height=\"31px\"/></a>"
         ]
     }
 }

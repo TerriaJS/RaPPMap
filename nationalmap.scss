@@ -10,3 +10,25 @@
         display: block;
     }
 }
+
+.nicta {
+    max-width: 90px; //240px - 90px;
+    float: left;
+    padding-top: 23px;
+}
+
+.rapp {
+    float: left;
+    padding-right: 6px;
+}
+
+@media screen and (min-width: 768px) {
+  .branding__branding {
+    padding: 2px !important;
+  }
+}
+
+.progress-bar__progress-bar {
+    background: #82a849 !important;
+}
+

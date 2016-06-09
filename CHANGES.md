@@ -205,7 +205,7 @@ Change Log
 * Completely support the [csv-geo-au](https://github.com/NICTA/nationalmap/wiki/csv-geo-au) specification (other than SA1s and boundaries from previous years) including ASGS boundaries like remoteness regions, indigenous areas and non ASGS boundaries like primary health networks.
 * Added freight route datasets provided by the Department of Infrastructure and Regional Development under `Transport -> Freight`.
 * Added IMOS and AODN Geoservers to the list of hosts that may be proxied.
-* Changed the support email address from `nationalmap@communications.gov.au` to `data@pmc.gov.au`.
+* Changed the support email address from `nationalmap@communications.gov.au` to `geoglam_support@lists.nicta.com.au`.
 * Use YouTube videos hosted in the AusGovDPMC account.
 * Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 1.0.48.  Significant changes relevant to NationalMap users include:
   * Update the default Australian topography basemap to Geoscience Australia's new worldwide layer (http://www.ga.gov.au/gisimg/rest/services/topography/National_Map_Colour_Basemap/MapServer)
