@@ -31,8 +31,8 @@ aws cloudformation $1-stack \
     --template-body file://stack.json \
     --capabilities CAPABILITY_IAM \
     --parameters \
-      ParameterKey=ImageId,ParameterValue='ami-2a644649' \
-      ParameterKey=InstanceType,ParameterValue='t2.medium' \
+      ParameterKey=ImageId,ParameterValue='ami-d5cae4b6' \
+      ParameterKey=InstanceType,ParameterValue='t2.micro' \
       ParameterKey=MaxSize,ParameterValue='2' \
       ParameterKey=MinSize,ParameterValue='2' \
       ParameterKey=UserDataBase64a,ParameterValue="${BASE64_USERDATA1}" \

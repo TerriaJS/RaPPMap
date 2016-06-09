@@ -46,7 +46,7 @@ write_files:
     START=yes
     NFILES=131072
     MEMLOCK=82000
-    DAEMON_OPTS="-a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s memcache=malloc,2G -s filecache=file,/mnt/varnish_storage.bin,3G"
+    DAEMON_OPTS="-a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s memcache=malloc,1G -s filecache=file,/mnt/varnish_storage.bin,3G"
 
  - path: /etc/nginx/sites-enabled/default
    content: |
@@ -74,11 +74,6 @@ write_files:
     setgid nogroup
     exec bash -c "npm start 2>&1 | logger -t geoglam-nm"
 
- - path: /opt/geoglam-nm/wwwroot/robots.txt
-   content: |
-    User-agent: *
-    Disallow: /
-
 # run all the commands to set this instance up
 runcmd:
  - echo 'APT::Periodic::Unattended-Upgrade "1";' >> /etc/apt/apt.conf.d/10periodic
@@ -99,6 +94,6 @@ runcmd:
 
 # start/restart services
  - service rsyslog restart
- - service varnish restart
  - service geoglam-nm start
-
+ - service nginx restart
+ - service varnish restart
