@@ -8,15 +8,16 @@
         "googleUrlShortenerKey": "AIzaSyCPSYR8WOf6Kz35L5J9duZYYr_bqZ-5bHg",
         "googleAnalyticsKey": "UA-75366509-1",
         "googleAnalyticsOptions": null,
-        "disclaimer": {
-            "text": "Disclaimer: GEOGLAM RAPP must not be used for navigation or precise spatial analysis",
-            "url": "about.html"
+        "autoPlay": false,
+        "globalDisclaimer": {
+            "confirmationRequired": true,
+            "title": "Disclaimer"
         },
         "developerAttribution": {
             "text": "Data61",
             "link": "http://www.csiro.au/en/Research/D61"
         },
-        "appName": "NationalMap",
+        "appName": "GEOGLAM RAPP",
         "supportEmail": "geoglam_support@lists.nicta.com.au",
         "brandBarElements": [
              "<a target=\"_blank\" href=\"http://www.geo-rapp.org/\"><img class=\"rapp\" src=\"images/rapp_logo.svg\" height=\"75px\" alt=\"GEOGLAM RAPP\" title=\"Version: {{version}}\"/></a>",

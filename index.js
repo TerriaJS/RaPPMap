@@ -28,6 +28,7 @@ var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers
 var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var Terria = require('terriajs/lib/Models/Terria');
+var defined = require('terriajs-cesium/Source/Core/defined');
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
@@ -108,6 +109,22 @@ terria.start({
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
         selectBaseMap(terria, allBaseMaps, 'Positron (Light)', false);
+
+        // Add the disclaimer, if specified
+        if (defined(terria.configParameters.globalDisclaimer)) {
+            var disclaimer = terria.configParameters.globalDisclaimer;
+            var message = '';
+            message += require('./lib/Views/GlobalDisclaimer.html');
+            var options = {
+                title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
+                confirmText: 'I Agree',
+                width: 600,
+                height: 550,
+                message: message
+            };
+
+            viewState.notifications.push(options);
+        }
 
         let render = () => {
             const StandardUserInterface = require('terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface.jsx');
