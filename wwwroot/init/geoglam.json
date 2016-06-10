@@ -90,13 +90,7 @@
                            "featureInfoTemplate":{
                               "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
                               "name":"Difference in vegetation cover from mean"
-                           },
-                           "info":[
-                              {
-                                 "content":"The anomaly map shows the difference in vegetation cover (the photosynthetic plus non-photosynthetic fractions) for the period in question relative to mean vegetation cover fractions estimated for the average of all years since 2000 at the same time of year.",
-                                 "name":"Description"
-                              }
-                           ]
+                           }
                         }
                      ]
                   }
@@ -230,6 +224,9 @@
                      "url":"http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
                      "layers":"soilm",
                      "opacity":0.6,
+                     "parameters": {
+                        "styles": "boxfill/csiro_anomaly"
+                      },
                      "initialTimeSource":"end",
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
@@ -247,6 +244,9 @@
                      "url":"http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
                      "layers":"soilm_anomaly",
                      "opacity":0.6,
+                     "parameters": {
+                        "styles": "boxfill/csiro_anomaly"
+                      },
                      "initialTimeSource":"end",
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
