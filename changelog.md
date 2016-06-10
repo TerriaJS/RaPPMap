@@ -1,5 +1,11 @@
 ### GEOGLAM RAPP Change Log
 
+#### ?
+
+* Catalog changes: renamed, moved and deleted layers in catalog
+* Fixes to make legend graphic for soil moisture appear correctly
+* Removed duplicate information in layer information
+
 #### 2016-05-03
 
 * Removed temporary Auscover layers
