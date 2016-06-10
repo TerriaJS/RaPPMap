@@ -8,6 +8,19 @@
     "services": [],
     "catalog": [
       {
+          "name": "Charts",
+          "type": "wps-getCapabilities",
+          "url": "http://qld.auscover.org.au/geoserver-dev/ows?service=WPS",
+          "opacity" : 0.6,
+          "initialTimeSource": "end",
+          "dateFormat":
+           {
+             "currentTime": "mmmm yyyy",
+             "timelineTic": "yyyy"
+           },
+          "ignoreUnknownTileErrors": true
+    },
+      {
         "name": "Vegetation Dynamics",
         "type": "group",
         "preserveOrder": true,
