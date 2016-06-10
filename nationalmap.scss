@@ -14,12 +14,23 @@
 .nicta {
     max-width: 90px; //240px - 90px;
     float: left;
-    padding-top: 23px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .rapp {
     float: left;
     padding-right: 6px;
+}
+
+.branding__branding{
+  a{
+    display: inline-block;
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
