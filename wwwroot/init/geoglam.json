@@ -36,17 +36,7 @@
                      "featureInfoTemplate":{
                         "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}} %</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}} %</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}} %</td>  </tr></tbody></table>",
                         "name":"Exposed proportion of PV, NPV or BS within each pixel"
-                     },
-                     "info":[
-                        {
-                           "content":"Data are MODIS NBAR-derived 16-days fractional cover of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS). Fractional cover represents the exposed proportion of PV, NPV or BS within each pixel. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. For more information, see [http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW](http://www.auscover.org.au/xwiki/bin/view/Product+pages/Fractional+Cover+MODIS+CLW).",
-                           "name":"Description"
-                        },
-                        {
-                           "content":"Copyright 2008-2012 CSIRO. Rights owned by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). Rights licensed subject to Creative Commons Attribution (CC BY).",
-                           "name":"Licensing, Terms & Conditions"
-                        }
-                     ]
+                     }
                   },
                   {
                      "name":"Total Cover",
@@ -87,13 +77,7 @@
                            "featureInfoTemplate":{
                               "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
                               "name":"Difference in vegetation cover from mean"
-                           },
-                           "info":[
-                              {
-                                 "content":"The anomaly map shows the difference in vegetation cover (the photosynthetic plus non-photosynthetic fractions) for the period in question relative to mean vegetation cover fractions estimated for the average of all years since 2000 at the same time of year.",
-                                 "name":"Description"
-                              }
-                           ]
+                           }
                         }
                      ]
                   }
@@ -227,6 +211,9 @@
                      "url":"http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
                      "layers":"soilm",
                      "opacity":0.6,
+                     "parameters": {
+                        "styles": "boxfill/csiro_anomaly"
+                      },
                      "initialTimeSource":"end",
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
@@ -244,6 +231,9 @@
                      "url":"http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
                      "layers":"soilm_anomaly",
                      "opacity":0.6,
+                     "parameters": {
+                        "styles": "boxfill/csiro_anomaly"
+                      },
                      "initialTimeSource":"end",
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
