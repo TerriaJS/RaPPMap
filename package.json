@@ -8,6 +8,7 @@
     "url": "http://github.com/NICTA/nationalmap"
   },
   "dependencies": {
+    "resolve-url-loader": "^1.4.3",
     "terriajs-server": "^2.2.0"
   },
   "config": {
