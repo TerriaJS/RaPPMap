@@ -18,8 +18,8 @@
           "initialTimeSource": "end",
           "dateFormat":
            {
-             "currentTime": "mmmm yyyy",
-             "timelineTic": "yyyy"
+             "currentTime": {"month": "short", "year": "numeric"},
+             "timelineTic": {"year": "numeric"}
            },
           "ignoreUnknownTileErrors": true
     },
@@ -42,10 +42,11 @@
                      "layers":"global:fractcover_monthly",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
                         "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}} %</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}} %</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}} %</td>  </tr></tbody></table>",
@@ -65,10 +66,11 @@
                            "layers":"global:total_cover",
                            "opacity":0.6,
                            "initialTimeSource":"end",
-                           "dateFormat":{
-                              "currentTime":"mmmm yyyy",
-                              "timelineTic":"yyyy"
-                           },
+                           "dateFormat":
+                            {
+                              "currentTime": {"month": "short", "year": "numeric"},
+                              "timelineTic": {"year": "numeric"}
+                            },
                            "ignoreUnknownTileErrors":true,
                            "featureInfoTemplate":{
                               "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Total Cover</td>    <td>{{Total_Cover}} %</td>  </tr></tbody></table>",
@@ -83,10 +85,11 @@
                            "layers":"global:fractcover_anomaly",
                            "opacity":0.6,
                            "initialTimeSource":"end",
-                           "dateFormat":{
-                              "currentTime":"mmmm yyyy",
-                              "timelineTic":"yyyy"
-                           },
+                           "dateFormat":
+                            {
+                              "currentTime": {"month": "short", "year": "numeric"},
+                              "timelineTic": {"year": "numeric"}
+                            },
                            "ignoreUnknownTileErrors":true,
                            "featureInfoTemplate":{
                               "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
@@ -109,10 +112,11 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -133,10 +137,11 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -171,10 +176,11 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -195,10 +201,11 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -229,10 +236,11 @@
                         "styles": "boxfill/csiro_anomaly"
                       },
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"mmmm yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"month": "short", "year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
                         "name":"{{#value}}{{value}} {{/value}}",
@@ -249,10 +257,11 @@
                         "styles": "boxfill/csiro_anomaly"
                       },
                      "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"mmmm yyyy"
-                     },
+                     "dateFormat":
+                      {
+                        "currentTime": {"month": "short", "year": "numeric"},
+                        "timelineTic": {"month": "short", "year": "numeric"}
+                      },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
                         "name":"{{#value}}{{value}} {{/value}}",
