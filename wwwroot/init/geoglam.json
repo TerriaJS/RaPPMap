@@ -12,15 +12,17 @@
       {
           "name": "TimeSeries",
           "type": "wps",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows?service=WPS",
-          "identifier": "py:timeSeries",
+          "url": "http://qld.auscover.org.au/wps?service=WPS",
+          "identifier": "timeSeries",
           "opacity" : 0.6,
-          "initialTimeSource": "end",
-          "dateFormat":
-           {
-             "currentTime": {"month": "short", "year": "numeric"},
-             "timelineTic": {"year": "numeric"}
-           },
+          "ignoreUnknownTileErrors": true
+    },
+    {
+          "name": "PolygonTest",
+          "type": "wps",
+          "url": "http://152.83.144.76:5001/wps?service=wps",
+          "identifier": "say_hello",
+          "opacity" : 0.6,
           "ignoreUnknownTileErrors": true
     },
     {
