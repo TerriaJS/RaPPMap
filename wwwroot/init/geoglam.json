@@ -44,10 +44,9 @@
                      "layers":"global:fractcover_monthly",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
@@ -68,10 +67,9 @@
                            "layers":"global:total_cover",
                            "opacity":0.6,
                            "initialTimeSource":"end",
-                           "dateFormat":
-                            {
-                              "currentTime": {"month": "short", "year": "numeric"},
-                              "timelineTic": {"year": "numeric"}
+                           "dateFormat":{
+                              "currentTime":"mmmm yyyy",
+                              "timelineTic":"yyyy"
                             },
                            "ignoreUnknownTileErrors":true,
                            "featureInfoTemplate":{
@@ -87,10 +85,9 @@
                            "layers":"global:fractcover_anomaly",
                            "opacity":0.6,
                            "initialTimeSource":"end",
-                           "dateFormat":
-                            {
-                              "currentTime": {"month": "short", "year": "numeric"},
-                              "timelineTic": {"year": "numeric"}
+                           "dateFormat":{
+                              "currentTime":"mmmm yyyy",
+                              "timelineTic":"yyyy"
                             },
                            "ignoreUnknownTileErrors":true,
                            "featureInfoTemplate":{
@@ -114,10 +111,9 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
@@ -139,10 +135,9 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
@@ -178,10 +173,9 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
@@ -203,10 +197,9 @@
                      "layers":"mean_exposure",
                      "opacity":0.6,
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
@@ -238,10 +231,9 @@
                         "styles": "boxfill/csiro_anomaly"
                       },
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"month": "short", "year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"mmmm yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
@@ -259,10 +251,9 @@
                         "styles": "boxfill/csiro_anomaly"
                       },
                      "initialTimeSource":"end",
-                     "dateFormat":
-                      {
-                        "currentTime": {"month": "short", "year": "numeric"},
-                        "timelineTic": {"month": "short", "year": "numeric"}
+                     "dateFormat":{
+                        "currentTime":"mmmm yyyy",
+                        "timelineTic":"mmmm yyyy"
                       },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
