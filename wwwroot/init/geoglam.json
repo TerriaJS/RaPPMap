@@ -18,10 +18,26 @@
           "ignoreUnknownTileErrors": true
     },
     {
-          "name": "PolygonTest",
+          "name": "PointTest",
           "type": "wps",
           "url": "http://152.83.144.76:5001/wps?service=wps",
           "identifier": "say_hello",
+          "opacity" : 0.6,
+          "ignoreUnknownTileErrors": true
+    },
+    {
+          "name": "PolygonTest",
+          "type": "wps",
+          "url": "http://152.83.144.76:5001/wps?service=wps",
+          "identifier": "do_stuff",
+          "opacity" : 0.6,
+          "ignoreUnknownTileErrors": true
+    },
+    {
+          "name": "RectangleTest",
+          "type": "wps",
+          "url": "http://152.83.144.76:5001/wps?service=wps",
+          "identifier": "bbox_test",
           "opacity" : 0.6,
           "ignoreUnknownTileErrors": true
     },
@@ -81,7 +97,7 @@
                            "name":"Anomaly",
                            "type":"wms",
                            "url":"http://qld.auscover.org.au/geoserver-dev/ows",
-                           "isEnabled":true,
+                           "isEnabled":false,
                            "layers":"global:fractcover_anomaly",
                            "opacity":0.6,
                            "initialTimeSource":"end",
