@@ -21,7 +21,7 @@
           "name": "PointTest",
           "type": "wps",
           "url": "http://152.83.144.76:5001/wps?service=wps",
-          "identifier": "say_hello",
+          "identifier": "point_test",
           "opacity" : 0.6,
           "ignoreUnknownTileErrors": true
     },
@@ -29,7 +29,7 @@
           "name": "PolygonTest",
           "type": "wps",
           "url": "http://152.83.144.76:5001/wps?service=wps",
-          "identifier": "do_stuff",
+          "identifier": "polygon_test",
           "opacity" : 0.6,
           "ignoreUnknownTileErrors": true
     },
