@@ -18,7 +18,7 @@ require('./nationalmap.scss');
 
 import defined from 'terriajs-cesium/Source/Core/defined';
 import GoogleAnalytics from 'terriajs/lib/Core/GoogleAnalytics';
-import GoogleUrlShortener from 'terriajs/lib/Models/GoogleUrlShortener';
+import ShareDataService from 'terriajs/lib/Models/ShareDataService';
 import isCommonMobilePlatform from 'terriajs/lib/Core/isCommonMobilePlatform';
 import OgrCatalogItem from 'terriajs/lib/Models/OgrCatalogItem';
 import raiseErrorToUser from 'terriajs/lib/Models/raiseErrorToUser';
@@ -26,7 +26,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import registerAnalytics from 'terriajs/lib/Models/registerAnalytics';
 import registerCatalogMembers from 'terriajs/lib/Models/registerCatalogMembers';
-import registerCustomComponentTypes from 'terriajs/lib/Models/registerCustomComponentTypes';
+import registerCustomComponentTypes from 'terriajs/lib/ReactViews/Custom/registerCustomComponentTypes';
 import registerKnockoutBindings from 'terriajs/lib/Core/registerKnockoutBindings';
 import Terria from 'terriajs/lib/Models/Terria';
 import updateApplicationOnHashChange from 'terriajs/lib/ViewModels/updateApplicationOnHashChange';
@@ -84,7 +84,7 @@ terria.start({
     applicationUrl: window.location,
     configUrl: 'config.json',
     defaultTo2D: true,
-    urlShortener: new GoogleUrlShortener({
+    shareDataService: new ShareDataService({
         terria: terria
     })
 }).otherwise(function(e) {
