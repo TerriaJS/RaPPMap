@@ -8,7 +8,6 @@ package_upgrade: true
 package_reboot_if_required: true
 packages:
  - ntp
- - python-pip
  - nodejs-legacy
  - npm
  - varnish
@@ -82,8 +81,11 @@ write_files:
 # run all the commands to set this instance up
 runcmd:
  - echo 'APT::Periodic::Unattended-Upgrade "1";' >> /etc/apt/apt.conf.d/10periodic
- - pip install awscli
- - npm install -g forever
+
+ # install awscli
+ - curl -so awscli-bundle.zip https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
+ - unzip awscli-bundle.zip
+ - sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 # cloudwatch monitoring scripts
  - curl -so /tmp/CloudWatchMonitoringScripts-1.2.1.zip http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip
