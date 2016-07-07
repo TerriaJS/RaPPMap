@@ -1,6 +1,6 @@
 ### GEOGLAM RAPP Change Log
 
-#### ?
+#### 2016-07-07
 
 * Catalog changes: renamed, moved and deleted layers in catalog
 * Fixes to make legend graphic for soil moisture appear correctly

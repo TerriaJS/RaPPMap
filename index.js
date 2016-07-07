@@ -74,7 +74,6 @@ var Terria = require('terriajs/lib/Models/Terria');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
-var defaultValue = require('terriajs-cesium/Source/Core/defaultValue');
 
 var svgInfo = require('terriajs/lib/SvgPaths/svgInfo');
 var svgPlus = require('terriajs/lib/SvgPaths/svgPlus');
