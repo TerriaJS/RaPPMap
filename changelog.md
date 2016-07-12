@@ -1,5 +1,10 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-07-12
+
+* NewUI test release
+* Contains WPS test time series
+
 #### 2016-05-03
 
 * Removed temporary Auscover layers
