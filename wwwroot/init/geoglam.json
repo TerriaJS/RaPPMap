@@ -21,7 +21,7 @@
              "timelineTic": "yyyy"
            },
           "ignoreUnknownTileErrors": true
-    },
+     },
     {
          "name":"Vegetation Dynamics",
          "type":"group",

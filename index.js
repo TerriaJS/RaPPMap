@@ -12,6 +12,7 @@ var configuration = {
 //var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
 
 // checkBrowserCompatibility('ui');
+import defined from 'terriajs-cesium/Source/Core/defined';
 import GoogleAnalytics from 'terriajs/lib/Core/GoogleAnalytics';
 import ShareDataService from 'terriajs/lib/Models/ShareDataService';
 import isCommonMobilePlatform from 'terriajs/lib/Core/isCommonMobilePlatform';
@@ -80,9 +81,6 @@ terria.start({
     applicationUrl: window.location,
     configUrl: 'config.json',
     defaultTo2D: true,
-    urlShortener: new GoogleUrlShortener({
-        terria: terria
-    }),
     shareDataService: new ShareDataService({
         terria: terria
     })

@@ -5,7 +5,6 @@
     "parameters": {
         "feedbackUrl": "feedback",
         "bingMapsKey": "AuonfVnd4_iwDtpsUyt97Em5AVFoF60qo-_naGQd2c97fvk7YYbd-dIc9AdBTMY5",
-        "googleUrlShortenerKey": "AIzaSyCPSYR8WOf6Kz35L5J9duZYYr_bqZ-5bHg",
         "googleAnalyticsKey": "UA-75366509-1",
         "googleAnalyticsOptions": null,
         "autoPlay": false,
