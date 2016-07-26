@@ -69,6 +69,7 @@ var MapProgressBarViewModel = require('terriajs/lib/ViewModels/MapProgressBarVie
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 var DisclaimerViewModel = require('terriajs/lib/ViewModels/DisclaimerViewModel');
+var PreviewLinkViewModel = require('./lib/ViewModels/PreviewLinkViewModel');
 
 var Terria = require('terriajs/lib/Models/Terria');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
@@ -326,6 +327,11 @@ terria.start({
             settingsPanel,
             featureInfoPanel
         ]
+    });
+
+    PreviewLinkViewModel.create({
+        container: 'cesiumContainer',
+        terria: terria
     });
 
     // While GEOGLAM is in progress, create a disclaimer that the site isn't finished.
