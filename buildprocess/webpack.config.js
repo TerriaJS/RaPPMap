@@ -11,7 +11,7 @@ module.exports = function(devMode, hot) {
         entry: './index.js',
         output: {
             path: 'wwwroot/build',
-            filename: 'nationalmap.js',
+            filename: 'TerriaMap.js',
             // work around chrome needing the full URL when using sourcemaps (http://stackoverflow.com/questions/34133808/webpack-ots-parsing-error-loading-fonts/34133809#34133809)
             publicPath: hot ? 'http://localhost:3003/build/' : 'build/',
             sourcePrefix: '' // to avoid breaking multi-line string literals by inserting extra tabs.
@@ -20,14 +20,9 @@ module.exports = function(devMode, hot) {
         module: {
             loaders: [
                 {
-                    test: path.resolve(__dirname, '..', 'lib', 'Views'),
-                    loader: require.resolve('raw-loader')
-                },
-                {
-                    test: /\.jsx?$/,
+                    test: /\.(js|jsx)$/,
                     include: [
                         path.resolve(__dirname, '..', 'index.js'),
-                        path.resolve(__dirname, '..', 'UserInterface.jsx'),
                         path.resolve(__dirname, '..', 'lib')
                     ],
                     loader: require.resolve('babel-loader'),
@@ -48,14 +43,15 @@ module.exports = function(devMode, hot) {
                     }
                 },
                 {
-                    test: /nationalmap\.scss$/,
+                    test: /\.scss$/,
+                    include: [path.resolve(__dirname, '..', 'lib')],
                     loader: hot ?
                         require.resolve('style-loader') + '!' +
-                        require.resolve('css-loader') + '?sourceMap!' +
+                        require.resolve('css-loader') + '?sourceMap&modules&camelCase&localIdentName=tm-[name]__[local]&importLoaders=2!' +
                         require.resolve('resolve-url-loader') + '?sourceMap!' +
                         require.resolve('sass-loader') + '?sourceMap'
                      : ExtractTextPlugin.extract(
-                        require.resolve('css-loader') + '?sourceMap!' +
+                        require.resolve('css-loader') + '?sourceMap&modules&camelCase&localIdentName=tm-[name]__[local]&importLoaders=2!' +
                         require.resolve('resolve-url-loader') + '?sourceMap!' +
                         require.resolve('sass-loader') + '?sourceMap',
                         {
@@ -71,9 +67,9 @@ module.exports = function(devMode, hot) {
                     'NODE_ENV': devMode ? '"development"' : '"production"'
                 }
             }),
-            new ExtractTextPlugin("nationalmap.css", {disable: hot, ignoreOrder: true})
+            new ExtractTextPlugin("TerriaMap.css", {disable: hot, ignoreOrder: true})
         ]
     };
 
     return configureWebpackForTerriaJS(path.dirname(require.resolve('terriajs/package.json')), config, devMode, hot, ExtractTextPlugin);
-}
+};

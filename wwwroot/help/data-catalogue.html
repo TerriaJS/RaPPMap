@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -37,31 +37,42 @@
             <li><a href="http://map.geo-rapp.org">Launch GEOGLAM RAPP</a></li>
         </ul>
 
+    <!-- Begin page content -->
+    <div class="container content">
+    <div class="row">
+
+      <nav class="side-nav navbar-right col-md-3 col-md-offset-1">
+
+      <div data-spy="affix">
+
+        <h4 class="nav-header">How to...</h4>
+        <ul class="how-to">
+          <li><a href="help.html">Get started with the National Map</a></li>
+          <li><a href="help.html#feature-info">Find out about a displayed feature</a></li>
+          <li><a href="help.html#add-data">Display my own spatial data</a></li>
+          <li><a href="help.html#share">Share my National Map view</a></li>
+          <li><a href="help.html#contribute">Contribute Data Sets to the National Map</a></li>
+        </ul>
+
+        <h4 class="nav-header">Key Features</h4>
+        <ul class="key-features">
+          <li><a href="map-navigation.html">Map Navigation and Display</a></li>
+          <li class="active"><a href="data-catalogue.html">Data Catalogue</a></li>
+          <li><a href="data-workbench.html">Data Workbench</a></li>
+        </ul>
+
+        <h4 class="nav-header">Frequently Asked Questions</h4>
+        <ul class="faq">
+          <li><a href="faq.html">National Map Operation</a></li>
+          <li><a href="faq.html#nm-systemdata">National Map system and data</a></li>
+          <li><a href="faq.html#nm-reportingissues">Reporting issues</a></li>
+        </ul>
+
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-        <div class="container">
 
+      </nav>
 
-
-
-	<div class="starter-template">
-	<div class="row">
-	<div class="col-md-3" id="sidebar">
-
-	<p><a href="map-navigation.html">Map Navigation and Display</a>
-	<br><expl>Zooming, panning, perspectives and base maps</expl></p>
-
-	<p><a href="data-catalogue.html">Data Catalogue Tab</a>
-	<br><expl>Selecting Data Sets for display</expl></p>
-
-	<p><a href="now-viewing.html">Now Viewing Tab</a>
-	<br><expl>The map legend and tuning the display</expl></p>
-
-	<p><a href="search-tab.html">Search Tab</a>
-	<br><expl>Finding places and Data Sets</expl></p>
+    <div class="col-md-8">
 
 	<p><a href="howto.html">How to...</a></p>
 	<ul class="sidebar-list">
@@ -79,30 +90,24 @@
 	 <li><a href="faq.html#nm-reportingissues">- About reporting issues</a></li>
 	</ul>
 
-</div>
+      <p>A wealth of spatial data has been made available though NationalMap, all of which can be accessed via the Data Catalogue. To launch the Data Catalogue, click the <strong>Add Data</strong> button in the left hand panel opposite the map.</p>
 
-	<div class="col-md-8">
-	<h1>Data Catalogue</h1>
+      <p>Data sets displayed in the Data Catalogue are directly referenced from data.gov.au or from a server provided by the relevant department or agency. The NationalMap does not store any of the data it serves. For example, if you access data relating to broadband availability and quality, you are accessing that data directly from the Department of Communications and the Arts. When you access data relating to surface geology, it is accessed directly from Geoscience Australia. If you access data relating to water, it is typically coming directly from the Bureau of Meteorology. The NationalMap itself does not store any data - it provides a map-based view of data that is stored by a growing number of government bodies.
+      </p>
 
-	<p>Click Data Catalogue to see the Data Sets you can display on the map view. They are organised into groups and sub-groups to make them easier to locate.</p>
+      <p>You can see details of the department or agency that provides the spatial data by clicking on the title of your prefered data set in the Data Catalogue.</p>
 
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/75LwHLgPsC4" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-	<ul>
-	<li>Click a Data Set <strong>Group Name</strong> (for example, <strong>National Data Sets</strong>) to see the Data Sets in that group.</li>
-	<li>Click a Data Set <strong>Sub-group Name</strong> (for example <strong>Communications</strong>) to see the Data Sets in that sub-group.</li>
-	<li>Click the <strong>check box</strong> to the left of the Data Set name to display that Data Set on the map. You can select as many as you like from any Group or Sub-group you like, but selecting too many will make for a very cluttered and confused display, and may make navigating in the Map View sluggish.</li>
-	<li>Click on the <strong>Data Set Name</strong> of any Data Set which you have already selected for display to cause the Map View to zoom to a view which just encloses all of the data in that Data Set. Data Sets which consist of a couple of small features on either side of the country may still be difficult to identify on the map. In this case you will need to zoom in manually to the correct location.</li>
-	<li>Click on the button if any Data Set (even if it is not currently displayed) to show the available metadata for that Data Set. The metadata includes the licence, which says what you can and can’t do with the data.</li>
-	</ul>
 
-	<p>To search for a particular Data Set, see the Search Tab.</p>
+  </div><!-- End col-md-8 -->
+  </div><!-- End container -->
 
-	<p>The display of your Data Sets can be tuned using the Now Viewing Tab tab, which shows a legend of your selected Data Sets.</p>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; Department of the Prime Minister and Cabinet, Department of Communications, and National ICT Australia Limited (NICTA) 2014-2015. All Rights Reserved.</p>
+        <p><strong><a href="../about.html#terms">Terms and conditions</a></strong> – <strong><a href="privacy.html">Privacy</a></strong></p>
 
-	<div class="row img-group">
-      <div class="col-md-8">
-	  	<img style="padding-bottom: 15px;" class="img-responsive" src="../public/img/data-catalogue-groups.png">
       </div>
       <div class="col-md-8">
 	  	<img class="img-responsive" src="../public/img/data-catalogue-subgroups.png">
@@ -124,6 +129,8 @@
         </div>
     </div>
 </footer>
+
+  </body>
         <script src="http://code.jquery.com/jquery.min.js"></script>
         <script>
         	$(document).ready(function () {
@@ -133,5 +140,13 @@
 			});
 		</script>
         <script src="../public/js/bootstrap.min.js"></script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     </body>
 </html>
