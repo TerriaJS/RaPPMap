@@ -7,6 +7,11 @@
     * polygon wps added
     * updated to latest TerriaMap which fixes branding icon issue
 
+#### 2016-07-12
+
+* NewUI test release
+* Contains WPS test time series
+
 #### 2016-05-03
 
 * Removed temporary Auscover layers

@@ -1,16 +1,16 @@
 #cloud-config
 
-# Capture all cloud-config output into a more readable logfile
-output: {all: '| tee -a /var/log/cloud-init-output.log'}
-
 # update and install packages, reboot if necessary
+apt_sources:
+ - source: deb https://deb.nodesource.com/node_4.x trusty main
+   keyid: 1655a0ab68576280
+
 package_upgrade: true
 package_reboot_if_required: true
 packages:
  - ntp
  - python-pip
- - nodejs-legacy
- - npm
+ - nodejs
  - varnish
  - gdal-bin
  - unzip
@@ -82,8 +82,11 @@ write_files:
 # run all the commands to set this instance up
 runcmd:
  - echo 'APT::Periodic::Unattended-Upgrade "1";' >> /etc/apt/apt.conf.d/10periodic
- - pip install awscli
- - npm install -g forever
+
+ # install awscli
+ - curl -so awscli-bundle.zip https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
+ - unzip awscli-bundle.zip
+ - sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 # cloudwatch monitoring scripts
  - curl -so /tmp/CloudWatchMonitoringScripts-1.2.1.zip http://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.1.zip
@@ -91,7 +94,7 @@ runcmd:
  - echo '*/5 * * * * ubuntu /opt/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --disk-space-util --disk-path=/ --from-cron' > /etc/cron.d/cloudwatch
 
 # geoglam-nm
- - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-04-15-54-g19cbebb.tar.gz /opt/geoglam-nm.tar.gz
+ - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-07-07.tar.gz /opt/geoglam-nm.tar.gz
  - mkdir /opt/geoglam-nm
  - tar xzf /opt/geoglam-nm.tar.gz -C /opt/geoglam-nm
  - touch /opt/geoglam-nm/terriajs.pid /opt/geoglam-nm/terriajs-server.log

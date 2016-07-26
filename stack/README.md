@@ -34,8 +34,8 @@ npm install && gulp build watch
 3. Tag:
 
 ```
-git tag -a 2016-03-01 master
-git push origin 2016-03-01
+git tag -a geoglam_2016-03-01 master
+git push origin geoglam_2016-03-01
 ```
 
 4. Build package:
