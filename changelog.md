@@ -1,5 +1,12 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-07-26
+
+* NewUI release:
+    * anomaly layers now on by default
+    * polygon wps added
+    * updated to latest TerriaMap which fixes branding icon issue
+
 #### 2016-05-03
 
 * Removed temporary Auscover layers

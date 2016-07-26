@@ -9,19 +9,22 @@
 
    ],
    "catalog":[
-      {
-          "name": "Charts",
-          "type": "wps-getCapabilities",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows?service=WPS",
+    {
+          "name": "TimeSeries",
+          "type": "wps",
+          "url": "http://qld.auscover.org.au/wps?service=WPS",
+          "identifier": "timeSeries",
           "opacity" : 0.6,
-          "initialTimeSource": "end",
-          "dateFormat":
-           {
-             "currentTime": "mmmm yyyy",
-             "timelineTic": "yyyy"
-           },
           "ignoreUnknownTileErrors": true
-     },
+    },
+    {
+          "name": "TimeSeriesPolygon",
+          "type": "wps",
+          "url": "http://qld.auscover.org.au/wps?service=WPS",
+          "identifier": "timeSeriesPoly",
+          "opacity" : 0.6,
+          "ignoreUnknownTileErrors": true
+    },
     {
          "name":"Vegetation Dynamics",
          "type":"group",
@@ -44,7 +47,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
                         "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}} %</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}} %</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}} %</td>  </tr></tbody></table>",
@@ -67,7 +70,7 @@
                            "dateFormat":{
                               "currentTime":"mmmm yyyy",
                               "timelineTic":"yyyy"
-                           },
+                            },
                            "ignoreUnknownTileErrors":true,
                            "featureInfoTemplate":{
                               "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Total Cover</td>    <td>{{Total_Cover}} %</td>  </tr></tbody></table>",
@@ -85,7 +88,7 @@
                            "dateFormat":{
                               "currentTime":"mmmm yyyy",
                               "timelineTic":"yyyy"
-                           },
+                            },
                            "ignoreUnknownTileErrors":true,
                            "featureInfoTemplate":{
                               "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
@@ -111,7 +114,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -135,7 +138,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -173,7 +176,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -197,7 +200,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "clipToRectangle":true,
                      "rectangle":[
@@ -231,7 +234,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"mmmm yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
                         "name":"{{#value}}{{value}} {{/value}}",
@@ -251,7 +254,7 @@
                      "dateFormat":{
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"mmmm yyyy"
-                     },
+                      },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
                         "name":"{{#value}}{{value}} {{/value}}",
