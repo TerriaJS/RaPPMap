@@ -1,7 +1,7 @@
 Change Log
 ==========
 
-### 2016-04-15
+### 2016-08-22
 
 * Updated layer names after change in auscover server
 
