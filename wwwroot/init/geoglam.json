@@ -25,7 +25,7 @@
                      "name":"Fractional Cover",
                      "type":"wms",
                      "url":"http://qld.auscover.org.au/geoserver-dev/ows",
-                     "layers":"global:fractcover_monthly",
+                     "layers":"global:fractcover_modis_monthly",
                      "opacity":0.6,
                      "initialTimeSource":"end",
                      "dateFormat":{
@@ -48,7 +48,7 @@
                            "name":"Absolute",
                            "type":"wms",
                            "url":"http://qld.auscover.org.au/geoserver-dev/ows",
-                           "layers":"global:total_cover",
+                           "layers":"global:totalcover_modis_monthly",
                            "opacity":0.6,
                            "initialTimeSource":"end",
                            "dateFormat":{
@@ -66,7 +66,7 @@
                            "type":"wms",
                            "url":"http://qld.auscover.org.au/geoserver-dev/ows",
                            "isEnabled":true,
-                           "layers":"global:fractcover_anomaly",
+                           "layers":"global:fractcover_modis_anomaly_monthly",
                            "opacity":0.6,
                            "initialTimeSource":"end",
                            "dateFormat":{
