@@ -1,6 +1,6 @@
 'use strict';
 
-/*global require*/
+/*global require,window */
 
 var configuration = {
     bingMapsKey: undefined, // use Cesium key
@@ -28,7 +28,6 @@ import ViewState from 'terriajs/lib/ReactViewModels/ViewState';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
-
 import render from './lib/Views/render';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
@@ -128,6 +127,32 @@ terria.start({
             };
 
             viewState.notifications.push(options);
+        }
+
+        // Show a modal disclaimer before user can do anything else.
+        if (defined(terria.configParameters.globalDisclaimer)) {
+            var globalDisclaimer = terria.configParameters.globalDisclaimer;
+            var hostname = window.location.hostname;
+            if (globalDisclaimer.enableOnLocalhost || hostname.indexOf('localhost') === -1) {
+                var message = '';
+                // Sometimes we want to show a preamble if the user is viewing a site other than the official production instance.
+                // This can be expressed as a devHostRegex ("any site starting with staging.") or a negative prodHostRegex ("any site not ending in .gov.au")
+                if (defined(globalDisclaimer.devHostRegex) && hostname.match(globalDisclaimer.devHostRegex) ||
+                    defined(globalDisclaimer.prodHostRegex) && !hostname.match(globalDisclaimer.prodHostRegex)) {
+                        message += require('./lib/Views/DevelopmentDisclaimerPreamble.html');
+                }
+                message += require('./lib/Views/GlobalDisclaimer.html');
+
+                var options = {
+                    title: (globalDisclaimer.title !== undefined) ? globalDisclaimer.title : 'Warning',
+                    confirmText: (globalDisclaimer.buttonTitle || "Ok"),
+                    width: 600,
+                    height: 550,
+                    message: message,
+                    horizontalPadding : 100
+                };
+                viewState.notifications.push(options);
+            }
         }
 
         render(terria, allBaseMaps, viewState);
