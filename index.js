@@ -12,6 +12,7 @@ var configuration = {
 //var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
 
 // checkBrowserCompatibility('ui');
+import React from 'react';
 import defined from 'terriajs-cesium/Source/Core/defined';
 import GoogleAnalytics from 'terriajs/lib/Core/GoogleAnalytics';
 import ShareDataService from 'terriajs/lib/Models/ShareDataService';
@@ -29,9 +30,30 @@ import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSea
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
 import render from './lib/Views/render';
+import WebProcessingServiceCatalogFunction from 'terriajs/lib/Models/WebProcessingServiceCatalogFunction';
+import ParameterEditor from 'terriajs/lib/ReactViews/Analytics/ParameterEditor';
+import geoJsonParameterConverter from './lib/CustomParameters/geoJsonParameterConverter';
+import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
+WebProcessingServiceCatalogFunction.parameterConverters.push(geoJsonParameterConverter());
+
+ParameterEditor.prototype.parameterTypeConverters.push({
+    id: 'geojson',
+    parameterTypeToDiv: function(type, parameterEditor) {
+        if (type === this.id) {
+            return (<div>
+                        {parameterEditor.renderLabel()}
+                         <GeoJsonParameterEditor
+                            previewed={parameterEditor.props.previewed}
+                            viewState={parameterEditor.props.viewState}
+                            parameter={parameterEditor.props.parameter}
+                         />
+                    </div>);
+        }
+    }
+});
 
 // Register custom Knockout.js bindings.  If you're not using the TerriaJS user interface, you can remove this.
 registerKnockoutBindings();
