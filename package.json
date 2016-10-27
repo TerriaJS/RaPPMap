@@ -20,7 +20,7 @@
     "awsRegion": "ap-southeast-2",
     "awsEc2InstanceType": "t2.medium",
     "awsEc2ImageId": "ami-2a644649",
-    "awsKeyName": "terria-rdengate",
+    "awsKeyName": "rdengate",
     "awsS3ServerConfigOverridePath": "s3://geoglam-apps/map/privateserverconfig-2016-10-27.json",
     "awsS3ClientConfigOverridePath": "s3://geoglam-apps/map/privateclientconfig-2016-10-27.json"
   },
