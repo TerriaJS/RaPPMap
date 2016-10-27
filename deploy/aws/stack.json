@@ -32,7 +32,7 @@
   },
   "Parameters": {
     "HostedZoneName": {
-      "Default": "terria.io.",
+      "Default": "map.geo-rapp.org.",
       "Type": "String"
     },
     "ImageId": {
@@ -159,12 +159,6 @@
             },
             "LoadBalancerPort": "80",
             "Protocol": "HTTP"
-          },
-          {
-            "InstancePort": "80",
-            "LoadBalancerPort": "443",
-            "Protocol": "HTTPS",
-            "SSLCertificateId": "arn:aws:iam::278900443360:server-certificate/terra.io-20151208"
           }
         ]
       },
@@ -322,8 +316,8 @@
                   ],
                   "Effect": "Allow",
                   "Resource": [
-                    "arn:aws:s3:::terriamap-sharing",
-                    "arn:aws:s3:::terriamap-sharing/*"
+                    "arn:aws:s3:::geoglam-sharing",
+                    "arn:aws:s3:::geoglam-sharing/*"
                   ]
                 }
               ]
