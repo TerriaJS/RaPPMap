@@ -1,5 +1,5 @@
 {
-  "name": "terriajs-map",
+  "name": "geoglam-rapp",
   "version": "0.0.1",
   "description": "Geospatial catalog explorer based on TerriaJS.",
   "license": "Apache-2.0",
@@ -9,20 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/TerriaJS/TerriaMap"
+    "url": "http://github.com/TerriaJS/geoglam-nm"
   },
   "dependencies": {
     "terriajs-server": "^2.5.1"
   },
   "config": {
-    "awsProfile": "terria",
-    "awsS3PackagesPath": "s3://terria-apps/map",
+    "awsProfile": "geoglam-nm",
+    "awsS3PackagesPath": "s3://geoglam-apps/map",
     "awsRegion": "ap-southeast-2",
     "awsEc2InstanceType": "t2.medium",
     "awsEc2ImageId": "ami-2a644649",
-    "awsKeyName": "terria-kring",
-    "awsS3ServerConfigOverridePath": "s3://terria-apps/map/privateserverconfig-2016-08-31.json",
-    "awsS3ClientConfigOverridePath": "s3://terria-apps/map/privateclientconfig-2016-08-31.json"
+    "awsKeyName": "terria-rdengate",
+    "awsS3ServerConfigOverridePath": "s3://geoglam-apps/map/privateserverconfig-2016-10-27.json",
+    "awsS3ClientConfigOverridePath": "s3://geoglam-apps/map/privateclientconfig-2016-10-27.json"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
