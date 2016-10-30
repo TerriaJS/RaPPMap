@@ -115,18 +115,7 @@
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
                       },
-                     "ignoreUnknownTileErrors":true,
-                     "clipToRectangle":true,
-                     "rectangle":[
-                        "112.0",
-                        "-48.0",
-                        "155.0",
-                        "-5.0"
-                     ],
-                     "featureInfoTemplate":{
-                        "name":"{{#value}}{{value}} MJ/m2{{/value}}",
-                        "template":"{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                     }
+                     "ignoreUnknownTileErrors":true
                   },
                   {
                      "name":"Anomalies_TODO",
