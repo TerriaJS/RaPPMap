@@ -1,5 +1,10 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-10-28
+
+* Rearranged layers as per Juan's instructions, including removing some and changing URLs
+* Legend resize bug fixed upstream, so this now works.
+
 #### 2016-07-26
 
 * NewUI release:
