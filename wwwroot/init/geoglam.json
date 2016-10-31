@@ -115,18 +115,7 @@
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
                       },
-                     "ignoreUnknownTileErrors":true,
-                     "clipToRectangle":true,
-                     "rectangle":[
-                        "112.0",
-                        "-48.0",
-                        "155.0",
-                        "-5.0"
-                     ],
-                     "featureInfoTemplate":{
-                        "name":"{{#value}}{{value}} MJ/m2{{/value}}",
-                        "template":"{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                     }
+                     "ignoreUnknownTileErrors":true
                   },
                   {
                      "name":"Anomalies_TODO",
@@ -177,7 +166,16 @@
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
                       },
-                     "ignoreUnknownTileErrors":true
+                     "ignoreUnknownTileErrors":true,
+                     "featureInfoTemplate":{
+                        "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall</td>    <td>{{Rainfall [mm per month]}} mm/month</td>  </tr></tbody></table>",
+                        "name":"Rainfall",
+                        "formats": {
+                          "Rainfall [mm per month]": {
+                            "maximumFractionDigits": 2
+                          }
+                        }
+                     }
                   },
                   {
                      "name":"Anomalies",
@@ -190,7 +188,16 @@
                         "currentTime":"mmmm yyyy",
                         "timelineTic":"yyyy"
                       },
-                     "ignoreUnknownTileErrors":true
+                     "ignoreUnknownTileErrors":true,
+                     "featureInfoTemplate":{
+                        "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall Anomaly</td>    <td>{{Rainfall anomaly [mm per month]}} mm/month</td>  </tr></tbody></table>",
+                        "name":"Rainfall Anomaly",
+                        "formats": {
+                          "Rainfall anomaly [mm per month]": {
+                            "maximumFractionDigits": 2
+                          }
+                        }
+                     }
                   }
                ]
             },
@@ -215,8 +222,13 @@
                       },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
-                        "name":"{{#value}}{{value}} {{/value}}",
-                        "template":"{{#value}}{{value}}{{/value}}"
+                        "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture</td>    <td>{{value}} %</td>  </tr></tbody></table>",
+                        "name":"Soil Moisture",
+                        "formats": {
+                          "value": {
+                            "maximumFractionDigits": 2
+                          }
+                        }
                      }
                   },
                   {
@@ -235,8 +247,13 @@
                       },
                      "ignoreUnknownTileErrors":true,
                      "featureInfoTemplate":{
-                        "name":"{{#value}}{{value}} {{/value}}",
-                        "template":"{{#value}}{{value}}{{/value}}"
+                        "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture Anomaly</td>    <td>{{value}} %</td>  </tr></tbody></table>",
+                        "name": "Soil Moisture Anomaly",
+                        "formats": {
+                          "value": {
+                            "maximumFractionDigits": 2
+                          }
+                        }
                      }
                   }
                ]
@@ -274,7 +291,11 @@
                  "url":"http://qld.auscover.org.au:80/geoserver-dev/ows",
                  "layers":"global:Terrestrial Ecoregions of the World",
                  "opacity":0.6,
-                 "ignoreUnknownTileErrors":true
+                 "ignoreUnknownTileErrors":true,
+                 "featureInfoTemplate":{
+                    "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Ecoregion Name</td>    <td>{{eco_name}}</td>  </tr><tr>    <td>Realm</td>    <td>{{wwf_realm2}}</td>  </tr><tr>    <td>Major Habitat Type</td>    <td>{{wwf_mhtnam}}</td>  </tr><tr>    <td>Data Source</td>    <td>{{sourcedata}}</td>  </tr></tbody></table>",
+                    "name": "Terrestrial Ecoregions"
+                 }
               }
            ]
        },
@@ -292,7 +313,12 @@
                  "ignoreUnknownTileErrors":true,
                  "featureInfoTemplate":{
                     "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
-                    "name":"Cattle density in 2006"
+                    "name":"Cattle density in 2006",
+                    "formats": {
+                      "Density (heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                  }
               },
               {
@@ -304,7 +330,12 @@
                  "ignoreUnknownTileErrors":true,
                  "featureInfoTemplate":{
                     "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-                    "name":"Sheep density in 2006"
+                    "name":"Sheep density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                  }
               },
               {
@@ -316,7 +347,12 @@
                  "ignoreUnknownTileErrors":true,
                  "featureInfoTemplate":{
                     "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-                    "name":"Goat density in 2006"
+                    "name":"Goat density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                  }
               },
               {
@@ -328,7 +364,12 @@
                  "ignoreUnknownTileErrors":true,
                  "featureInfoTemplate":{
                     "template":"<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-                    "name":"FAO Livestock Unit North America density in 2006"
+                    "name":"FAO Livestock Unit North America density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                  }
               }
            ]
