@@ -11,6 +11,7 @@ import Ellipsoid from 'terriajs-cesium/Source/Core/Ellipsoid';
 import UserDrawing from 'terriajs/lib/Models/UserDrawing';
 import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
 import Styles from 'terriajs/lib/ReactViews/Analytics/parameter-editors.scss';
+import LocalStyles from './geojson-parameter-editor.scss';
 
 import PointParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/PointParameterEditorCore';
 import PolygonParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/PolygonParameterEditorCore';
@@ -109,7 +110,7 @@ const GeoJsonParameterEditor = React.createClass({
                     }}>
                     <button type="button"
                             onClick={this.selectPointOnMap}
-                            className={Styles.btnLocationSelector}>
+                            className={LocalStyles.btnLocationSelector}>
                             <strong>Point (lat/lon)</strong>
                     </button>
                     <button type="button"
@@ -117,12 +118,12 @@ const GeoJsonParameterEditor = React.createClass({
                                     "marginRight" : "0.5%"
                                   }}
                             onClick={this.selectPolygonOnMap}
-                            className={Styles.btnLocationSelector}>
+                            className={LocalStyles.btnLocationSelector}>
                             <strong>Polygon</strong>
                     </button>
                     <button type="button"
                             onClick={this.selectRegionOnMap}
-                            className={Styles.btnLocationSelector}>
+                            className={LocalStyles.btnLocationSelector}>
                             <strong>Region</strong>
                     </button>
                 </div>
