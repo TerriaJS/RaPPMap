@@ -81,7 +81,6 @@
                            "name":"Total Vegetation Cover Anomaly",
                            "type":"wms",
                            "url":"http://qld.auscover.org.au/geoserver-dev/ows",
-                           "isEnabled":true,
                            "layers":"global:fractcover_modis_anomaly_monthly",
                            "opacity":0.6,
                            "initialTimeSource":"end",
@@ -287,6 +286,7 @@
               },
               {
                  "name":"Terrestrial Ecoregions of the World",
+                 "isEnabled":true,
                  "type":"wms",
                  "url":"http://qld.auscover.org.au:80/geoserver-dev/ows",
                  "layers":"global:Terrestrial Ecoregions of the World",

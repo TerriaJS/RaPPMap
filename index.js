@@ -34,9 +34,53 @@ import WebProcessingServiceCatalogFunction from 'terriajs/lib/Models/WebProcessi
 import ParameterEditor from 'terriajs/lib/ReactViews/Analytics/ParameterEditor';
 import geoJsonParameterConverter from './lib/CustomParameters/geoJsonParameterConverter';
 import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
+import SelectAPolygonParameter from './lib/ViewModels/SelectAPolygonParameter';
+import SelectAPolygonEditor from './lib/Views/SelectAPolygonEditor';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
+WebProcessingServiceCatalogFunction.parameterConverters.push({
+       id: 'PolygonGeometry',
+         inputToFunctionParameter: function(catalogFunction, input) {
+             if (!defined(input.ComplexData) || !defined(input.ComplexData.Default) || !defined(input.ComplexData.Default.Format) || !defined(input.ComplexData.Default.Format.Schema)) {
+                 return undefined;
+             }
+
+             var schema = input.ComplexData.Default.Format.Schema;
+             if (schema.indexOf('http://geojson.org/geojson-spec.html#') !== 0) {
+                 return undefined;
+             }
+
+             if (schema.substring(schema.lastIndexOf('#') + 1) !== 'polygon') {
+                 return undefined;
+             }
+
+             return new SelectAPolygonParameter({
+                 terria: catalogFunction.terria,
+                 catalogFunction: catalogFunction,
+                 id: input.Identifier,
+                 name: input.Title,
+                 description: input.Abstract,
+                 isRequired: (input.minOccurs | 0) > 0
+             });
+         },
+         functionParameterToInput: function(catalogFunction, parameter, value) {
+            if (!defined(value) || value === '') {
+                    return undefined;
+                }
+            var featureList = value.map(function(featureData) {
+                    return {
+                            'type': 'Feature',
+                            'geometry': featureData.geometry
+                    };
+            });
+
+            return parameter.id + '=' + JSON.stringify({
+                'type': 'FeatureCollection',
+                'features': featureList
+            });
+         }
+});
 WebProcessingServiceCatalogFunction.parameterConverters.push(geoJsonParameterConverter());
 
 ParameterEditor.prototype.parameterTypeConverters.push({
@@ -46,6 +90,22 @@ ParameterEditor.prototype.parameterTypeConverters.push({
             return (<div>
                         {parameterEditor.renderLabel()}
                          <GeoJsonParameterEditor
+                            previewed={parameterEditor.props.previewed}
+                            viewState={parameterEditor.props.viewState}
+                            parameter={parameterEditor.props.parameter}
+                         />
+                    </div>);
+        }
+    }
+});
+
+ParameterEditor.prototype.parameterTypeConverters.push({
+    id: 'polygon',
+    parameterTypeToDiv: function(type, parameterEditor) {
+        if (type === this.id) {
+            return (<div>
+                        {parameterEditor.renderLabel()}
+                         <SelectAPolygonEditor
                             previewed={parameterEditor.props.previewed}
                             viewState={parameterEditor.props.viewState}
                             parameter={parameterEditor.props.parameter}
@@ -133,7 +193,7 @@ terria.start({
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', false);
+        selectBaseMap(terria, allBaseMaps, 'Australian Topography', false);
 
         // Add the disclaimer, if specified
         if (defined(terria.configParameters.globalDisclaimer)) {
