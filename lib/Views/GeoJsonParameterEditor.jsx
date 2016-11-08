@@ -16,6 +16,7 @@ import LocalStyles from './geojson-parameter-editor.scss';
 import PointParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/PointParameterEditorCore';
 import PolygonParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/PolygonParameterEditorCore';
 import RegionParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/RegionParameterEditorCore';
+import SelectAPolygonParameterEditorCore from '../ViewModels/SelectAPolygonParameterEditorCore';
 
 const GeoJsonParameterEditor = React.createClass({
     mixins: [ObserveModelMixin],
@@ -48,11 +49,15 @@ const GeoJsonParameterEditor = React.createClass({
         var regionEditorCore = new RegionParameterEditorCore(this.props.previewed,
                                                              this.props.parameter,
                                                              this.props.viewState);
+        var selectAPolygonEditorCore = new SelectAPolygonParameterEditorCore(this.props.previewed,
+                                                                             this.props.parameter,
+                                                                             this.props.viewState);
 
         return {
             pointEditorCore: pointEditorCore,
             polygonEditorCore: polygonEditorCore,
-            regionEditorCore: regionEditorCore
+            regionEditorCore: regionEditorCore,
+            selectAPolygonEditorCore: selectAPolygonEditorCore
         };
     },
 
@@ -91,8 +96,18 @@ const GeoJsonParameterEditor = React.createClass({
     },
 
     selectRegionOnMap() {
+        debugger;
         this.setState({
             currentEditorCore: this.state.regionEditorCore
+        },
+        function() {
+            this.state.currentEditorCore.selectOnMap();
+        });
+    },
+
+    selectExistingPolygonOnMap() {
+        this.setState({
+            currentEditorCore: this.state.selectAPolygonEditorCore
         },
         function() {
             this.state.currentEditorCore.selectOnMap();
@@ -114,17 +129,25 @@ const GeoJsonParameterEditor = React.createClass({
                             <strong>Point (lat/lon)</strong>
                     </button>
                     <button type="button"
-                            style={{"marginLeft" : "0.5%",
-                                    "marginRight" : "0.5%"
+                            style={{"marginLeft" : "1.3333%",
+                                    "marginRight" : "0.66666%"
                                   }}
                             onClick={this.selectPolygonOnMap}
                             className={LocalStyles.btnLocationSelector}>
                             <strong>Polygon</strong>
                     </button>
                     <button type="button"
+                            style={{"marginLeft" : "0.666666%",
+                                    "marginRight" : "1.3333%"
+                                  }}
                             onClick={this.selectRegionOnMap}
                             className={LocalStyles.btnLocationSelector}>
                             <strong>Region</strong>
+                    </button>
+                    <button type="button"
+                            onClick={this.selectExistingPolygonOnMap}
+                            className={LocalStyles.btnLocationSelector}>
+                            <strong>Existing Polygon</strong>
                     </button>
                 </div>
                 <input className={Styles.field}
