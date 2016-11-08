@@ -39,9 +39,9 @@ import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
 WebProcessingServiceCatalogFunction.parameterConverters.push(geoJsonParameterConverter());
 
-ParameterEditor.prototype.parameterTypeConverters.push({
+ParameterEditor.parameterTypeConverters.push({
     id: 'geojson',
-    parameterTypeToDiv: function(type, parameterEditor) {
+    parameterTypeToDiv: function GeoJsonParameterToDiv(type, parameterEditor) {
         if (type === this.id) {
             return (<div>
                         {parameterEditor.renderLabel()}
