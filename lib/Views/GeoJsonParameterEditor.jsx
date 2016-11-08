@@ -13,10 +13,10 @@ import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
 import Styles from 'terriajs/lib/ReactViews/Analytics/parameter-editors.scss';
 import LocalStyles from './geojson-parameter-editor.scss';
 
-import PointParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/PointParameterEditorCore';
-import PolygonParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/PolygonParameterEditorCore';
-import RegionParameterEditorCore from 'terriajs/lib/ReactViews/Analytics/RegionParameterEditorCore';
-import SelectAPolygonParameterEditorCore from '../ViewModels/SelectAPolygonParameterEditorCore';
+import PointParameterEditor from 'terriajs/lib/ReactViews/Analytics/PointParameterEditor';
+import PolygonParameterEditor from 'terriajs/lib/ReactViews/Analytics/PolygonParameterEditor';
+import SelectAPolygonParameterEditor from '../ViewModels/SelectAPolygonParameterEditor';
+import RegionParameterEditor from 'terriajs/lib/ReactViews/Analytics/RegionParameterEditor';
 
 const GeoJsonParameterEditor = React.createClass({
     mixins: [ObserveModelMixin],
@@ -29,89 +29,26 @@ const GeoJsonParameterEditor = React.createClass({
 
     componentWillMount() {
         var that = this;
-        knockout.getObservable(this.props.parameter, '_value').subscribe(that.updateProcessedValue);
-    },
-
-    updateProcessedValue() {
-        if (defined(this.state.currentEditorCore)) {
-            var promiseOrValue = this.state.currentEditorCore.formatValueForUrl(this.props.parameter.value);
-            this.props.parameter.processedValue = promiseOrValue;
-        }
-    },
-
-    getInitialState() {
-        var pointEditorCore = new PointParameterEditorCore(this.props.previewed,
-                                                           this.props.parameter,
-                                                           this.props.viewState);
-        var polygonEditorCore = new PolygonParameterEditorCore(this.props.previewed,
-                                                               this.props.parameter,
-                                                               this.props.viewState);
-        var regionEditorCore = new RegionParameterEditorCore(this.props.previewed,
-                                                             this.props.parameter,
-                                                             this.props.viewState);
-        var selectAPolygonEditorCore = new SelectAPolygonParameterEditorCore(this.props.previewed,
-                                                                             this.props.parameter,
-                                                                             this.props.viewState);
-
-        return {
-            pointEditorCore: pointEditorCore,
-            polygonEditorCore: polygonEditorCore,
-            regionEditorCore: regionEditorCore,
-            selectAPolygonEditorCore: selectAPolygonEditorCore
-        };
-    },
-
-    onTextChange(e) {
-        this.state.currentEditorCore.onTextChange(e);
-    },
-
-    getValue() {
-        return this.state.currentEditorCore.getValue();
-    },
-
-    setValue(value) {
-        this.state.currentEditorCore.setValue(value);
     },
 
     onCleanUp() {
-        this.props.viewState.openAddData();
+       this.props.viewState.openAddData();
     },
 
     selectPointOnMap() {
-        this.setState({
-            currentEditorCore: this.state.pointEditorCore
-        },
-        function() {
-            this.state.currentEditorCore.selectOnMap();
-        });
+        PointParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
     },
 
     selectPolygonOnMap() {
-        this.setState({
-            currentEditorCore: this.state.polygonEditorCore
-        },
-        function() {
-            this.state.currentEditorCore.selectOnMap();
-        });
+        PolygonParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
     },
 
     selectRegionOnMap() {
-        debugger;
-        this.setState({
-            currentEditorCore: this.state.regionEditorCore
-        },
-        function() {
-            this.state.currentEditorCore.selectOnMap();
-        });
+        RegionParameterEditor.selectOnMap(this.props.viewState, this.props.parameter, this.props.previewed);
     },
 
-    selectExistingPolygonOnMap() {
-        this.setState({
-            currentEditorCore: this.state.selectAPolygonEditorCore
-        },
-        function() {
-            this.state.currentEditorCore.selectOnMap();
-        });
+    selectAPolygonOnMap() {
+        SelectAPolygonParameterEditor.selectOnMap(this.props.viewState, this.props.parameter, this.props.previewed);
     },
 
     render() {
@@ -152,7 +89,7 @@ const GeoJsonParameterEditor = React.createClass({
                 </div>
                 <input className={Styles.field}
                        type="text"
-                       onChange={this.onTextChange}
+                       readOnly
                        value={this.props.parameter.displayValue}/>
             </div>
         );

@@ -40,7 +40,7 @@
                 {
                   "name": "MultipleInputsTest",
                   "type": "wps",
-                  "url": "http://localhost:5001/wps?service=wps",
+                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
                   "identifier": "multipleGeoJsonInputs_test"
                 },
                 {
