@@ -1,66 +1,55 @@
-'use strict';
+import React from 'react';
 
-/* global require*/
-const Cartographic = require('terriajs-cesium/Source/Core/Cartographic');
-const CesiumMath = require('terriajs-cesium/Source/Core/Math');
-const defined = require('terriajs-cesium/Source/Core/defined');
-const Ellipsoid = require('terriajs-cesium/Source/Core/Ellipsoid');
-const knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
-const MapInteractionMode = require('terriajs/lib/Models/MapInteractionMode');
-const when = require('terriajs-cesium/Source/ThirdParty/when');
+import Cartographic from 'terriajs-cesium/Source/Core/Cartographic';
+import CesiumMath from 'terriajs-cesium/Source/Core/Math';
+import defined from 'terriajs-cesium/Source/Core/defined';
+import Ellipsoid from 'terriajs-cesium/Source/Core/Ellipsoid';
+import knockout from 'terriajs-cesium/Source/ThirdParty/knockout';
 
-/**
- * The guts of what a SelectAPolygonParameter does.
- *
- * @alias SelectAPolygonParameterEditorCore
- * @constructor
- * @abstract
- *
- * @param {React.PropTypes.object} previewed Previewed item from viewState.
- * @param {React.PropTypes.object} parameter Object that inherits from FunctionParameter.
- * @param {React.PropTypes.object} viewState the main viewState.
- */
-let SelectAPolygonParameterEditorCore = function(previewed, parameter, viewState) {
-    this.previewed = previewed;
-    this.parameter = parameter;
-    this.viewState = viewState;
-};
+import MapInteractionMode from 'terriajs/lib/Models/MapInteractionMode';
+import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
+import Styles from 'terriajs/lib/ReactViews/Analytics/parameter-editors.scss';
+import when from 'terriajs-cesium/Source/ThirdParty/when';
 
-/**
- * @return {String} the value when editor is first opened.
- */
-SelectAPolygonParameterEditorCore.prototype.getInitialState = function() {
-    return this.getValue();
-};
+const SelectAPolygonParameterEditor = React.createClass({
+    mixins: [ObserveModelMixin],
 
-/**
- * @return {String} stored value.
- */
-SelectAPolygonParameterEditorCore.prototype.getValue = function() {
-    debugger;
-    let featureList = this.parameter.value;
-    if (!defined(featureList)) {
-        return '';
+    propTypes: {
+        previewed: React.PropTypes.object,
+        parameter: React.PropTypes.object,
+        viewState: React.PropTypes.object
+    },
+
+    setDisplayValue(e) {
+        SelectAPolygonParameterEditor.setDisplayValue(e, parameter);
+    },
+
+    selectExistingPolygonOnMap() {
+        this.selectAPolygonParameterEditorCore.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
+    },
+
+    render() {
+        return (
+            <div>
+                <input className={Styles.field}
+                       type="text"
+                       value={this.state.value}/>
+                <button type="button" onClick={this.selectExistingPolygonOnMap} className={Styles.btnSelector}>
+                    Select existing polygon
+                </button>
+            </div>
+        );
     }
-    return featureList.map(function(featureData) { return featureData.id; }).join(", ");
-};
-
-/**
- * @param {String} value Value to store.
- */
-SelectAPolygonParameterEditorCore.prototype.setValue = function(value) {
-    this.parameter.value = value;
-    this.parameter.displayValue = this.getValue();
-};
+});
 
 /**
  * @param {String} value Value to use to format.
  * @return {String} Stringified JSON that can be used to pass parameter value in URL.
  */
-SelectAPolygonParameterEditorCore.prototype.formatValueForUrl = function(value) {
+SelectAPolygonParameterEditor.formatValueForUrl = function(value, parameter) {
     if (!defined(value) || value === '') {
             return undefined;
-        }
+    }
     const featureList = value.map(function(featureData) {
             return {
                     'type': 'Feature',
@@ -68,7 +57,7 @@ SelectAPolygonParameterEditorCore.prototype.formatValueForUrl = function(value) 
             };
     });
 
-    return this.parameter.id + '=' + JSON.stringify({
+    return parameter.id + '=' + JSON.stringify({
         'type': 'FeatureCollection',
         'features': featureList
     });
@@ -77,10 +66,7 @@ SelectAPolygonParameterEditorCore.prototype.formatValueForUrl = function(value) 
 /**
  * Prompts the user to select a point on the map.
  */
-SelectAPolygonParameterEditorCore.prototype.selectOnMap = function() {
-    const terria = this.previewed.terria;
-    const that = this;
-
+SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, parameter) {
     // Cancel any feature picking already in progress.
     terria.pickedFeatures = undefined;
 
@@ -88,7 +74,7 @@ SelectAPolygonParameterEditorCore.prototype.selectOnMap = function() {
         message: '<div>Select existing polygon<div style="font-size:12px"><p><i>If there are no polygons to select, add a layer that provides polygons.</i></p></div></div>',
         onCancel: function () {
             terria.mapInteractionModeStack.pop();
-            that.viewState.openAddData();
+            viewState.openAddData();
         }
     });
     terria.mapInteractionModeStack.push(pickPolygonMode);
@@ -115,14 +101,22 @@ SelectAPolygonParameterEditorCore.prototype.selectOnMap = function() {
                             }
                         };
                     });
-                that.setValue(value);
+                parameter.value = value;
+                parameter.processedValue = SelectAPolygonParameterEditor.formatValueForUrl(value, parameter);
                 terria.mapInteractionModeStack.pop();
-                that.viewState.openAddData();
+                viewState.openAddData();
             }
         });
     });
 
-    that.viewState.explorerPanelIsVisible = false;
+    viewState.explorerPanelIsVisible = false;
 };
 
-module.exports = SelectAPolygonParameterEditorCore;
+SelectAPolygonParameterEditor.getDisplayValue = function(value) {
+    if (!defined(value)) {
+        return '';
+    }
+    return value.map(function(featureData) { return featureData.id; }).join(", ");
+};
+
+module.exports = SelectAPolygonParameterEditor;

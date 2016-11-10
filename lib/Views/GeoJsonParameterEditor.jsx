@@ -15,8 +15,11 @@ import LocalStyles from './geojson-parameter-editor.scss';
 
 import PointParameterEditor from 'terriajs/lib/ReactViews/Analytics/PointParameterEditor';
 import PolygonParameterEditor from 'terriajs/lib/ReactViews/Analytics/PolygonParameterEditor';
-import SelectAPolygonParameterEditor from '../ViewModels/SelectAPolygonParameterEditor';
+import SelectAPolygonParameterEditor from './SelectAPolygonParameterEditor';
 import RegionParameterEditor from 'terriajs/lib/ReactViews/Analytics/RegionParameterEditor';
+import RegionPicker from 'terriajs/lib/ReactViews/Analytics/RegionPicker';
+
+import GeoJsonParameter from '../Models/GeoJsonParameter';
 
 const GeoJsonParameterEditor = React.createClass({
     mixins: [ObserveModelMixin],
@@ -37,18 +40,22 @@ const GeoJsonParameterEditor = React.createClass({
 
     selectPointOnMap() {
         PointParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
+        this.props.parameter.subtype = GeoJsonParameter.PointType;
     },
 
     selectPolygonOnMap() {
         PolygonParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
+        this.props.parameter.subtype = GeoJsonParameter.PolygonType;
     },
 
     selectRegionOnMap() {
         RegionParameterEditor.selectOnMap(this.props.viewState, this.props.parameter, this.props.previewed);
+        this.props.parameter.subtype = GeoJsonParameter.RegionType;
     },
 
-    selectAPolygonOnMap() {
-        SelectAPolygonParameterEditor.selectOnMap(this.props.viewState, this.props.parameter, this.props.previewed);
+    selectExistingPolygonOnMap() {
+        SelectAPolygonParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
+        this.props.parameter.subtype = GeoJsonParameter.SelectAPolygonType;
     },
 
     render() {
@@ -90,10 +97,27 @@ const GeoJsonParameterEditor = React.createClass({
                 <input className={Styles.field}
                        type="text"
                        readOnly
-                       value={this.props.parameter.displayValue}/>
+                       value={GeoJsonParameterEditor.getDisplayValue(this.props.parameter.value, this.props.parameter)}/>
             </div>
         );
     }
 });
+
+GeoJsonParameterEditor.getDisplayValue = function(value, parameter) {
+    debugger;
+    if (!defined(parameter.subtype)) {
+        return '';
+    }
+    if (parameter.subtype === GeoJsonParameter.PointType) {
+        return PointParameterEditor.getDisplayValue(value);
+    }
+    if (parameter.subtype === GeoJsonParameter.SelectAPolygonType) {
+        return SelectAPolygonParameterEditor.getDisplayValue(value);
+    }
+    if (parameter.subtype === GeoJsonParameter.PolygonType) {
+        return PolygonParameterEditor.getDisplayValue(value);
+    }
+    return RegionPicker.getDisplayValue(value, parameter);
+};
 
 module.exports = GeoJsonParameterEditor;

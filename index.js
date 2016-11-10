@@ -34,8 +34,7 @@ import WebProcessingServiceCatalogFunction from 'terriajs/lib/Models/WebProcessi
 import ParameterEditor from 'terriajs/lib/ReactViews/Analytics/ParameterEditor';
 import geoJsonParameterConverter from './lib/CustomParameters/geoJsonParameterConverter';
 import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
-import SelectAPolygonParameter from './lib/ViewModels/SelectAPolygonParameter';
-import SelectAPolygonEditor from './lib/Views/SelectAPolygonEditor';
+import SelectAPolygonParameterEditor from './lib/Views/SelectAPolygonParameterEditor';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
