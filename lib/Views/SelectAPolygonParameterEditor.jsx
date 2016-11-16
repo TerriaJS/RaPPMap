@@ -43,27 +43,6 @@ const SelectAPolygonParameterEditor = React.createClass({
 });
 
 /**
- * @param {String} value Value to use to format.
- * @return {String} Stringified JSON that can be used to pass parameter value in URL.
- */
-SelectAPolygonParameterEditor.formatValueForUrl = function(value, parameter) {
-    if (!defined(value) || value === '') {
-            return undefined;
-    }
-    const featureList = value.map(function(featureData) {
-            return {
-                    'type': 'Feature',
-                    'geometry': featureData.geometry
-            };
-    });
-
-    return parameter.id + '=' + JSON.stringify({
-        'type': 'FeatureCollection',
-        'features': featureList
-    });
-};
-
-/**
  * Prompts the user to select a point on the map.
  */
 SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, parameter) {
@@ -102,7 +81,6 @@ SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, paramete
                         };
                     });
                 parameter.value = value;
-                parameter.processedValue = SelectAPolygonParameterEditor.formatValueForUrl(value, parameter);
                 terria.mapInteractionModeStack.pop();
                 viewState.openAddData();
             }
@@ -113,7 +91,7 @@ SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, paramete
 };
 
 SelectAPolygonParameterEditor.getDisplayValue = function(value) {
-    if (!defined(value)) {
+    if (!defined(value) || value === '') {
         return '';
     }
     return value.map(function(featureData) { return featureData.id; }).join(", ");

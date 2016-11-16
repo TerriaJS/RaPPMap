@@ -104,7 +104,6 @@ const GeoJsonParameterEditor = React.createClass({
 });
 
 GeoJsonParameterEditor.getDisplayValue = function(value, parameter) {
-    debugger;
     if (!defined(parameter.subtype)) {
         return '';
     }
