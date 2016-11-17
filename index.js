@@ -34,6 +34,7 @@ import WebProcessingServiceCatalogFunction from 'terriajs/lib/Models/WebProcessi
 import ParameterEditor from 'terriajs/lib/ReactViews/Analytics/ParameterEditor';
 import geoJsonParameterConverter from './lib/CustomParameters/geoJsonParameterConverter';
 import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
+import SelectAPolygonParameterEditor from './lib/Views/SelectAPolygonParameterEditor';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
@@ -133,7 +134,7 @@ terria.start({
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', false);
+        selectBaseMap(terria, allBaseMaps, 'Australian Topography', false);
 
         // Add the disclaimer, if specified
         if (defined(terria.configParameters.globalDisclaimer)) {

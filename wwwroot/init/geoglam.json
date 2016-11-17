@@ -80,8 +80,8 @@
                         {
                            "name":"Total Vegetation Cover Anomaly",
                            "type":"wms",
-                           "url":"http://qld.auscover.org.au/geoserver-dev/ows",
                            "isEnabled":true,
+                           "url":"http://qld.auscover.org.au/geoserver-dev/ows",
                            "layers":"global:fractcover_modis_anomaly_monthly",
                            "opacity":0.6,
                            "initialTimeSource":"end",

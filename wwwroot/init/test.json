@@ -27,85 +27,10 @@
                ]
             },
             {
-              "name": "WPS tests from NM",
-              "type": "group",
-              "preserveOrder": true,
-              "items": [
-                {
-                  "name": "InputsTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "inputs_test"
-                },
-                {
-                  "name": "MultipleInputsTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "multipleGeoJsonInputs_test"
-                },
-                {
-                  "name": "PointTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "point_test",
-                  "opacity" : 0.6,
-                  "ignoreUnknownTileErrors": true
-                },
-                {
-                  "name": "LineTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "line_test",
-                  "opacity" : 0.6,
-                  "ignoreUnknownTileErrors": true
-                },
-                {
-                  "name": "RectangleTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "bbox_test",
-                  "opacity" : 0.6,
-                  "ignoreUnknownTileErrors": true
-                },
-                {
-                  "name": "PolygonTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "polygon_test",
-                  "opacity" : 0.6,
-                  "ignoreUnknownTileErrors": true
-                },
-                {
-                  "name": "GeoJsonTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "geojson_test",
-                  "opacity" : 0.6,
-                  "ignoreUnknownTileErrors": true
-                },
-                {
-                  "name": "ContextTest",
-                  "type": "wps",
-                  "url": "http://sparrow.terria.io:5001/wps?service=wps",
-                  "identifier": "point_test",
-                  "opacity" : 0.6,
-                  "ignoreUnknownTileErrors": true,
-                  "contextItem": {
-                      "name": "Analysis Study Area",
-                      "description": "Show where it is possible to use the analytical functions of this test function.",
-                      "layers": "awavea-interim:outline_ww3.aus_4m",
-                      "url": "http://oa-gis.csiro.au/geoserver/ows",
-                      "type": "wms",
-                      "legendUrl": "",
-                      "rectangle": [
-                        109.0,
-                        -48.0,
-                        158.0,
-                        -5.0
-                      ]
-                    }
-                }
-              ]
+               "name":"WPS National Map Tests",
+               "description":"All WPS services from NM test server",
+               "url":"http://sparrow.terria.io:5001/wps",
+               "type":"wps-getCapabilities"
             },
             {
                "name":"WPS from GSky",
