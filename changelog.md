@@ -1,5 +1,12 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2016-11-21
+
+* Only show disclaimer once.
+* NDVI layer now global, not restricted to Australia.
+* Fix issue with polygon drawing for polygon WPS parameters.
+* GeoJsonParameter added for a WPS parameter which provides point, polygon, region, or existing polygon selection.
+
 #### 2016-10-28
 
 * Rearranged layers as per Juan's instructions, including removing some and changing URLs
