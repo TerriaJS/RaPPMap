@@ -6,6 +6,8 @@
 * NDVI layer now global, not restricted to Australia.
 * Fix issue with polygon drawing for polygon WPS parameters.
 * GeoJsonParameter added for a WPS parameter which provides point, polygon, region, or existing polygon selection.
+* Change initial camera to different view
+* Show Vegetation Fractional Cover (PV, NPV & BS) rather than Anomaly layer by default
 
 #### 2016-10-28
 

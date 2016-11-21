@@ -1,9 +1,9 @@
 {
    "homeCamera":{
-      "west":-126,
-      "south":-78,
-      "east":182,
-      "north":81
+      "west":-141,
+      "south":-59,
+      "east":134,
+      "north":64
    },
    "services":[
 
@@ -41,6 +41,7 @@
                      "name":"Vegetation Fractional Cover (PV, NPV & BS)",
                      "type":"wms",
                      "url":"http://gsky.nci.org.au/ows",
+                     "isEnabled":true,
                      "layers":"global:frac_cover",
                      "opacity":0.6,
                      "initialTimeSource":"end",
@@ -57,7 +58,6 @@
                   {
                      "name":"Total Cover",
                      "type":"group",
-                     "isOpen":true,
                      "preserveOrder":true,
                      "items":[
                         {
@@ -80,7 +80,6 @@
                         {
                            "name":"Total Vegetation Cover Anomaly",
                            "type":"wms",
-                           "isEnabled":true,
                            "url":"http://qld.auscover.org.au/geoserver-dev/ows",
                            "layers":"global:fractcover_modis_anomaly_monthly",
                            "opacity":0.6,
