@@ -1,5 +1,9 @@
 ### GEOGLAM RAPP Change Log
 
+#### ?
+
+* Change base map back to Positron
+
 #### 2016-11-21
 
 * Only show disclaimer once.

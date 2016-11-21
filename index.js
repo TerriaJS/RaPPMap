@@ -134,7 +134,7 @@ terria.start({
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Australian Topography', false);
+        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', false);
 
         // Add the disclaimer, if specified
         if (defined(terria.configParameters.globalDisclaimer)) {
