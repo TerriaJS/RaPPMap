@@ -15,8 +15,7 @@
         "appName": "GEOGLAM RAPP",
         "supportEmail": "geoglam_support@lists.nicta.com.au",
         "brandBarElements": [
-             "<a target=\"_blank\" href=\"http://www.geo-rapp.org/\"><img class=\"rapp\" src=\"images/rapp_logo.svg\" height=\"75px\" alt=\"GEOGLAM RAPP\" title=\"Version: {{version}}\"/></a>",
-             "<a href=\"https://www.nicta.com.au/\" target=\"_blank\"><img class=\"nicta\" src=\"images/DATA61_CSIRO_OnBlack_RGB_trans.png\" alt=\"Data61\" width=\"53px\" height=\"31px\"/></a>"
+             "<a target=\"_blank\" href=\"http://www.geo-rapp.org/\"><img class=\"rapp\" src=\"images/rapp_logo.svg\" height=\"75px\" alt=\"GEOGLAM RAPP\" title=\"Version: {{version}}\"/></a>"
         ],
         "proj4ServiceBaseUrl": "proj4def/",
         "developerAttribution": {
