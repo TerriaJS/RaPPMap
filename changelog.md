@@ -1,5 +1,10 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2017-01-??
+
+* NCI logo added, GEOGLAM logo resized to be bigger, and all logos on white.
+* NDVI absolute replaces contents of Total Vegetation Cover (PV + NPV), and NDVI catalog group removed.
+
 #### 2016-11-22
 
 * Change base map back to Positron

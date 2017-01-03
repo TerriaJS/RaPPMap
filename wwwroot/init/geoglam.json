@@ -63,8 +63,8 @@
                         {
                            "name":"Total Vegetation Cover (PV + NPV)",
                            "type":"wms",
-                           "url":"http://qld.auscover.org.au/geoserver-dev/ows",
-                           "layers":"global:totalcover_modis_monthly",
+                           "url":"http://gsky.nci.org.au/ows",
+                           "layers":"global:ndvi",
                            "opacity":0.6,
                            "initialTimeSource":"end",
                            "dateFormat":{
@@ -95,50 +95,6 @@
                            }
                         }
                      ]
-                  }
-               ]
-            },
-            {
-               "name":"NDVI",
-               "type":"group",
-               "preserveOrder":true,
-               "items":[
-                  {
-                     "name":"Absolute",
-                     "type":"wms",
-                     "url":"http://gsky.nci.org.au/ows",
-                     "layers":"global:ndvi",
-                     "opacity":0.6,
-                     "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                      },
-                     "ignoreUnknownTileErrors":true
-                  },
-                  {
-                     "name":"Anomalies_TODO",
-                     "type":"wms",
-                     "url":"http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-                     "layers":"mean_exposure",
-                     "opacity":0.6,
-                     "initialTimeSource":"end",
-                     "dateFormat":{
-                        "currentTime":"mmmm yyyy",
-                        "timelineTic":"yyyy"
-                      },
-                     "ignoreUnknownTileErrors":true,
-                     "clipToRectangle":true,
-                     "rectangle":[
-                        "112.0",
-                        "-48.0",
-                        "155.0",
-                        "-5.0"
-                     ],
-                     "featureInfoTemplate":{
-                        "name":"{{#value}}{{value}} MJ/m2{{/value}}",
-                        "template":"{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}"
-                     }
                   }
                ]
             }
