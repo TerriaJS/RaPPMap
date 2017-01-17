@@ -25,6 +25,19 @@ function RelatedMaps(props) {
             </p>
 
             <div className={classNames(PanelStyles.section, Styles.section)}>
+                <a target="_blank" href="http://nationalmap.gov.au/">
+                    <img className={Styles.image} src={require('../../wwwroot/images/nationalmap.jpg')}
+                         alt="NationalMap"/>
+                </a>
+
+                <a target="_blank" className={Styles.link} href="http://nationalmap.gov.au/">NationalMap</a>
+
+                <p>
+                    The NationalMap is a website for map-based access to spatial data from Australian government agencies. It is an initiative of the Australian Government's Department of the Prime Minister and Cabinet and the software has been developed by Data61 working closely with the Department of the Prime Minister and Cabinet, Geoscience Australia and other government agencies.
+                </p>
+            </div>
+
+            <div className={classNames(PanelStyles.section, Styles.section)}>
                 <a target="_blank" href="http://nationalmap.gov.au/renewables/">
                     <img className={Styles.image} src={require('../../wwwroot/images/aremi.jpg')}
                          alt="AREMI"/>

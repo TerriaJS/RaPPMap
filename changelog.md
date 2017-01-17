@@ -4,6 +4,7 @@
 
 * NCI logo added, GEOGLAM logo resized to be bigger, and all logos on white.
 * NDVI absolute replaces contents of Total Vegetation Cover (PV + NPV), and NDVI catalog group removed.
+* Added NationalMap to list of related maps
 
 #### 2016-11-22
 
