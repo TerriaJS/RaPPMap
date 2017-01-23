@@ -4,7 +4,12 @@
 
 * NCI logo added, GEOGLAM logo resized to be bigger, and all logos on white.
 * NDVI absolute replaces contents of Total Vegetation Cover (PV + NPV), and NDVI catalog group removed.
-* Added NationalMap to list of related maps
+* Added NationalMap to list of related maps.
+* Can now return TerriaJS JSON catalog items, which allows the return of charts with attributes such as per column chartLineColor, yAxisMin and yAxisMax. Specifying the units of the chart also allows multiple types of charts to be plotted on same chart with different axes.
+* Download as csv button restored for expanded chart.
+* New IP and port for Gsky dev server.
+* Fixed add existing polygon. Previously, in http://map.geo-rapp.org/#test, Test Data > WPS National Map Tests > Geojson input, select a region and run analysis. Then Add Data > Test Data > WPS National Map Tests > Geojson input > existing polygon, then try to cancel. You couldn't: cancel hung. Now fixed.
+* Bug fix for WMTS; this service should now be supported.
 
 #### 2016-11-22
 
