@@ -4,6 +4,9 @@ Change Log
 ### 2016-08-22
 
 * Update layer names to match recently changed names in auscover server
+### 2016-11-15
+
+* Fixed link to NEII viewer in Related Maps.
 
 ### 2016-07-15
 
