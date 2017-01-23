@@ -41,7 +41,7 @@
             {
                "name":"WPS from GSky-dev",
                "description":"All WPS services from GSky development server",
-               "url":"http://130.56.242.20:8080/ows",
+               "url":"http://130.56.242.26:8080/ows",
                "type":"wps-getCapabilities"
             }
          ]
