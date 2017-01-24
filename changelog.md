@@ -2,6 +2,7 @@
 
 #### 2017-01-??
 
+* Added layers showing geopolitical areas and labels.
 * NCI logo added, GEOGLAM logo resized to be bigger, and all logos on white.
 * NDVI absolute replaces contents of Total Vegetation Cover (PV + NPV), and NDVI catalog group removed.
 * Added NationalMap to list of related maps.
