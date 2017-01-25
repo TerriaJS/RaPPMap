@@ -137,8 +137,8 @@ terria.start({
             var message = '';
             message += require('./lib/Views/GlobalDisclaimer.html');
             var options = {
-                title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
-                confirmText: 'I Agree',
+                title: 'GEOGLAM RAPP Map',
+                confirmText: 'Continue',
                 width: 600,
                 height: 550,
                 message: message

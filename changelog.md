@@ -1,9 +1,10 @@
 ### GEOGLAM RAPP Change Log
 
-#### 2017-01-??
+#### 2017-01-25
 
 * Added layers showing geopolitical areas and labels.
-* NCI logo added, GEOGLAM logo resized to be bigger, and all logos on white.
+* GEOGLAM logo bigger and by itself in brand bar.
+* Disclaimer now has information about the map and contains logos for Data61, NCI, Datacube, NLP, TERN Auscover, GEO and GEOGLAM.
 * NDVI absolute replaces contents of Total Vegetation Cover (PV + NPV), and NDVI catalog group removed.
 * Added NationalMap to list of related maps.
 * Can now return TerriaJS JSON catalog items, which allows the return of charts with attributes such as per column chartLineColor, yAxisMin and yAxisMax. Specifying the units of the chart also allows multiple types of charts to be plotted on same chart with different axes.
