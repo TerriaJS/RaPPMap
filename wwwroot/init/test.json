@@ -30,21 +30,18 @@
                "name":"WPS National Map Tests",
                "description":"All WPS services from NM test server",
                "url":"http://sparrow.terria.io:5001/wps",
-               "useKvp":false,
                "type":"wps-getCapabilities"
             },
             {
                "name":"WPS from GSky",
                "description":"All WPS services from GSky server",
                "url":"http://gsky.nci.org.au/ows",
-               "useKvp":false,
                "type":"wps-getCapabilities"
             },
             {
                "name":"WPS from GSky-dev",
                "description":"All WPS services from GSky development server",
                "url":"http://130.56.242.26/ows",
-               "useKvp":false,
                "type":"wps-getCapabilities"
             }
          ]
