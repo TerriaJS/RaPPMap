@@ -120,16 +120,12 @@ terria.start({
         updateApplicationOnHashChange(terria, window);
         updateApplicationOnMessageFromParentWindow(terria, window);
 
-        //temp
-        var createAustraliaBaseMapOptions = require('./lib/ViewModels/createAustraliaBaseMapOptions');
+        // Create the various base map options.
         var createGlobalBaseMapOptions = require('./lib/ViewModels/createGlobalBaseMapOptions');
         var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
-        // Create the various base map options.
-        var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
-        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', false);
+        selectBaseMap(terria, globalBaseMaps, 'Positron (Light)', false);
 
         // Add the disclaimer, if specified
         if (defined(terria.configParameters.globalDisclaimer)) {
@@ -147,7 +143,7 @@ terria.start({
             viewState.notifications.push(options);
         }
 
-        render(terria, allBaseMaps, viewState);
+        render(terria, globalBaseMaps, viewState);
     } catch (e) {
         console.error(e);
         console.error(e.stack);
