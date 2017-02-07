@@ -12,7 +12,6 @@
       "type": "wps",
       "url": "http://qld.auscover.org.au/wps?service=WPS",
       "identifier": "timeSeries",
-      "opacity": 0.6,
       "ignoreUnknownTileErrors": true
     },
     {
@@ -20,7 +19,6 @@
       "type": "wps",
       "url": "http://qld.auscover.org.au/wps?service=WPS",
       "identifier": "timeSeriesPoly",
-      "opacity": 0.6,
       "ignoreUnknownTileErrors": true
     },
     {
@@ -75,7 +73,7 @@
               "url": "http://gsky.nci.org.au/ows",
               "isEnabled": true,
               "layers": "global:frac_cover",
-              "opacity": 0.6,
+              "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -97,7 +95,7 @@
                   "type": "wms",
                   "url": "http://gsky.nci.org.au/ows",
                   "layers": "global:ndvi",
-                  "opacity": 0.6,
+                  "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
                     "currentTime": "mmmm yyyy",
@@ -114,7 +112,7 @@
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-dev/ows",
                   "layers": "global:fractcover_modis_anomaly_monthly",
-                  "opacity": 0.6,
+                  "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
                     "currentTime": "mmmm yyyy",
@@ -147,7 +145,7 @@
               "type": "wms",
               "url": "http://qld.auscover.org.au/geoserver-dev/ows",
               "layers": "global:Monthly Rainfall - CHIRPS",
-              "opacity": 0.6,
+              "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -169,7 +167,7 @@
               "type": "wms",
               "url": "http://qld.auscover.org.au/geoserver-dev/ows",
               "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
-              "opacity": 0.6,
+              "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -198,7 +196,7 @@
               "type": "wms",
               "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
               "layers": "soilm",
-              "opacity": 0.6,
+              "opacity": 1,
               "parameters": {
                 "styles": "boxfill/csiro_anomaly"
               },
@@ -223,7 +221,7 @@
               "type": "wms",
               "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
               "layers": "soilm_anomaly",
-              "opacity": 0.6,
+              "opacity": 1,
               "parameters": {
                 "styles": "boxfill/csiro_anomaly"
               },
@@ -257,7 +255,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au/geoserver-dev/ows",
           "layers": "global:Livestock-prodsys",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
             "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Classification</td>    <td>{{Classification}}</td>  </tr></tbody></table>",
@@ -269,7 +267,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au:80/geoserver-dev/ows",
           "layers": "global:GLOBCOVER_L4_200901_200912_V2.3.color._fixed",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true
         },
         {
@@ -277,7 +275,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au:80/geoserver-dev/ows",
           "layers": "global:Terrestrial Ecoregions of the World",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
             "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Ecoregion Name</td>    <td>{{eco_name}}</td>  </tr><tr>    <td>Realm</td>    <td>{{wwf_realm2}}</td>  </tr><tr>    <td>Major Habitat Type</td>    <td>{{wwf_mhtnam}}</td>  </tr><tr>    <td>Data Source</td>    <td>{{sourcedata}}</td>  </tr></tbody></table>",
@@ -296,7 +294,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au/geoserver-dev/ows",
           "layers": "global:Cattle-density",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
             "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
@@ -313,7 +311,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au/geoserver-dev/ows",
           "layers": "global:Sheep-density",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
             "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -330,7 +328,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au/geoserver-dev/ows",
           "layers": "global:Goat-density",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
             "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -347,7 +345,7 @@
           "type": "wms",
           "url": "http://qld.auscover.org.au/geoserver-dev/ows",
           "layers": "global:Cattle-equivalents",
-          "opacity": 0.6,
+          "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
             "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
