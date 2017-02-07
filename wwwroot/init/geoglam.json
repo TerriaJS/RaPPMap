@@ -50,6 +50,7 @@
       "opacity": 1,
       "ignoreUnknownTileErrors": true,
       "keepOnTop": true,
+      "isEnabled": true,
       "info": [
         {
           "name": "Licensing, Terms & Conditions",
