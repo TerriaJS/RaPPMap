@@ -35,6 +35,7 @@
       "ignoreUnknownTileErrors": true,
       "keepOnTop": true,
       "isEnabled": true,
+      "isLegendVisible": false,
       "info": [
         {
           "name": "Licensing, Terms & Conditions",
@@ -51,6 +52,7 @@
       "ignoreUnknownTileErrors": true,
       "keepOnTop": true,
       "isEnabled": true,
+      "isLegendVisible": false,
       "info": [
         {
           "name": "Licensing, Terms & Conditions",
