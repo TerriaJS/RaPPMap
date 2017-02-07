@@ -121,8 +121,8 @@ terria.start({
         updateApplicationOnMessageFromParentWindow(terria, window);
 
         //temp
-        var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
-        var createGlobalBaseMapOptions = require('terriajs/lib/ViewModels/createGlobalBaseMapOptions');
+        var createAustraliaBaseMapOptions = require('./lib/ViewModels/createAustraliaBaseMapOptions');
+        var createGlobalBaseMapOptions = require('./lib/ViewModels/createGlobalBaseMapOptions');
         var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
         // Create the various base map options.
         var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
