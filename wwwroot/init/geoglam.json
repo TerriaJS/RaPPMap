@@ -27,10 +27,10 @@
     },
 
     {
-      "name": "Area Borders",
+      "name": "Area Labels",
       "type": "wmts",
       "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
-      "layer": "Reference_Features",
+      "layer": "Reference_Labels",
       "opacity": 1,
       "ignoreUnknownTileErrors": true,
       "keepOnTop": true,
@@ -44,10 +44,10 @@
       ]
     },
     {
-      "name": "Area Labels",
+      "name": "Area Borders",
       "type": "wmts",
       "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
-      "layer": "Reference_Labels",
+      "layer": "Reference_Features",
       "opacity": 1,
       "ignoreUnknownTileErrors": true,
       "keepOnTop": true,
