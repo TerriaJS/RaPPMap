@@ -72,7 +72,7 @@ write_files:
     chdir /opt/geoglam-nm
     setuid nobody
     setgid nogroup
-    exec bash -c "npm start 2>&1 | logger -t geoglam-nm"
+    exec bash -c "./node_modules/terriajs-server/run_server.sh --config-file productionserverconfig.json 2>&1 | logger -t geoglam-nm"
 
  - path: /opt/geoglam-nm/wwwroot/robots.txt
    content: |
@@ -83,7 +83,7 @@ write_files:
 runcmd:
  - echo 'APT::Periodic::Unattended-Upgrade "1";' >> /etc/apt/apt.conf.d/10periodic
 
- # install awscli
+# install awscli
  - curl -so awscli-bundle.zip https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
  - unzip awscli-bundle.zip
  - sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
@@ -94,7 +94,7 @@ runcmd:
  - echo '*/5 * * * * ubuntu /opt/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --disk-space-util --disk-path=/ --from-cron' > /etc/cron.d/cloudwatch
 
 # geoglam-nm
- - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/geoglam-nm-master-2016-07-07.tar.gz /opt/geoglam-nm.tar.gz
+ - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/map/geoglam-nm-master-2017-02-08.tar.gz /opt/geoglam-nm.tar.gz
  - mkdir /opt/geoglam-nm
  - tar xzf /opt/geoglam-nm.tar.gz -C /opt/geoglam-nm
  - touch /opt/geoglam-nm/terriajs.pid /opt/geoglam-nm/terriajs-server.log
@@ -104,4 +104,3 @@ runcmd:
  - service rsyslog restart
  - service varnish restart
  - service geoglam-nm start
-

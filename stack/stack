@@ -31,7 +31,7 @@ aws cloudformation $1-stack \
     --template-body file://stack.json \
     --capabilities CAPABILITY_IAM \
     --parameters \
-      ParameterKey=ImageId,ParameterValue='ami-2a644649' \
+      ParameterKey=ImageId,ParameterValue='ami-c83335ab' \
       ParameterKey=InstanceType,ParameterValue='t2.medium' \
       ParameterKey=MaxSize,ParameterValue='2' \
       ParameterKey=MinSize,ParameterValue='2' \
@@ -40,7 +40,7 @@ aws cloudformation $1-stack \
       ParameterKey=WebServerPort,ParameterValue='80' \
       ParameterKey=StartupGracePeriod,ParameterValue='1200' \
       ParameterKey=HealthCheck,ParameterValue='HTTP:80/' \
-      ParameterKey=KeyName,ParameterValue='rdengate'
+      ParameterKey=KeyName,ParameterValue='mhenrikson'
 
 
 
