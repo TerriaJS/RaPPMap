@@ -16,7 +16,7 @@ npm install
 gulp release
 
 mkdir -p target
-tar czf ${TARGET} \
+gtar czf ${TARGET} \
   productionserverconfig.json \
   package.json \
   node_modules \
