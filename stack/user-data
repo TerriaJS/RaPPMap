@@ -94,7 +94,7 @@ runcmd:
  - echo '*/5 * * * * ubuntu /opt/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail --disk-space-util --disk-path=/ --from-cron' > /etc/cron.d/cloudwatch
 
 # geoglam-nm
- - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/map/geoglam-nm-master-2017-02-17.tar.gz /opt/geoglam-nm.tar.gz
+ - aws s3 cp --region ap-southeast-2 s3://geoglam-apps/map/geoglam-nm-master-2017-02-17-3-ge3030c04.tar.gz /opt/geoglam-nm.tar.gz
  - mkdir /opt/geoglam-nm
  - tar xzf /opt/geoglam-nm.tar.gz -C /opt/geoglam-nm
  - touch /opt/geoglam-nm/terriajs.pid /opt/geoglam-nm/terriajs-server.log
