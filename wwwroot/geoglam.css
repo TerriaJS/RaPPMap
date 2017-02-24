@@ -1,0 +1,67 @@
+
+
+// Global Livestock Custom hack
+
+.livestock0:after {
+  content: ""
+}
+
+.livestock1:after {
+  content: "LGY Rangeland-Hyperarid"
+}
+
+.livestock2:after {
+  content: "LGA Rangeland-Arid/Semi Arid"
+}
+
+.livestock3:after {
+  content: "LGH Rangeland-Humid/Sub Humid"
+}
+
+.livestock4:after {
+  content: "LGT Rangeland-Temperate/Tropical Highland"
+}
+
+.livestock5:after {
+  content: "MRY Mixed Rainfed-Hyperarid"
+}
+
+.livestock6:after {
+  content: "MRA Mixed Rainfed-Arid/Semi Arid"
+}
+
+.livestock7:after {
+  content: "MRH Mixed Rainfed-Humid/Sub Humid"
+}
+
+.livestock8:after {
+  content: "MRT Mixed Rainfed-Temperate/Tropical Highland"
+}
+
+.livestock9:after {
+  content: "MIY Mixed Irrigated-Hyperarid"
+}
+
+.livestock10:after {
+  content: "MIA Mixed Irrigated-Arid/Semi Arid"
+}
+
+.livestock11:after {
+  content: "MIH Mixed Irrigated-Humid/Sub Humid"
+}
+
+.livestock12:after {
+  content: "MIT Mixed Irrigated-Temperate/Tropical Highland"
+}
+
+.livestock13:after {
+  content: "Urban"
+}
+
+.livestock14:after {
+  content: "Other"
+}
+
+.livestock255:after {
+  content: "No classification"
+}
