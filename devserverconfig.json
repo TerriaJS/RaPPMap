@@ -22,5 +22,5 @@
     "gov.nz",
     "gsky.nci.org.au"
   ],
-  "trustProxy": "loopback, uniquelocal"
+  "trustProxy": "loopback, linklocal, uniquelocal"
 }
