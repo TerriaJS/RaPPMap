@@ -269,7 +269,7 @@
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
           "featureInfoTemplate": {
-            "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='globcover{{Classification}}'></span></p>"
+            "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='globcover{{PALETTE_INDEX}}'></span></p>"
           }
         },
         {
