@@ -110,7 +110,7 @@
                 {
                   "name": "Total Vegetation Cover Anomaly",
                   "type": "wms",
-                  "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+                  "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
                   "layers": "global:fractcover_modis_anomaly_monthly",
                   "opacity": 1,
                   "initialTimeSource": "end",
@@ -143,7 +143,7 @@
             {
               "name": "Absolute",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
               "layers": "global:Monthly Rainfall - CHIRPS",
               "opacity": 1,
               "initialTimeSource": "end",
@@ -165,7 +165,7 @@
             {
               "name": "Anomalies",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
               "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
               "opacity": 1,
               "initialTimeSource": "end",
@@ -253,7 +253,7 @@
         {
           "name": "Global Livestock Production Systems",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:Livestock-prodsys",
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
@@ -264,15 +264,18 @@
         {
           "name": "Land Cover (GlobCover, 2009)",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:GLOBCOVER_L4_200901_200912_V2.3.color._fixed",
           "opacity": 1,
-          "ignoreUnknownTileErrors": true
+          "ignoreUnknownTileErrors": true,
+          "featureInfoTemplate": {
+            "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='globcover{{Classification}}'></span></p>"
+          }
         },
         {
           "name": "Terrestrial Ecoregions of the World",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:Terrestrial Ecoregions of the World",
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
@@ -291,7 +294,7 @@
         {
           "name": "Cattle Density",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:Cattle-density",
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
@@ -308,7 +311,7 @@
         {
           "name": "Sheep Density",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:Sheep-density",
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
@@ -325,7 +328,7 @@
         {
           "name": "Goat Density",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:Goat-density",
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
@@ -342,7 +345,7 @@
         {
           "name": "Cattle Equivalents",
           "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-dev/ows",
+          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
           "layers": "global:Cattle-equivalents",
           "opacity": 1,
           "ignoreUnknownTileErrors": true,
