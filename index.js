@@ -64,7 +64,7 @@ registerAnalytics();
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria({
     appName: "GEOGLAM RAPP",
-    supportEmail: "geoglam_support@lists.nicta.com.au",
+    supportEmail: "geoglam.rapp@csiro.au",
     baseUrl: "build/TerriaJS",
     cesiumBaseUrl: undefined, // for default
     analytics: new GoogleAnalytics()

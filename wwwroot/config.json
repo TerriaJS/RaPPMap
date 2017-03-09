@@ -13,7 +13,7 @@
             "title": "Disclaimer"
         },
         "appName": "GEOGLAM RAPP",
-        "supportEmail": "geoglam_support@lists.nicta.com.au",
+        "supportEmail": "geoglam.rapp@csiro.au",
         "brandBarElements": [
              "<a target=\"_blank\" href=\"http://www.geo-rapp.org/\"><img class=\"rapp\" src=\"images/rapp_logo.svg\" height=\"75px\" alt=\"GEOGLAM RAPP\" title=\"Version: {{version}}\"/></a>"
         ],
