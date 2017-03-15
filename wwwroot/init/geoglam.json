@@ -8,54 +8,6 @@
   "services": [],
   "catalog": [
     {
-      "name": "TimeSeries",
-      "type": "wps",
-      "url": "http://qld.auscover.org.au/wps?service=WPS",
-      "identifier": "timeSeries",
-      "ignoreUnknownTileErrors": true
-    },
-    {
-      "name": "TimeSeriesPolygon",
-      "type": "wps",
-      "url": "http://qld.auscover.org.au/wps?service=WPS",
-      "identifier": "timeSeriesPoly",
-      "ignoreUnknownTileErrors": true
-    },
-    {
-      "name": "Area Labels",
-      "type": "wmts",
-      "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
-      "layer": "Reference_Labels",
-      "opacity": 1,
-      "ignoreUnknownTileErrors": true,
-      "keepOnTop": true,
-      "isEnabled": true,
-      "isLegendVisible": false,
-      "info": [
-        {
-          "name": "Licensing, Terms & Conditions",
-          "content": "<a href='https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/'>NASA Open Data Policy</a> <p> We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, <a href='https://earthdata.nasa.gov'>https://earthdata.nasa.gov</a>) with funding provided by NASA/HQ."
-        }
-      ]
-    },
-    {
-      "name": "Area Borders",
-      "type": "wmts",
-      "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
-      "layer": "Reference_Features",
-      "opacity": 1,
-      "ignoreUnknownTileErrors": true,
-      "keepOnTop": true,
-      "isEnabled": true,
-      "isLegendVisible": false,
-      "info": [
-        {
-          "name": "Licensing, Terms & Conditions",
-          "content": "<a href='https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/'>NASA Open Data Policy</a> <p> We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, <a href='https://earthdata.nasa.gov'>https://earthdata.nasa.gov</a>) with funding provided by NASA/HQ."
-        }
-      ]
-    },
-    {
       "name": "Vegetation Dynamics",
       "type": "group",
       "preserveOrder": true,
