@@ -9,6 +9,14 @@
   "catalog": [
 
     {
+       "name":"Query Data",
+       "url":"http://130.56.242.26/ows",
+       "type":"wps",
+       "identifier": "geometryDrill",
+       "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+    },
+
+    {
       "name": "Vegetation Dynamics",
       "type": "group",
       "preserveOrder": true,
