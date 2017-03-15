@@ -19,8 +19,7 @@
     "githubusercontent.com",
     "gov",
     "gov.uk",
-    "gov.nz",
-    "gsky.nci.org.au"
+    "gov.nz"
   ],
   "trustProxy": "loopback, linklocal, uniquelocal"
 }
