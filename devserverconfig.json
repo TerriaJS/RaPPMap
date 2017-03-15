@@ -1,6 +1,7 @@
 {
   "port": 3001,
   "allowProxyFor": [
+    "130.56.242.26",
     "adelaidecitycouncil.com",
     "arcgis.com",
     "argo.jcommops.org",
