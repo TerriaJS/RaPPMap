@@ -41,10 +41,21 @@
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Photosynthetic Vegetation (PV)</td>    <td>{{PV}} %</td>  </tr>  <tr>    <td>Non-Photosynthetic Vegetation (NPV)</td>    <td>{{NPV}} %</td>  </tr>  <tr>    <td>Bare Soil (BS)</td>    <td>{{BS}} %</td>  </tr></tbody></table>",
-                "name": "Exposed proportion of PV, NPV or BS within each pixel"
-              }
+              "getFeatureInfoFormats": [{"type": "none"}]
+            },
+            {
+              "name": "Normalised Difference Vegetation Index (NDVI)",
+              "type": "wms",
+              "url": "http://gsky.nci.org.au/ows",
+              "layers": "modis:NDVI",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [{"type": "none"}]
             },
             {
               "name": "Total Cover",
@@ -55,7 +66,7 @@
                   "name": "Total Vegetation Cover (PV + NPV)",
                   "type": "wms",
                   "url": "http://gsky.nci.org.au/ows",
-                  "layers": "global:ndvi",
+                  "layers": "global:totalcover",
                   "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
@@ -63,10 +74,7 @@
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true,
-                  "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Total Cover</td>    <td>{{Total_Cover}} %</td>  </tr></tbody></table>",
-                    "name": "Total vegetation cover as a percentage"
-                  }
+                  "getFeatureInfoFormats": [{"type": "none"}]
                 },
                 {
                   "name": "Total Vegetation Cover Anomaly",
@@ -102,10 +110,10 @@
           "preserveOrder": true,
           "items": [
             {
-              "name": "Absolute",
+              "name": "CHIRPS Precipitation - Absolute",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Monthly Rainfall - CHIRPS",
+              "url": "http://gsky.nci.org.au/ows",
+              "layers": "chirps2.0",
               "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
@@ -113,15 +121,7 @@
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall</td>    <td>{{Rainfall [mm per month]}} mm/month</td>  </tr></tbody></table>",
-                "name": "Rainfall",
-                "formats": {
-                  "Rainfall [mm per month]": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
+              "getFeatureInfoFormats": [{"type": "none"}]
             },
             {
               "name": "Anomalies",
