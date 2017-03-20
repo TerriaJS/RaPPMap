@@ -48,6 +48,13 @@ body {
         // background-repeat: no-repeat;
 
     }
+
+
+    .tjs-legend__legend__inner img {
+      max-height: 400px
+    }
+
+
     /* Background of whole left panel
     .tjs-standard-user-interface__sidePanel {
         background:$dark-darker;
