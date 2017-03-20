@@ -41,7 +41,7 @@
             {
                "name":"WPS from GSky-dev",
                "description":"All WPS services from GSky development server",
-               "url":"http://130.56.242.26/ows",
+               "url":"http://gsky-dev.nci.org.au/ows",
                "type":"wps-getCapabilities"
             }
          ]
