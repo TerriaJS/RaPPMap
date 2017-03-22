@@ -20,7 +20,7 @@
         "proj4ServiceBaseUrl": "proj4def/",
         "developerAttribution": {
             "text": "DATA61",
-            "link": "http://www.data61.csiro.au"
+            "link": "https://data61.csiro.au/"
         }
     }
 }
