@@ -1,9 +1,9 @@
 {
   "homeCamera": {
-    "west": -141,
-    "south": -59,
-    "east": 134,
-    "north": 64
+    "west": -170,
+    "south": -60,
+    "east": 170,
+    "north": 60
   },
   "services": [],
   "catalog": [
@@ -32,7 +32,6 @@
               "name": "Vegetation Fractional Cover (PV, NPV & BS)",
               "type": "wms",
               "url": "http://gsky.nci.org.au/ows",
-              "isEnabled": true,
               "layers": "global:frac_cover",
               "opacity": 1,
               "initialTimeSource": "end",
@@ -61,12 +60,14 @@
               "name": "Total Cover",
               "type": "group",
               "preserveOrder": true,
+              "isOpen": true,
               "items": [
                 {
                   "name": "Total Vegetation Cover (PV + NPV)",
                   "type": "wms",
                   "url": "http://gsky.nci.org.au/ows",
                   "layers": "global:totalcover",
+                  "isEnabled": true,
                   "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
