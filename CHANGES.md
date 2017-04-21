@@ -4,6 +4,10 @@ Change Log
 ### 2016-08-22
 
 * Update layer names to match recently changed names in auscover server
+### 2017-XX-XX
+
+* Change deafult mobile view mode to a configuration parameter rather then hard coded to 2D.
+
 ### 2016-11-15
 
 * Fixed link to NEII viewer in Related Maps.

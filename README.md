@@ -12,9 +12,3 @@ Ancilliary datasets include:
 * Livestock use: biomass use, production, feed efficiency, excretion, and greenhouse gas emissions
 
 GEOGLAM RAPP is based on NICTA's Open Source TerriaJS web geospatial platform: https://github.com/TerriaJS/terriajs
-
-Deploying
----------
-
-To deploy, see the README.md in the stack directory.
-

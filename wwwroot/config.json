@@ -21,7 +21,8 @@
         "developerAttribution": {
             "text": "DATA61",
             "link": "https://data61.csiro.au/"
-        }
+        },
+        "mobileDefaultViewerMode": "2d"
     }
 }
 
