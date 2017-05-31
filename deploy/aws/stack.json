@@ -32,7 +32,7 @@
   },
   "Parameters": {
     "HostedZoneName": {
-      "Default": "map.geo-rapp.org.",
+      "Default": "geoglam.d61.io.",
       "Type": "String"
     },
     "ImageId": {
