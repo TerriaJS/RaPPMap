@@ -1,9 +1,9 @@
 {
   "homeCamera": {
     "west": 112,
-    "south": -48,
-    "east": 155,
-    "north": -5
+    "south": -44,
+    "east": 154,
+    "north": -10
   },
   "services": [],
   "catalog": [
