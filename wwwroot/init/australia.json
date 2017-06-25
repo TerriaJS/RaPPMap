@@ -8,27 +8,6 @@
   "services": [],
   "catalog": [
     {
-      "id": "0f672cbc-e0ca-4eed-815d-85d75eec39e7",
-      "isEnabled": true,
-      "name": "Density distribution of feral camels across their range in Australia, 2008",
-      "debugFormat": "Esri REST",
-      "type": "ckan-resource",
-      "url": "proxy/_60s/https://data.gov.au",
-      "datasetId": "2016-soe-lan-camel-density-distribution",
-      "resourceId": "0f672cbc-e0ca-4eed-815d-85d75eec39e7",
-      "cacheDuration": "1h",
-      "itemProperties": {
-        "hideSource": true,
-        "info": [
-          {
-            "name": "Metadata and Data Source",
-            "content": "https://data.gov.au/dataset/2016-soe-lan-camel-density-distribution"
-          }
-        ],
-        "cacheDuration": "1h"
-      }
-    },
-    {
       "id": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
       "name": "Observed major vegetation subgroups, from Australia’s NVIS database",
       "debugFormat": "Esri REST",
