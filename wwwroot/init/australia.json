@@ -8,6 +8,92 @@
   "services": [],
   "catalog": [
     {
+      "name": "Australia",
+      "nameInCatalog": "Australia",
+      "type": "group",
+			"isPromoted": true,
+			"isOpen": true,
+      "items": [
+        {
+          "name": "Land Use / Land Cover",
+          "nameInCatalog": "Land Use / Land Cover",
+          "type": "group",
+          "items": [
+            {
+              "name": "Catchment Scale Land Use 2016",
+              "type": "wms",
+              "url": "http://data.gov.au/geoserver/ws_e4c5c71b_8d42_4ff3_b062_e24a76a636c9/wms",
+              "layers": "ft_e4c5c71b_8d42_4ff3_b062_e24a76a636c9",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Land Cover",
+              "type": "esri-mapServer",
+              "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
+              "layers": "Land_Cover_Class",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "IBRA - [Broken]",
+              "type": "wms",
+              "url": "http://www.environment.gov.au/mapping/services/ogc_services/IBRA7_Subregions/MapServer/WMSServer",
+              "layers": "",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Collaborative Australian Protected Areas Database (CAPAD)",
+              "type": "wms",
+              "url": "http://www.environment.gov.au/mapping/services/ogc_services/capad/MapServer/WMSServer",
+              "layers": "Protected_Areas_2014",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Physiographic Regions of Australia - [Broken]",
+              "type": "wms",
+              "url": "https://data.gov.au/dataset/a0f3edb6-6afd-4eb9-a9be-e815f8ec4eab",
+              "layers": "",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            }
+          ]
+        },
+        {
+          "name": "Boundaries",
+          "nameInCatalog": "Boundaries",
+          "type": "group",
+          "items": [
+            {
+              "name": "Natural Resource Management Regions 2011",
+              "type": "wms",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+              "layers": "admin_bnds:NRMR_2011_AUST",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Local Government Areas",
+              "type": "esri-mapServer",
+              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/7",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Land Tenure",
+              "type": "wms",
+              "url": "http://services.ga.gov.au/gis/services/Land_Tenure_WM/MapServer/WMSServer",
+              "layers": "Land_Tenure",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
       "name": "Observed major vegetation subgroups, from Australia’s NVIS database",
       "debugFormat": "Esri REST",
