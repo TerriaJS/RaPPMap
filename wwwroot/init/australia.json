@@ -21,9 +21,9 @@
           "items": [
             {
               "name": "Catchment Scale Land Use 2016",
-              "type": "wms",
-              "url": "http://data.gov.au/geoserver/ws_e4c5c71b_8d42_4ff3_b062_e24a76a636c9/wms",
-              "layers": "ft_e4c5c71b_8d42_4ff3_b062_e24a76a636c9",
+              "url": "https://data.gov.au",
+              "type": "ckan-resource",
+              "datasetId": "catchment-scale-land-use-of-australia-update-may-2016",
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
