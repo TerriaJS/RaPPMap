@@ -9,17 +9,18 @@
   "catalog": [
     {
       "name": "Australia",
-      "nameInCatalog": "Australia",
       "type": "group",
-			"isPromoted": true,
-			"isOpen": true,
+      "isPromoted": true,
+      "isOpen": true,
+      "preserveOrder": true,
       "items": [
         {
           "name": "Land Use / Land Cover",
-          "nameInCatalog": "Land Use / Land Cover",
           "type": "group",
+          "preserveOrder": true,
           "items": [
             {
+              "id": "7f857b39-04a0-4463-af8b-9fb039518060",
               "name": "Catchment Scale Land Use 2016",
               "url": "https://data.gov.au",
               "type": "ckan-resource",
@@ -28,6 +29,7 @@
               "ignoreUnknownTileErrors": true
             },
             {
+              "id": "9d0ec459-74a2-4793-b6a9-4485596f24c3",
               "name": "Land Cover",
               "type": "esri-mapServer",
               "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
@@ -36,14 +38,16 @@
               "ignoreUnknownTileErrors": true
             },
             {
-              "name": "IBRA - [Broken]",
-              "type": "wms",
-              "url": "http://www.environment.gov.au/mapping/services/ogc_services/IBRA7_Subregions/MapServer/WMSServer",
-              "layers": "",
+              "id": "fa38c8cc-8e0e-4609-8743-1e6461e44118",
+              "name": "IBRA",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/IBRA7_Subregions/MapServer",
+              "layers": "IBRA7 subregions",
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
             {
+              "id": "126ff747-1594-4168-b691-ddaf2202d56e",
               "name": "Collaborative Australian Protected Areas Database (CAPAD)",
               "type": "wms",
               "url": "http://www.environment.gov.au/mapping/services/ogc_services/capad/MapServer/WMSServer",
@@ -52,10 +56,12 @@
               "ignoreUnknownTileErrors": true
             },
             {
-              "name": "Physiographic Regions of Australia - [Broken]",
-              "type": "wms",
-              "url": "https://data.gov.au/dataset/a0f3edb6-6afd-4eb9-a9be-e815f8ec4eab",
-              "layers": "",
+              "id": "14887171-5354-4bb3-8395-986d6f41a947",
+              "name": "Physiographic Regions of Australia",
+              "type": "esri-mapServer",
+              "url": "http://www.asris.csiro.au/arcgis/rest/services/ASRIS/ASRIS_L2/MapServer",
+              "layers": "L2 Regions",
+              "opacity": 1.0,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             }
@@ -63,18 +69,22 @@
         },
         {
           "name": "Boundaries",
-          "nameInCatalog": "Boundaries",
           "type": "group",
+          "preserveOrder": true,
           "items": [
             {
+              "id": "4d4a1bf8-e943-4152-b422-03ebc627a4a3",
               "name": "Natural Resource Management Regions 2011",
               "type": "wms",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows?service=WMS&version=1.3.0&request=GetCapabilities",
               "layers": "admin_bnds:NRMR_2011_AUST",
+              "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+              "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
             {
+              "id": "061918ff-d997-4c42-8e5e-6dd9452ceb61",
               "name": "Local Government Areas",
               "type": "esri-mapServer",
               "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/7",
@@ -82,6 +92,7 @@
               "ignoreUnknownTileErrors": true
             },
             {
+              "id": "57ab8c75-c14f-4f65-879d-b14d0a9d7f42",
               "name": "Land Tenure",
               "type": "wms",
               "url": "http://services.ga.gov.au/gis/services/Land_Tenure_WM/MapServer/WMSServer",
