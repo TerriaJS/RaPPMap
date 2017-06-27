@@ -50,12 +50,6 @@ const GeoJsonParameterEditor = React.createClass({
         this.props.parameter.subtype = GeoJsonParameter.PolygonType;
     },
 
-    selectRegionOnMap() {
-        this.props.parameter.value = undefined;
-        RegionParameterEditor.selectOnMap(this.props.viewState, this.props.parameter, this.props.previewed);
-        this.props.parameter.subtype = GeoJsonParameter.RegionType;
-    },
-
     selectExistingPolygonOnMap() {
         this.props.parameter.value = undefined;
         SelectAPolygonParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
