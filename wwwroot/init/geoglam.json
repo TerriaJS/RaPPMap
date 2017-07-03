@@ -37,7 +37,7 @@
               "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
-                "currentTime": "mmmm yyyy",
+                "currentTime": "d mmmm yyyy",
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
@@ -52,7 +52,7 @@
               "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
-                "currentTime": "mmmm yyyy",
+                "currentTime": "d mmmm yyyy",
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
@@ -74,7 +74,7 @@
                   "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
-                    "currentTime": "mmmm yyyy",
+                    "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true,
