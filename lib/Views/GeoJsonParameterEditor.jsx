@@ -50,12 +50,6 @@ const GeoJsonParameterEditor = React.createClass({
         this.props.parameter.subtype = GeoJsonParameter.PolygonType;
     },
 
-    selectRegionOnMap() {
-        this.props.parameter.value = undefined;
-        RegionParameterEditor.selectOnMap(this.props.viewState, this.props.parameter, this.props.previewed);
-        this.props.parameter.subtype = GeoJsonParameter.RegionType;
-    },
-
     selectExistingPolygonOnMap() {
         this.props.parameter.value = undefined;
         SelectAPolygonParameterEditor.selectOnMap(this.props.previewed.terria, this.props.viewState, this.props.parameter);
@@ -77,20 +71,12 @@ const GeoJsonParameterEditor = React.createClass({
                             <strong>Point (lat/lon)</strong>
                     </button>
                     <button type="button"
-                            style={{"marginLeft" : "1.3333%",
-                                    "marginRight" : "0.66666%"
+                            style={{"marginLeft" : "2%",
+                                    "marginRight" : "2%"
                                   }}
                             onClick={this.selectPolygonOnMap}
                             className={LocalStyles.btnLocationSelector}>
                             <strong>Polygon</strong>
-                    </button>
-                    <button type="button"
-                            style={{"marginLeft" : "0.666666%",
-                                    "marginRight" : "1.3333%"
-                                  }}
-                            onClick={this.selectRegionOnMap}
-                            className={LocalStyles.btnLocationSelector}>
-                            <strong>Region</strong>
                     </button>
                     <button type="button"
                             onClick={this.selectExistingPolygonOnMap}
