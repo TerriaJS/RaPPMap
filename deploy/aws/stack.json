@@ -175,7 +175,7 @@
                 [
                   "arn:aws:acm:ap-southeast-2:",
                   {
-                    "Ref": "SSLCertificateId"
+                    "Ref": "AWS::AccountId"
                   },
                   ":certificate/",
                   {
