@@ -60,6 +60,9 @@
       "Default": "0",
       "Type": "Number"
     },
+    "SSLCertificateId": {
+      "Type": "String"
+    },
     "StartupGracePeriod": {
       "Default": "600",
       "Type": "Number"
@@ -159,6 +162,28 @@
             },
             "LoadBalancerPort": "80",
             "Protocol": "HTTP"
+          },
+          {
+            "InstancePort": {
+              "Ref": "WebServerPort"
+            },
+            "LoadBalancerPort": "443",
+            "Protocol": "HTTPS",
+            "SSLCertificateId": {
+              "Fn::Join" : [
+                "",
+                [
+                  "arn:aws:acm:ap-southeast-2:",
+                  {
+                    "Ref": "SSLCertificateId"
+                  },
+                  ":certificate/",
+                  {
+                    "Ref": "SSLCertificateId"
+                  }
+                ]
+              ]
+            }
           }
         ]
       },

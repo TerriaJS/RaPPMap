@@ -43,5 +43,6 @@ aws cloudformation $1-stack \
       ParameterKey=KeyName,ParameterValue="${npm_package_config_awsKeyName}" \
       ParameterKey=MinSize,ParameterValue="2" \
       ParameterKey=RootVolumeSize,ParameterValue='16' \
+      ParameterKey=SSLCertificateId,ParameterValue='1de5476c-3cee-4433-9012-e20146ff1fba' \
       ParameterKey=UserDataBase64,ParameterValue="${BASE64_USERDATA}" \
       # ParameterKey=SpotPrice,ParameterValue='0.041' \
