@@ -7,16 +7,14 @@
   },
   "services": [],
   "catalog": [
-
     {
-       "name":"Query Data",
-       "url":"http://gsky.nci.org.au/ows",
-       "type":"wps",
-       "isPromoted": true,
-       "identifier": "geometryDrill",
-       "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+      "name": "Analysis Tools",
+      "url": "http://gsky.nci.org.au/ows",
+      "type": "wps",
+      "isPromoted": true,
+      "identifier": "geometryDrill",
+      "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes Photosyntetic Vegetation cover fraction (PV), Non-Photosyntetic Vegetation cover fraction (NPV), Bare Soil Fraciton (BS), Total Vegetation cover fraction (PV+NPV) and Precipitation."
     },
-
     {
       "name": "Vegetation Dynamics",
       "type": "group",
@@ -42,7 +40,11 @@
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [{"type": "none"}]
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
             },
             {
               "name": "Normalised Difference Vegetation Index (NDVI)",
@@ -57,7 +59,11 @@
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [{"type": "none"}]
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
             },
             {
               "name": "Total Cover",
@@ -79,7 +85,11 @@
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [{"type": "none"}]
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
                 },
                 {
                   "name": "Total Vegetation Cover Anomaly",
@@ -127,7 +137,11 @@
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [{"type": "none"}]
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
             },
             {
               "name": "Anomalies",
@@ -328,7 +342,6 @@
         }
       ]
     },
-
     {
       "name": "Ancillary",
       "type": "group",
@@ -369,6 +382,5 @@
         }
       ]
     }
-
   ]
 }
