@@ -9,12 +9,12 @@
   "catalog": [
 
     {
-       "name":"Query Data",
+       "name":"Analysis Tools",
        "url":"http://gsky.nci.org.au/ows",
        "type":"wps",
        "isPromoted": true,
        "identifier": "geometryDrill",
-       "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+       "description": "This function can be used to analyse the Vegetation Fractional Cover layer data. The output is a graph which includes Photosynthetic Vegetation cover fraction (PV), Non-Photosynthetic Vegetation cover fraction (NPV), Bare Soil fraction (BS), Total Vegetation cover fraciton (PV+NPV) and Precipitation."
     },
 
     {
