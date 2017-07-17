@@ -30,7 +30,7 @@
             },
             {
               "id": "9d0ec459-74a2-4793-b6a9-4485596f24c3",
-              "name": "Land Cover",
+              "name": "Dynamic Land Cover Dataset (Geoscience Australia)",
               "type": "esri-mapServer",
               "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
               "layers": "Land_Cover_Class",
@@ -39,7 +39,7 @@
             },
             {
               "id": "fa38c8cc-8e0e-4609-8743-1e6461e44118",
-              "name": "IBRA",
+              "name": "Interim Biogeographic Regionalisation for Australia (IBRA) version 7.0",
               "type": "esri-mapServer",
               "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/IBRA7_Subregions/MapServer",
               "layers": "IBRA7 subregions",
@@ -143,6 +143,49 @@
                   }
                 ],
                 "cacheDuration": "1h"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TERN Auscover Layers",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Seasonal fractional cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "fractional_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              }
+            },
+            {
+              "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "ground_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              }
+            },
+            {
+              "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "persistent_green",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
               }
             }
           ]
