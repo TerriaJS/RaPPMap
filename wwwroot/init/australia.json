@@ -153,6 +153,7 @@
           "preserveOrder": true,
           "items": [
             {
+              "id": "d1d7d2ce-a702-4305-a030-4c49c208963e",
               "name": "Seasonal fractional cover - Landsat, JRSRP algorithm",
               "type": "wms",
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
@@ -165,6 +166,7 @@
               }
             },
             {
+              "id": "5270734b-48bc-41e6-9723-583dce66c356",
               "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
               "type": "wms",
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
@@ -177,6 +179,7 @@
               }
             },
             {
+              "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
               "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
               "type": "wms",
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
