@@ -164,6 +164,32 @@
               },
               "ignoreUnknownTileErrors": true,
               "cacheDuration": "2h"
+            },
+            {
+              "name": "Seasonal ground cover (\"cover under trees\")- Landsat, JRSRP algorithm",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "ground_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmmm yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "cacheDuration": "2h"
+            },
+            {
+              "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "persistent_green",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmmm yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "cacheDuration": "2h"
             }
           ]
         },
