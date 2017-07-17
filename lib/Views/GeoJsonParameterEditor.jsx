@@ -88,6 +88,11 @@ const GeoJsonParameterEditor = React.createClass({
                        type="text"
                        readOnly
                        value={GeoJsonParameterEditor.getDisplayValue(this.props.parameter.value, this.props.parameter)}/>
+                <If condition={GeoJsonParameterEditor.getDisplayValue(this.props.parameter.value, this.props.parameter)==""}>
+                    <div>
+                        Nothing has been selected, please use the buttons above to make a selection.
+                    </div>
+                </If>
             </div>
         );
     }
