@@ -90,7 +90,7 @@ const GeoJsonParameterEditor = React.createClass({
                        value={GeoJsonParameterEditor.getDisplayValue(this.props.parameter.value, this.props.parameter)}/>
                 <If condition={GeoJsonParameterEditor.getDisplayValue(this.props.parameter.value, this.props.parameter)==""}>
                     <div>
-                        No region selected. Please select a region before performing the query.
+                        Nothing has been selected, please use the buttons above to make a selection.
                     </div>
                 </If>
             </div>
