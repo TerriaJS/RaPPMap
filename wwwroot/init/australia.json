@@ -30,7 +30,7 @@
             },
             {
               "id": "9d0ec459-74a2-4793-b6a9-4485596f24c3",
-              "name": "Land Cover",
+              "name": "Dynamic Land Cover Dataset (Geoscience Australia)",
               "type": "esri-mapServer",
               "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
               "layers": "Land_Cover_Class",
@@ -39,7 +39,7 @@
             },
             {
               "id": "fa38c8cc-8e0e-4609-8743-1e6461e44118",
-              "name": "IBRA",
+              "name": "Interim Biogeographic Regionalisation for Australia (IBRA) version 7.0",
               "type": "esri-mapServer",
               "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/IBRA7_Subregions/MapServer",
               "layers": "IBRA7 subregions",
@@ -61,9 +61,135 @@
               "type": "esri-mapServer",
               "url": "http://www.asris.csiro.au/arcgis/rest/services/ASRIS/ASRIS_L2/MapServer",
               "layers": "L2 Regions",
-              "opacity": 1.0,
+              "opacity": 1,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
+              "name": "Observed major vegetation subgroups, from Australia’s NVIS database",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-climate-scenarios-observed",
+              "resourceId": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-climate-scenarios-observed"
+                  }
+                ],
+                "cacheDuration": "1h"
+              }
+            },
+            {
+              "id": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
+              "name": "Australian land use at the national scale, 2010–11",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-aus-land-use",
+              "resourceId": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-aus-land-use"
+                  }
+                ],
+                "cacheDuration": "1h"
+              }
+            },
+            {
+              "id": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
+              "name": "Extent of all forms of vegetation across Australia",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-integrated-vegetation",
+              "resourceId": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-integrated-vegetation"
+                  }
+                ],
+                "cacheDuration": "1h"
+              }
+            },
+            {
+              "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "name": "Generalised map of soil orders for Australia",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-soil-classification",
+              "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
+                  }
+                ],
+                "cacheDuration": "1h"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TERN Auscover Layers",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "d1d7d2ce-a702-4305-a030-4c49c208963e",
+              "name": "Seasonal fractional cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "fractional_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              }
+            },
+            {
+              "id": "5270734b-48bc-41e6-9723-583dce66c356",
+              "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "ground_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              }
+            },
+            {
+              "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
+              "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "persistent_green",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              }
             }
           ]
         },
@@ -103,86 +229,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
-      "name": "Observed major vegetation subgroups, from Australia’s NVIS database",
-      "debugFormat": "Esri REST",
-      "type": "ckan-resource",
-      "url": "proxy/_60s/https://data.gov.au",
-      "datasetId": "2016-soe-lan-climate-scenarios-observed",
-      "resourceId": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
-      "cacheDuration": "1h",
-      "itemProperties": {
-        "hideSource": true,
-        "info": [
-          {
-            "name": "Metadata and Data Source",
-            "content": "https://data.gov.au/dataset/2016-soe-lan-climate-scenarios-observed"
-          }
-        ],
-        "cacheDuration": "1h"
-      }
-    },
-    {
-      "id": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
-      "name": "Australian land use at the national scale, 2010–11",
-      "debugFormat": "Esri REST",
-      "type": "ckan-resource",
-      "url": "proxy/_60s/https://data.gov.au",
-      "datasetId": "2016-soe-lan-aus-land-use",
-      "resourceId": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
-      "cacheDuration": "1h",
-      "itemProperties": {
-        "hideSource": true,
-        "info": [
-          {
-            "name": "Metadata and Data Source",
-            "content": "https://data.gov.au/dataset/2016-soe-lan-aus-land-use"
-          }
-        ],
-        "cacheDuration": "1h"
-      }
-    },
-    {
-      "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
-      "name": "Generalised map of soil orders for Australia",
-      "debugFormat": "Esri REST",
-      "type": "ckan-resource",
-      "url": "proxy/_60s/https://data.gov.au",
-      "datasetId": "2016-soe-lan-soil-classification",
-      "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
-      "cacheDuration": "1h",
-      "itemProperties": {
-        "hideSource": true,
-        "info": [
-          {
-            "name": "Metadata and Data Source",
-            "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
-          }
-        ],
-        "cacheDuration": "1h"
-      }
-    },
-    {
-      "id": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
-      "name": "Extent of all forms of vegetation across Australia",
-      "debugFormat": "Esri REST",
-      "type": "ckan-resource",
-      "url": "proxy/_60s/https://data.gov.au",
-      "datasetId": "2016-soe-lan-integrated-vegetation",
-      "resourceId": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
-      "cacheDuration": "1h",
-      "itemProperties": {
-        "hideSource": true,
-        "info": [
-          {
-            "name": "Metadata and Data Source",
-            "content": "https://data.gov.au/dataset/2016-soe-lan-integrated-vegetation"
-          }
-        ],
-        "cacheDuration": "1h"
-      }
     }
   ]
 }

@@ -1,5 +1,9 @@
 ### GEOGLAM RAPP Change Log
 
+#### 2017-##-##
+
+* Added distance measurement tool below the locate me button.
+
 #### 2017-01-25
 
 * Added layers showing geopolitical areas and labels.

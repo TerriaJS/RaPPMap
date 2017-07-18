@@ -9,7 +9,7 @@
   "catalog": [
 
     {
-       "name":"Query Data",
+       "name":"Analysis Tools",
        "url":"http://gsky.nci.org.au/ows",
        "type":"wps",
        "isPromoted": true,
