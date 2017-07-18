@@ -1,13 +1,12 @@
-import React from 'react';
-
 import Cartographic from 'terriajs-cesium/Source/Core/Cartographic';
 import CesiumMath from 'terriajs-cesium/Source/Core/Math';
 import defined from 'terriajs-cesium/Source/Core/defined';
 import Ellipsoid from 'terriajs-cesium/Source/Core/Ellipsoid';
+import featureDataToGeoJson from 'terriajs/lib/Map/featureDataToGeoJson';
 import knockout from 'terriajs-cesium/Source/ThirdParty/knockout';
-
 import MapInteractionMode from 'terriajs/lib/Models/MapInteractionMode';
 import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
+import React from 'react';
 import Styles from 'terriajs/lib/ReactViews/Analytics/parameter-editors.scss';
 import when from 'terriajs-cesium/Source/ThirdParty/when';
 
@@ -63,7 +62,11 @@ SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, paramete
             if (defined(pickedFeatures.pickPosition)) {
                 const value = pickedFeatures.features.map(function(feature) {
                         if (defined(feature.data)) {
-                            return feature.data;
+                            const geojson = featureDataToGeoJson(feature.data);
+                            if (geojson && !defined(geojson.id) && defined(feature.id)) {
+                                geojson.id = feature.id;
+                            }
+                            return geojson;
                         }
                         const positions = feature.polygon.hierarchy.getValue().positions.map(function(position) {
                             const cartographic = Ellipsoid.WGS84.cartesianToCartographic(position);
