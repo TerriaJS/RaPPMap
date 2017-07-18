@@ -1,5 +1,5 @@
 {
-  "name": "geoglam-rapp",
+  "name": "geoglam",
   "version": "0.0.1",
   "description": "Geospatial catalog explorer based on TerriaJS.",
   "license": "Apache-2.0",
