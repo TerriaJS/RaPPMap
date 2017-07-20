@@ -65,9 +65,12 @@ SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, paramete
             }
 
             const catalogItems = pickedFeatures.features.map(function(feature) {
-                let geojson = featureDataToGeoJson(feature.data);
-                if (geojson && !defined(geojson.id) && defined(feature.id)) {
-                    geojson.id = feature.id;
+                let geojson;
+                if (feature.data) {
+                    geojson = featureDataToGeoJson(feature.data);
+                    if (geojson && !defined(geojson.id) && defined(feature.id)) {
+                        geojson.id = feature.id;
+                    }
                 } else {
                     const positions = feature.polygon.hierarchy.getValue().positions.map(function(position) {
                         const cartographic = Ellipsoid.WGS84.cartesianToCartographic(position);
