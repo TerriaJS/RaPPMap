@@ -51,7 +51,7 @@
               "name": "Collaborative Australian Protected Areas Database (CAPAD)",
               "type": "wms",
               "url": "http://www.environment.gov.au/mapping/services/ogc_services/capad/MapServer/WMSServer",
-              "layers": "Protected_Areas_2014",
+              "layers": "Protected_Areas",
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
@@ -159,6 +159,7 @@
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
               "layers": "fractional_cover",
               "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -172,6 +173,21 @@
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
               "layers": "ground_cover",
               "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              }
+            },
+            {
+              "id": "835b0bc4-a803-4c75-913c-5200c7b8f35f",
+              "name": "Total Ground Cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "total_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/total_cover_legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -185,6 +201,7 @@
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
               "layers": "persistent_green",
               "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/persistent_green_legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
