@@ -1,13 +1,13 @@
-import React from 'react';
-
 import Cartographic from 'terriajs-cesium/Source/Core/Cartographic';
 import CesiumMath from 'terriajs-cesium/Source/Core/Math';
 import defined from 'terriajs-cesium/Source/Core/defined';
 import Ellipsoid from 'terriajs-cesium/Source/Core/Ellipsoid';
+import featureDataToGeoJson from 'terriajs/lib/Map/featureDataToGeoJson';
+import GeoJsonCatalogItem from 'terriajs/lib/Models/GeoJsonCatalogItem';
 import knockout from 'terriajs-cesium/Source/ThirdParty/knockout';
-
 import MapInteractionMode from 'terriajs/lib/Models/MapInteractionMode';
 import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
+import React from 'react';
 import Styles from 'terriajs/lib/ReactViews/Analytics/parameter-editors.scss';
 import when from 'terriajs-cesium/Source/ThirdParty/when';
 
@@ -60,30 +60,44 @@ SelectAPolygonParameterEditor.selectOnMap = function(terria, viewState, paramete
 
     knockout.getObservable(pickPolygonMode, 'pickedFeatures').subscribe(function(pickedFeatures) {
         when(pickedFeatures.allFeaturesAvailablePromise, function() {
-            if (defined(pickedFeatures.pickPosition)) {
-                const value = pickedFeatures.features.map(function(feature) {
-                        if (defined(feature.data)) {
-                            return feature.data;
-                        }
-                        const positions = feature.polygon.hierarchy.getValue().positions.map(function(position) {
-                            const cartographic = Ellipsoid.WGS84.cartesianToCartographic(position);
-                            return [CesiumMath.toDegrees(cartographic.longitude), CesiumMath.toDegrees(cartographic.latitude)];
-                        });
-
-                        return {
-                            id: feature.id,
-                            type: "Feature",
-                            properties: feature.properties,
-                            geometry: {
-                                coordinates: [[positions]],
-                                type: "MultiPolygon",
-                            }
-                        };
-                    });
-                parameter.value = value;
-                terria.mapInteractionModeStack.pop();
-                viewState.openAddData();
+            if (!defined(pickedFeatures.pickPosition)) {
+                return [];
             }
+
+            const catalogItems = pickedFeatures.features.map(function(feature) {
+                let geojson;
+                if (feature.data) {
+                    geojson = featureDataToGeoJson(feature.data);
+                    if (geojson && !defined(geojson.id) && defined(feature.id)) {
+                        geojson.id = feature.id;
+                    }
+                } else {
+                    const positions = feature.polygon.hierarchy.getValue().positions.map(function(position) {
+                        const cartographic = Ellipsoid.WGS84.cartesianToCartographic(position);
+                        return [CesiumMath.toDegrees(cartographic.longitude), CesiumMath.toDegrees(cartographic.latitude)];
+                    });
+
+                    geojson = {
+                        id: feature.id,
+                        type: "Feature",
+                        properties: feature.properties,
+                        geometry: {
+                            coordinates: [[positions]],
+                            type: "MultiPolygon",
+                        }
+                    };
+                }
+
+                const catalogItem = new GeoJsonCatalogItem(terria);
+                catalogItem.data = geojson;
+                return catalogItem;
+            });
+            const promises = catalogItems.map(item => item.load());
+            return when.all(promises).then(() => catalogItems);
+        }).then(function(catalogItems) {
+            parameter.value = catalogItems.map(item => item._readyData);
+            terria.mapInteractionModeStack.pop();
+            viewState.openAddData();
         });
     });
 
