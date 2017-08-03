@@ -94,7 +94,8 @@
                     "content": "https://data.gov.au/dataset/2016-soe-lan-climate-scenarios-observed"
                   }
                 ],
-                "cacheDuration": "1h"
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -114,7 +115,8 @@
                     "content": "https://data.gov.au/dataset/2016-soe-lan-aus-land-use"
                   }
                 ],
-                "cacheDuration": "1h"
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -134,7 +136,8 @@
                     "content": "https://data.gov.au/dataset/2016-soe-lan-integrated-vegetation"
                   }
                 ],
-                "cacheDuration": "1h"
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -154,7 +157,8 @@
                     "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
                   }
                 ],
-                "cacheDuration": "1h"
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -186,7 +190,9 @@
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
-              }
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
             },
             {
               "id": "5270734b-48bc-41e6-9723-583dce66c356",
@@ -200,7 +206,9 @@
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
-              }
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
             },
             {
               "id": "835b0bc4-a803-4c75-913c-5200c7b8f35f",
@@ -214,7 +222,9 @@
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
-              }
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
             },
             {
               "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
@@ -228,7 +238,9 @@
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
-              }
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
             }
           ]
         },
