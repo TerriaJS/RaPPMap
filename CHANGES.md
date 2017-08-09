@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+### 2017-07-09
+
+* Change the server config to allow files up to 20MB in size.
+
 ### 2016-08-22
 
 * Update layer names to match recently changed names in auscover server

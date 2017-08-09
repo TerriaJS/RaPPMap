@@ -24,5 +24,8 @@
     "www.abc.net.au",
     "www.dptiapps.com.au"
   ],
-  "trustProxy": "loopback, linklocal, uniquelocal"
+  "trustProxy": "loopback, linklocal, uniquelocal",
+
+  // The largest size, in bytes, of files we will convert using OGR2OGR.
+  "maxConversionSize": 20000000
 }
