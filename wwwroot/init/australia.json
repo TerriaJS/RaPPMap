@@ -35,7 +35,7 @@
               "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
               "layers": "Land_Cover_Class",
               "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "ignoreUnknownTileErrors": true 
             },
             {
               "id": "93a9b3b8-00b1-44f0-a202-d0e4f86271b8",
