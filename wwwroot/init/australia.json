@@ -35,7 +35,7 @@
               "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
               "layers": "Land_Cover_Class",
               "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "ignoreUnknownTileErrors": true 
             },
             {
               "id": "93a9b3b8-00b1-44f0-a202-d0e4f86271b8",
@@ -273,16 +273,26 @@
               "name": "Local Government Areas",
               "type": "esri-mapServer",
               "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/7",
+              "opacity": 1,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
             {
-              "id": "57ab8c75-c14f-4f65-879d-b14d0a9d7f42",
-              "name": "Land Tenure",
+              "name": "River Regions (Bureau of Meteorology)",
               "type": "wms",
-              "url": "http://services.ga.gov.au/gis/services/Land_Tenure_WM/MapServer/WMSServer",
-              "layers": "Land_Tenure",
+              "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
+              "layers": "ahgf_hrr:RiverRegion",
               "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Mesh Blocks (Australian Bureau of Statistics)",
+              "type": "wms",
+              "layers": "admin_bnds:MB_2011_ACT,admin_bnds:MB_2011_NSW,admin_bnds:MB_2011_NT,admin_bnds:MB_2011_OT,admin_bnds:MB_2011_QLD,admin_bnds:MB_2011_SA,admin_bnds:MB_2011_TAS,admin_bnds:MB_2011_VIC,admin_bnds:MB_2011_WA",
+              "opacity": 1,
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
+              "legendUrls": [],
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             }
