@@ -67,6 +67,10 @@
       "Default": "600",
       "Type": "Number"
     },
+    "StatusNotificationTopic": {
+      "Default": "arn:aws:sns:ap-southeast-2:242476885589:geoglam_service_status",
+      "Type": "String"
+    },
     "UserDataBase64": {
         "Type": "String"
     },
@@ -110,7 +114,18 @@
               "Ref": "AWS::StackName"
             }
           }
-        ]
+        ],
+        "NotificationConfiguration": {
+          "TopicARN": {
+            "Ref": "StatusNotificationTopic"
+          },
+          "NotificationTypes": [
+            "autoscaling:EC2_INSTANCE_LAUNCH",
+            "autoscaling:EC2_INSTANCE_LAUNCH_ERROR",
+            "autoscaling:EC2_INSTANCE_TERMINATE",
+            "autoscaling:EC2_INSTANCE_TERMINATE_ERROR"
+          ]
+        }
       },
       "Type": "AWS::AutoScaling::AutoScalingGroup",
       "UpdatePolicy": {
