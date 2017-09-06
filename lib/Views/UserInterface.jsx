@@ -7,6 +7,8 @@ import MenuItem from 'terriajs/lib/ReactViews/StandardUserInterface/customizable
 import RelatedMaps from './RelatedMaps';
 import { Menu, Nav } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
 import MeasureTool from 'terriajs/lib/ReactViews/Map/Navigation/MeasureTool';
+import CatalogShortcut from 'terriajs/lib/ReactViews/Map/Navigation/CatalogShortcut.jsx';
+import Icon from "terriajs/lib/ReactViews/Icon.jsx";
 
 import './global.scss';
 
@@ -19,6 +21,7 @@ export default function UserInterface(props) {
             </Menu>
             <Nav>
                 <MeasureTool terria={props.viewState.terria} key="measure-tool"/>
+                <CatalogShortcut terria={props.terria} viewState={props.viewState} catalogMember={props.terria.catalog.group.items[0].items[0]} glyph={Icon.GLYPHS.barChart}/>
             </Nav>
         </StandardUserInterface>
     );
