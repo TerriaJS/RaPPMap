@@ -9,12 +9,20 @@
   "catalog": [
 
     {
-       "name":"Analysis Tools",
-       "url":"http://gsky.nci.org.au/ows",
-       "type":"wps",
-       "isPromoted": true,
-       "identifier": "geometryDrill",
-       "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+      "name": "Analysis Tools",
+      "type": "group",
+      "preserveOrder": true,
+      "isOpen": true,
+      "items": [
+        {
+          "name":"Analysis Tools",
+          "url":"http://gsky.nci.org.au/ows",
+          "type":"wps",
+          "isPromoted": true,
+          "identifier": "geometryDrill",
+          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+        }
+      ]
     },
 
     {
