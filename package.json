@@ -19,7 +19,7 @@
     "awsS3PackagesPath": "s3://geoglam-apps/map",
     "awsRegion": "ap-southeast-2",
     "awsEc2InstanceType": "t2.medium",
-    "awsEc2ImageId": "ami-81dc32e3",
+    "awsEc2ImageId": "ami-4cc8232e",
     "awsKeyName": "mhenrikson",
     "awsS3ServerConfigOverridePath": "s3://geoglam-apps/map/privateserverconfig-2016-10-27.json",
     "awsS3ClientConfigOverridePath": "s3://geoglam-apps/map/privateclientconfig-2016-10-27.json"
@@ -54,7 +54,7 @@
     "semver": "^5.0.0",
     "style-loader": "^0.18.0",
     "svg-sprite-loader": "^3.4.0",
-    "terriajs": "5.5.0",
+    "terriajs": "5.5.3",
     "terriajs-catalog-editor": "^0.2.0",
     "terriajs-cesium": "1.33.3",
     "terriajs-schema": "latest",
