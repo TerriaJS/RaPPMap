@@ -9,69 +9,37 @@
   "catalog": [
 
     {
-       "name":"Analysis Tools",
-       "url":"http://gsky.nci.org.au/ows",
-       "type":"wps",
-       "isPromoted": true,
-       "identifier": "geometryDrill",
-       "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
-    },
-
-    {
-      "name": "Vegetation Dynamics",
+      "name": "Global",
       "type": "group",
       "preserveOrder": true,
-      "isOpen": true,
       "items": [
+
         {
-          "name": "Vegetation Cover",
+           "name": "Analysis Tools",
+           "url": "http://gsky.nci.org.au/ows",
+           "type": "wps",
+           "identifier": "geometryDrill",
+           "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+        },
+
+        {
+          "name": "Vegetation Dynamics",
           "type": "group",
           "preserveOrder": true,
           "isOpen": true,
           "items": [
             {
-              "name": "Vegetation Fractional Cover (PV, NPV & BS)",
-              "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:frac_cover",
-              "opacity": 1,
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [{"type": "none"}]
-            },
-            {
-              "name": "Normalised Difference Vegetation Index (NDVI)",
-              "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "modis:NDVI",
-              "opacity": 1,
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [{"type": "none"}]
-            },
-            {
-              "name": "Total Cover",
+              "name": "Vegetation Cover",
               "type": "group",
               "preserveOrder": true,
               "isOpen": true,
               "items": [
                 {
-                  "name": "Total Vegetation Cover (PV + NPV)",
+                  "name": "Vegetation Fractional Cover (PV, NPV & BS)",
                   "type": "wms",
                   "url": "http://gsky.nci.org.au/ows",
                   "cacheDuration": "2h",
-                  "layers": "global:totalcover",
-                  "isEnabled": true,
+                  "layers": "global:frac_cover",
                   "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
@@ -82,10 +50,95 @@
                   "getFeatureInfoFormats": [{"type": "none"}]
                 },
                 {
-                  "name": "Total Vegetation Cover Anomaly",
+                  "name": "Normalised Difference Vegetation Index (NDVI)",
+                  "type": "wms",
+                  "url": "http://gsky.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "modis:NDVI",
+                  "opacity": 1,
+                  "initialTimeSource": "end",
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [{"type": "none"}]
+                },
+                {
+                  "name": "Total Cover",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": true,
+                  "items": [
+                    {
+                      "name": "Total Vegetation Cover (PV + NPV)",
+                      "type": "wms",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "cacheDuration": "2h",
+                      "layers": "global:totalcover",
+                      "isEnabled": true,
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "dateFormat": {
+                        "currentTime": "d mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true,
+                      "getFeatureInfoFormats": [{"type": "none"}]
+                    },
+                    {
+                      "name": "Total Vegetation Cover Anomaly",
+                      "type": "wms",
+                      "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+                      "layers": "global:fractcover_modis_anomaly_monthly",
+                      "opacity": 1,
+                      "initialTimeSource": "end",
+                      "dateFormat": {
+                        "currentTime": "mmmm yyyy",
+                        "timelineTic": "yyyy"
+                      },
+                      "ignoreUnknownTileErrors": true,
+                      "featureInfoTemplate": {
+                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
+                        "name": "Difference in vegetation cover from mean"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Climate",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Rainfall",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "CHIRPS Precipitation - Absolute",
+                  "type": "wms",
+                  "url": "http://gsky.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "chirps2.0",
+                  "opacity": 1,
+                  "initialTimeSource": "end",
+                  "dateFormat": {
+                    "currentTime": "mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [{"type": "none"}]
+                },
+                {
+                  "name": "Anomalies",
                   "type": "wms",
                   "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-                  "layers": "global:fractcover_modis_anomaly_monthly",
+                  "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
                   "opacity": 1,
                   "initialTimeSource": "end",
                   "dateFormat": {
@@ -94,9 +147,228 @@
                   },
                   "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
-                    "name": "Difference in vegetation cover from mean"
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall Anomaly</td>    <td>{{Rainfall anomaly [mm per month]}} mm/month</td>  </tr></tbody></table>",
+                    "name": "Rainfall Anomaly",
+                    "formats": {
+                      "Rainfall anomaly [mm per month]": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                   }
+                }
+              ]
+            },
+            {
+              "name": "Soil Moisture",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Absolute",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
+                  "layers": "soilm",
+                  "opacity": 1,
+                  "parameters": {
+                    "styles": "boxfill/csiro_anomaly"
+                  },
+                  "initialTimeSource": "end",
+                  "dateFormat": {
+                    "currentTime": "mmmm yyyy",
+                    "timelineTic": "mmmm yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture</td>    <td>{{value}} %</td>  </tr></tbody></table>",
+                    "name": "Soil Moisture",
+                    "formats": {
+                      "value": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Anomalies",
+                  "type": "wms",
+                  "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
+                  "layers": "soilm_anomaly",
+                  "opacity": 1,
+                  "parameters": {
+                    "styles": "boxfill/csiro_anomaly"
+                  },
+                  "initialTimeSource": "end",
+                  "dateFormat": {
+                    "currentTime": "mmmm yyyy",
+                    "timelineTic": "mmmm yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture Anomaly</td>    <td>{{value}} %</td>  </tr></tbody></table>",
+                    "name": "Soil Moisture Anomaly",
+                    "formats": {
+                      "value": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Land Use & Land Cover",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Global Livestock Production Systems",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Livestock-prodsys",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
+              }
+            },
+            {
+              "name": "Land Cover (GlobCover, 2009)",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:GLOBCOVER_L4_200901_200912_V2.3.color._fixed",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='globcover{{PALETTE_INDEX}}'></span></p>"
+              }
+            },
+            {
+              "name": "Terrestrial Ecoregions of the World",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Terrestrial Ecoregions of the World",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Ecoregion Name</td>    <td>{{eco_name}}</td>  </tr><tr>    <td>Realm</td>    <td>{{wwf_realm2}}</td>  </tr><tr>    <td>Major Habitat Type</td>    <td>{{wwf_mhtnam}}</td>  </tr><tr>    <td>Data Source</td>    <td>{{sourcedata}}</td>  </tr></tbody></table>",
+                "name": "Terrestrial Ecoregions"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Livestock",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Cattle Density",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Cattle-density",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                "name": "Cattle density in 2006",
+                "formats": {
+                  "Density (heads per sq km)": {
+                    "maximumFractionDigits": 2
+                  }
+                }
+              }
+            },
+            {
+              "name": "Sheep Density",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Sheep-density",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                "name": "Sheep density in 2006",
+                "formats": {
+                  "Density(heads per sq km)": {
+                    "maximumFractionDigits": 2
+                  }
+                }
+              }
+            },
+            {
+              "name": "Goat Density",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Goat-density",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                "name": "Goat density in 2006",
+                "formats": {
+                  "Density(heads per sq km)": {
+                    "maximumFractionDigits": 2
+                  }
+                }
+              }
+            },
+            {
+              "name": "Cattle Equivalents",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Cattle-equivalents",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                "name": "FAO Livestock Unit North America density in 2006",
+                "formats": {
+                  "Density(heads per sq km)": {
+                    "maximumFractionDigits": 2
+                  }
+                }
+              }
+            }
+          ]
+        },
+
+        {
+          "name": "Ancillary",
+          "type": "group",
+          "items": [
+            {
+              "name": "Area Labels",
+              "type": "wmts",
+              "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
+              "layer": "Reference_Labels",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "keepOnTop": true,
+              "isEnabled": true,
+              "isLegendVisible": false,
+              "info": [
+                {
+                  "name": "Licensing, Terms & Conditions",
+                  "content": "<a href='https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/'>NASA Open Data Policy</a> <p> We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, <a href='https://earthdata.nasa.gov'>https://earthdata.nasa.gov</a>) with funding provided by NASA/HQ."
+                }
+              ]
+            },
+            {
+              "name": "Area Borders",
+              "type": "wmts",
+              "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
+              "layer": "Reference_Features",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "keepOnTop": true,
+              "isEnabled": true,
+              "isLegendVisible": false,
+              "info": [
+                {
+                  "name": "Licensing, Terms & Conditions",
+                  "content": "<a href='https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/'>NASA Open Data Policy</a> <p> We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, <a href='https://earthdata.nasa.gov'>https://earthdata.nasa.gov</a>) with funding provided by NASA/HQ."
                 }
               ]
             }
@@ -104,271 +376,299 @@
         }
       ]
     },
-    {
-      "name": "Climate",
-      "type": "group",
-      "preserveOrder": true,
-      "items": [
-        {
-          "name": "Rainfall",
-          "type": "group",
-          "preserveOrder": true,
-          "items": [
-            {
-              "name": "CHIRPS Precipitation - Absolute",
-              "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "chirps2.0",
-              "opacity": 1,
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [{"type": "none"}]
-            },
-            {
-              "name": "Anomalies",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
-              "opacity": 1,
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall Anomaly</td>    <td>{{Rainfall anomaly [mm per month]}} mm/month</td>  </tr></tbody></table>",
-                "name": "Rainfall Anomaly",
-                "formats": {
-                  "Rainfall anomaly [mm per month]": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Soil Moisture",
-          "type": "group",
-          "preserveOrder": true,
-          "items": [
-            {
-              "name": "Absolute",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
-              "layers": "soilm",
-              "opacity": 1,
-              "parameters": {
-                "styles": "boxfill/csiro_anomaly"
-              },
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmmm yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture</td>    <td>{{value}} %</td>  </tr></tbody></table>",
-                "name": "Soil Moisture",
-                "formats": {
-                  "value": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
-            },
-            {
-              "name": "Anomalies",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
-              "layers": "soilm_anomaly",
-              "opacity": 1,
-              "parameters": {
-                "styles": "boxfill/csiro_anomaly"
-              },
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmmm yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture Anomaly</td>    <td>{{value}} %</td>  </tr></tbody></table>",
-                "name": "Soil Moisture Anomaly",
-                "formats": {
-                  "value": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Land Use & Land Cover",
-      "type": "group",
-      "preserveOrder": true,
-      "items": [
-        {
-          "name": "Global Livestock Production Systems",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:Livestock-prodsys",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
-          }
-        },
-        {
-          "name": "Land Cover (GlobCover, 2009)",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:GLOBCOVER_L4_200901_200912_V2.3.color._fixed",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='globcover{{PALETTE_INDEX}}'></span></p>"
-          }
-        },
-        {
-          "name": "Terrestrial Ecoregions of the World",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:Terrestrial Ecoregions of the World",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Ecoregion Name</td>    <td>{{eco_name}}</td>  </tr><tr>    <td>Realm</td>    <td>{{wwf_realm2}}</td>  </tr><tr>    <td>Major Habitat Type</td>    <td>{{wwf_mhtnam}}</td>  </tr><tr>    <td>Data Source</td>    <td>{{sourcedata}}</td>  </tr></tbody></table>",
-            "name": "Terrestrial Ecoregions"
-          }
-        }
-      ]
-    },
-    {
-      "name": "Livestock",
-      "type": "group",
-      "preserveOrder": true,
-      "items": [
-        {
-          "name": "Cattle Density",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:Cattle-density",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
-            "name": "Cattle density in 2006",
-            "formats": {
-              "Density (heads per sq km)": {
-                "maximumFractionDigits": 2
-              }
-            }
-          }
-        },
-        {
-          "name": "Sheep Density",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:Sheep-density",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-            "name": "Sheep density in 2006",
-            "formats": {
-              "Density(heads per sq km)": {
-                "maximumFractionDigits": 2
-              }
-            }
-          }
-        },
-        {
-          "name": "Goat Density",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:Goat-density",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-            "name": "Goat density in 2006",
-            "formats": {
-              "Density(heads per sq km)": {
-                "maximumFractionDigits": 2
-              }
-            }
-          }
-        },
-        {
-          "name": "Cattle Equivalents",
-          "type": "wms",
-          "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-          "layers": "global:Cattle-equivalents",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "featureInfoTemplate": {
-            "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-            "name": "FAO Livestock Unit North America density in 2006",
-            "formats": {
-              "Density(heads per sq km)": {
-                "maximumFractionDigits": 2
-              }
-            }
-          }
-        }
-      ]
-    },
 
     {
-      "name": "Ancillary",
+      "name": "Australia",
       "type": "group",
+      "preserveOrder": true,
       "items": [
         {
-          "name": "Area Labels",
-          "type": "wmts",
-          "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
-          "layer": "Reference_Labels",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "keepOnTop": true,
-          "isEnabled": true,
-          "isLegendVisible": false,
-          "info": [
+          "name": "Land Use / Land Cover",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
             {
-              "name": "Licensing, Terms & Conditions",
-              "content": "<a href='https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/'>NASA Open Data Policy</a> <p> We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, <a href='https://earthdata.nasa.gov'>https://earthdata.nasa.gov</a>) with funding provided by NASA/HQ."
+              "id": "7f857b39-04a0-4463-af8b-9fb039518060",
+              "name": "Catchment Scale Land Use 2016",
+              "url": "https://data.gov.au",
+              "type": "ckan-resource",
+              "datasetId": "catchment-scale-land-use-of-australia-update-may-2016",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "9d0ec459-74a2-4793-b6a9-4485596f24c3",
+              "name": "Dynamic Land Cover Dataset (Geoscience Australia)",
+              "type": "esri-mapServer",
+              "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
+              "layers": "Land_Cover_Class",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "93a9b3b8-00b1-44f0-a202-d0e4f86271b8",
+              "name": "Interim Biogeographic Regionalisation for Australia (IBRA) version 7.0 Regions",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/IBRA7_Regions/MapServer",
+              "layers": "IBRA7 regions",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "fa38c8cc-8e0e-4609-8743-1e6461e44118",
+              "name": "Interim Biogeographic Regionalisation for Australia (IBRA) version 7.0 Subregions",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/IBRA7_Subregions/MapServer",
+              "layers": "IBRA7 subregions",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "126ff747-1594-4168-b691-ddaf2202d56e",
+              "name": "Collaborative Australian Protected Areas Database (CAPAD)",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/capad/MapServer",
+              "layers": "Protected_Areas",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "14887171-5354-4bb3-8395-986d6f41a947",
+              "name": "Physiographic Regions of Australia",
+              "type": "esri-mapServer",
+              "url": "http://www.asris.csiro.au/arcgis/rest/services/ASRIS/ASRIS_L2/MapServer",
+              "layers": "L2 Regions",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
+              "name": "Observed major vegetation subgroups, from Australia’s NVIS database",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-climate-scenarios-observed",
+              "resourceId": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-climate-scenarios-observed"
+                  }
+                ],
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "id": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
+              "name": "Australian land use at the national scale, 2010–11",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-aus-land-use",
+              "resourceId": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-aus-land-use"
+                  }
+                ],
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "id": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
+              "name": "Extent of all forms of vegetation across Australia",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-integrated-vegetation",
+              "resourceId": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-integrated-vegetation"
+                  }
+                ],
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "name": "Generalised map of soil orders for Australia",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-soil-classification",
+              "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
+                  }
+                ],
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "id": "bdb6a2aa-ad05-48bc-b8ce-216590485d2f",
+              "name": "Ramsar Wetlands of Australia",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Ramsar_Wetlands/MapServer",
+              "layers": "Ramsar_Wetlands",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
             }
           ]
         },
         {
-          "name": "Area Borders",
-          "type": "wmts",
-          "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
-          "layer": "Reference_Features",
-          "opacity": 1,
-          "ignoreUnknownTileErrors": true,
-          "keepOnTop": true,
-          "isEnabled": true,
-          "isLegendVisible": false,
-          "info": [
+          "name": "TERN Auscover Layers",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
             {
-              "name": "Licensing, Terms & Conditions",
-              "content": "<a href='https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/'>NASA Open Data Policy</a> <p> We acknowledge the use of imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (ESDIS, <a href='https://earthdata.nasa.gov'>https://earthdata.nasa.gov</a>) with funding provided by NASA/HQ."
+              "id": "d1d7d2ce-a702-4305-a030-4c49c208963e",
+              "name": "Seasonal fractional cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "fractional_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "5270734b-48bc-41e6-9723-583dce66c356",
+              "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "ground_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "835b0bc4-a803-4c75-913c-5200c7b8f35f",
+              "name": "Total Ground Cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "total_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/total_cover_legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
+              "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "persistent_green",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/persistent_green_legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            }
+          ]
+        },
+        {
+          "name": "Boundaries",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "9bbcc69f-2892-438a-93e0-31688c52e97c",
+              "name": "Australian Rangelands",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Rangelands/MapServer/",
+              "layers": "Rangelands",
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "4d4a1bf8-e943-4152-b422-03ebc627a4a3",
+              "name": "Natural Resource Management Regions 2015",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer/",
+              "layers": "NRM Regions",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "061918ff-d997-4c42-8e5e-6dd9452ceb61",
+              "name": "Local Government Areas",
+              "type": "esri-mapServer",
+              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/7",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "River Regions (Bureau of Meteorology)",
+              "type": "wms",
+              "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
+              "layers": "ahgf_hrr:RiverRegion",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Mesh Blocks (Australian Bureau of Statistics)",
+              "type": "wms",
+              "layers": "admin_bnds:MB_2011_ACT,admin_bnds:MB_2011_NSW,admin_bnds:MB_2011_NT,admin_bnds:MB_2011_OT,admin_bnds:MB_2011_QLD,admin_bnds:MB_2011_SA,admin_bnds:MB_2011_TAS,admin_bnds:MB_2011_VIC,admin_bnds:MB_2011_WA",
+              "opacity": 1,
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
+              "legendUrls": [],
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
             }
           ]
         }
       ]
     }
+
 
   ]
 }

@@ -23,7 +23,8 @@
             "link": "https://data61.csiro.au/"
         },
         "mobileDefaultViewerMode": "2d",
-        "experimentalFeatures": true
+        "experimentalFeatures": true,
+        "tabbedCatalog": true
     }
 }
 
