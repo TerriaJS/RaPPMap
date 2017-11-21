@@ -7,103 +7,87 @@
   },
   "services": [],
   "catalog": [
-
     {
       "name": "Global",
       "type": "group",
       "preserveOrder": true,
       "items": [
-
         {
-           "name": "Analysis Tools",
-           "url": "http://gsky.nci.org.au/ows",
-           "type": "wps",
-           "identifier": "geometryDrill",
-           "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
+          "name": "Analysis Tools",
+          "url": "http://gsky.nci.org.au/ows",
+          "type": "wps",
+          "identifier": "geometryDrill",
+          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
         },
-
         {
-          "name": "Vegetation Dynamics",
+          "name": "Vegetation Cover (500m)",
           "type": "group",
           "preserveOrder": true,
           "isOpen": true,
           "items": [
             {
-              "name": "Vegetation Cover",
-              "type": "group",
-              "preserveOrder": true,
-              "isOpen": true,
-              "items": [
+              "name": "Vegetation Fractional Cover (PV, NPV & BS)",
+              "type": "wms",
+              "url": "http://gsky.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:frac_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
                 {
-                  "name": "Vegetation Fractional Cover (PV, NPV & BS)",
-                  "type": "wms",
-                  "url": "http://gsky.nci.org.au/ows",
-                  "cacheDuration": "2h",
-                  "layers": "global:frac_cover",
-                  "opacity": 1,
-                  "initialTimeSource": "end",
-                  "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
-                    "timelineTic": "yyyy"
-                  },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [{"type": "none"}]
-                },
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Total Vegetation Cover (PV + NPV)",
+              "type": "wms",
+              "url": "http://gsky.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:totalcover",
+              "isEnabled": true,
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
                 {
-                  "name": "Normalised Difference Vegetation Index (NDVI)",
-                  "type": "wms",
-                  "url": "http://gsky.nci.org.au/ows",
-                  "cacheDuration": "2h",
-                  "layers": "modis:NDVI",
-                  "opacity": 1,
-                  "initialTimeSource": "end",
-                  "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
-                    "timelineTic": "yyyy"
-                  },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [{"type": "none"}]
-                },
+                  "type": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vegetation Indices (500m)",
+          "type": "group",
+          "preserveOrder": true,
+          "isOpen": true,
+          "items": [
+            {
+              "name": "Normalised Difference Vegetation Index (NDVI)",
+              "type": "wms",
+              "url": "http://gsky.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "modis:NDVI",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
                 {
-                  "name": "Total Cover",
-                  "type": "group",
-                  "preserveOrder": true,
-                  "isOpen": true,
-                  "items": [
-                    {
-                      "name": "Total Vegetation Cover (PV + NPV)",
-                      "type": "wms",
-                      "url": "http://gsky.nci.org.au/ows",
-                      "cacheDuration": "2h",
-                      "layers": "global:totalcover",
-                      "isEnabled": true,
-                      "opacity": 1,
-                      "initialTimeSource": "end",
-                      "dateFormat": {
-                        "currentTime": "d mmmm yyyy",
-                        "timelineTic": "yyyy"
-                      },
-                      "ignoreUnknownTileErrors": true,
-                      "getFeatureInfoFormats": [{"type": "none"}]
-                    },
-                    {
-                      "name": "Total Vegetation Cover Anomaly",
-                      "type": "wms",
-                      "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-                      "layers": "global:fractcover_modis_anomaly_monthly",
-                      "opacity": 1,
-                      "initialTimeSource": "end",
-                      "dateFormat": {
-                        "currentTime": "mmmm yyyy",
-                        "timelineTic": "yyyy"
-                      },
-                      "ignoreUnknownTileErrors": true,
-                      "featureInfoTemplate": {
-                        "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Anomaly</td>    <td>{{FC_ANOMALY}} %</td>  </tr>  </tbody></table>",
-                        "name": "Difference in vegetation cover from mean"
-                      }
-                    }
-                  ]
+                  "type": "none"
                 }
               ]
             }
@@ -115,105 +99,45 @@
           "preserveOrder": true,
           "items": [
             {
-              "name": "Rainfall",
-              "type": "group",
-              "preserveOrder": true,
-              "items": [
+              "name": "Rainfall (Global, 5km)",
+              "type": "wms",
+              "url": "http://gsky.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "chirps2.0",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
                 {
-                  "name": "CHIRPS Precipitation - Absolute",
-                  "type": "wms",
-                  "url": "http://gsky.nci.org.au/ows",
-                  "cacheDuration": "2h",
-                  "layers": "chirps2.0",
-                  "opacity": 1,
-                  "initialTimeSource": "end",
-                  "dateFormat": {
-                    "currentTime": "mmmm yyyy",
-                    "timelineTic": "yyyy"
-                  },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [{"type": "none"}]
-                },
-                {
-                  "name": "Anomalies",
-                  "type": "wms",
-                  "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-                  "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
-                  "opacity": 1,
-                  "initialTimeSource": "end",
-                  "dateFormat": {
-                    "currentTime": "mmmm yyyy",
-                    "timelineTic": "yyyy"
-                  },
-                  "ignoreUnknownTileErrors": true,
-                  "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall Anomaly</td>    <td>{{Rainfall anomaly [mm per month]}} mm/month</td>  </tr></tbody></table>",
-                    "name": "Rainfall Anomaly",
-                    "formats": {
-                      "Rainfall anomaly [mm per month]": {
-                        "maximumFractionDigits": 2
-                      }
-                    }
-                  }
+                  "type": "none"
                 }
               ]
             },
             {
-              "name": "Soil Moisture",
-              "type": "group",
-              "preserveOrder": true,
-              "items": [
-                {
-                  "name": "Absolute",
-                  "type": "wms",
-                  "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-global-monthly.nc",
-                  "layers": "soilm",
-                  "opacity": 1,
-                  "parameters": {
-                    "styles": "boxfill/csiro_anomaly"
-                  },
-                  "initialTimeSource": "end",
-                  "dateFormat": {
-                    "currentTime": "mmmm yyyy",
-                    "timelineTic": "mmmm yyyy"
-                  },
-                  "ignoreUnknownTileErrors": true,
-                  "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture</td>    <td>{{value}} %</td>  </tr></tbody></table>",
-                    "name": "Soil Moisture",
-                    "formats": {
-                      "value": {
-                        "maximumFractionDigits": 2
-                      }
-                    }
-                  }
-                },
-                {
-                  "name": "Anomalies",
-                  "type": "wms",
-                  "url": "http://qld.auscover.org.au/thredds/wms/auscover/spatial_other/csiro/amsr2/amsr2-soilm-anomaly-global-monthly.nc",
-                  "layers": "soilm_anomaly",
-                  "opacity": 1,
-                  "parameters": {
-                    "styles": "boxfill/csiro_anomaly"
-                  },
-                  "initialTimeSource": "end",
-                  "dateFormat": {
-                    "currentTime": "mmmm yyyy",
-                    "timelineTic": "mmmm yyyy"
-                  },
-                  "ignoreUnknownTileErrors": true,
-                  "featureInfoTemplate": {
-                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Soil Moisture Anomaly</td>    <td>{{value}} %</td>  </tr></tbody></table>",
-                    "name": "Soil Moisture Anomaly",
-                    "formats": {
-                      "value": {
-                        "maximumFractionDigits": 2
-                      }
-                    }
+              "name": "Rainfall Anomalies (Global, 5km) ",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall Anomaly</td>    <td>{{Rainfall anomaly [mm per month]}} mm/month</td>  </tr></tbody></table>",
+                "name": "Rainfall Anomaly",
+                "formats": {
+                  "Rainfall anomaly [mm per month]": {
+                    "maximumFractionDigits": 2
                   }
                 }
-              ]
+              }
             }
           ]
         },
@@ -222,17 +146,6 @@
           "type": "group",
           "preserveOrder": true,
           "items": [
-            {
-              "name": "Global Livestock Production Systems",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Livestock-prodsys",
-              "opacity": 1,
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
-              }
-            },
             {
               "name": "Land Cover (GlobCover, 2009)",
               "type": "wms",
@@ -263,6 +176,17 @@
           "type": "group",
           "preserveOrder": true,
           "items": [
+            {
+              "name": "Global Livestock Production Systems",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
+              "layers": "global:Livestock-prodsys",
+              "opacity": 1,
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
+              }
+            },
             {
               "name": "Cattle Density",
               "type": "wms",
@@ -333,7 +257,6 @@
             }
           ]
         },
-
         {
           "name": "Ancillary",
           "type": "group",
@@ -376,12 +299,97 @@
         }
       ]
     },
-
     {
       "name": "Australia",
       "type": "group",
       "preserveOrder": true,
       "items": [
+        {
+          "name": "TERN Auscover Layers",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "d1d7d2ce-a702-4305-a030-4c49c208963e",
+              "name": "Seasonal fractional cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "fractional_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Seasonal fractional cover - Sentinel 2, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "sentinel_fractional",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "5270734b-48bc-41e6-9723-583dce66c356",
+              "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "ground_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "835b0bc4-a803-4c75-913c-5200c7b8f35f",
+              "name": "Total Ground Cover (\"cover under trees\") - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "total_cover",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/total_cover_legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
+              "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "persistent_green",
+              "opacity": 1,
+              "legendUrl": "http://vegcover.com/vegmachine/assets/images/persistent_green_legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmm yyyy"
+              },
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            }
+          ]
+        },
         {
           "name": "Land Use / Land Cover",
           "type": "group",
@@ -447,7 +455,7 @@
             },
             {
               "id": "662d6a05-6bc9-40ab-aa4f-b9822dd22fcd",
-              "name": "Observed major vegetation subgroups, from Australia’s NVIS database",
+              "name": "Observed major vegetation subgroups, from Australiaâ€™s NVIS database",
               "debugFormat": "Esri REST",
               "type": "ckan-resource",
               "url": "proxy/_60s/https://data.gov.au",
@@ -468,7 +476,7 @@
             },
             {
               "id": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
-              "name": "Australian land use at the national scale, 2010–11",
+              "name": "Australian land use at the national scale, 2010â€“11",
               "debugFormat": "Esri REST",
               "type": "ckan-resource",
               "url": "proxy/_60s/https://data.gov.au",
@@ -542,77 +550,6 @@
           ]
         },
         {
-          "name": "TERN Auscover Layers",
-          "type": "group",
-          "preserveOrder": true,
-          "items": [
-            {
-              "id": "d1d7d2ce-a702-4305-a030-4c49c208963e",
-              "name": "Seasonal fractional cover - Landsat, JRSRP algorithm",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "fractional_cover",
-              "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "5270734b-48bc-41e6-9723-583dce66c356",
-              "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "ground_cover",
-              "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "835b0bc4-a803-4c75-913c-5200c7b8f35f",
-              "name": "Total Ground Cover (\"cover under trees\") - Landsat, JRSRP algorithm",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "total_cover",
-              "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/total_cover_legend.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
-              "name": "Seasonal Persistent Green Cover - Landsat, JRSRP algorithm",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "persistent_green",
-              "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/persistent_green_legend.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            }
-          ]
-        },
-        {
           "name": "Boundaries",
           "type": "group",
           "preserveOrder": true,
@@ -668,7 +605,5 @@
         }
       ]
     }
-
-
   ]
 }
