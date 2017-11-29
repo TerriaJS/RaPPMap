@@ -14,7 +14,7 @@
       "items": [
         {
           "name": "Analysis Tools",
-          "url": "http://gsky.nci.org.au/ows",
+          "url": "http://gsky-geoglam.nci.org.au/ows",
           "type": "wps",
           "identifier": "geometryDrill",
           "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
@@ -28,7 +28,7 @@
             {
               "name": "Vegetation Fractional Cover (PV, NPV & BS)",
               "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
               "layers": "global:frac_cover",
               "opacity": 1,
@@ -47,7 +47,7 @@
             {
               "name": "Total Vegetation Cover (PV + NPV)",
               "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
               "layers": "global:totalcover",
               "isEnabled": true,
@@ -75,7 +75,7 @@
             {
               "name": "Normalised Difference Vegetation Index (NDVI)",
               "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
               "layers": "modis:NDVI",
               "opacity": 1,
@@ -101,7 +101,7 @@
             {
               "name": "Rainfall (Global, 5km)",
               "type": "wms",
-              "url": "http://gsky.nci.org.au/ows",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
               "layers": "chirps2.0",
               "opacity": 1,
