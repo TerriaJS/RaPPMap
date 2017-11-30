@@ -1,4 +1,8 @@
 {
+  "corsDomains": [
+    "gibs.earthdata.nasa.gov",
+    "gsky-geoglam.nci.org.au"
+  ],
   "homeCamera": {
     "west": -170,
     "south": -60,
