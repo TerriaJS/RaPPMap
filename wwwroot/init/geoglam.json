@@ -35,6 +35,7 @@
               "cacheDuration": "2h",
               "layers": "global:frac_cover",
               "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
@@ -55,6 +56,7 @@
               "layers": "global:totalcover",
               "isEnabled": true,
               "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
@@ -82,6 +84,7 @@
               "cacheDuration": "2h",
               "layers": "modis:NDVI",
               "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/NDVI_Legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
@@ -108,6 +111,7 @@
               "cacheDuration": "2h",
               "layers": "chirps2.0",
               "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/CHIRPS_Legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
