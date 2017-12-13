@@ -16,13 +16,6 @@
       "preserveOrder": true,
       "items": [
         {
-          "name": "Analysis Tools",
-          "url": "http://gsky-geoglam.nci.org.au/ows",
-          "type": "wps",
-          "identifier": "geometryDrill",
-          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
-        },
-        {
           "name": "Vegetation Cover (500m)",
           "type": "group",
           "preserveOrder": true,
@@ -421,6 +414,15 @@
               "ignoreUnknownTileErrors": true
             },
             {
+              "name": "Vegetation height and structure",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "structuralForm",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
               "id": "93a9b3b8-00b1-44f0-a202-d0e4f86271b8",
               "name": "Interim Biogeographic Regionalisation for Australia (IBRA) version 7.0 Regions",
               "type": "esri-mapServer",
@@ -609,6 +611,20 @@
               "ignoreUnknownTileErrors": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Analysis Tools",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "name": "Analysis Tools",
+          "url": "http://gsky-geoglam.nci.org.au/ows",
+          "type": "wps",
+          "identifier": "geometryDrill",
+          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
         }
       ]
     }
