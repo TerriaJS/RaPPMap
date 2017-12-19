@@ -16,24 +16,17 @@
       "preserveOrder": true,
       "items": [
         {
-          "name": "Analysis Tools",
-          "url": "http://gsky-geoglam.nci.org.au/ows",
-          "type": "wps",
-          "identifier": "geometryDrill",
-          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation."
-        },
-        {
-          "name": "Vegetation Cover (500m)",
+          "name": "Vegetation Cover (MODIS, 500m)",
           "type": "group",
           "preserveOrder": true,
           "isOpen": true,
           "items": [
             {
-              "name": "Vegetation Fractional Cover (PV, NPV & BS)",
+              "name": "Vegetation Fractional Cover (PV, NPV & BS) (8-day) \nC6",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
-              "layers": "global:frac_cover",
+              "layers": "global:c6:frac_cover",
               "opacity": 1,
               "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
               "initialTimeSource": "end",
@@ -49,14 +42,94 @@
               ]
             },
             {
-              "name": "Total Vegetation Cover (PV + NPV)",
+              "name": "Total Vegetation Cover (PV+NPV, 8-day) \nC6",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
-              "layers": "global:totalcover",
+              "layers": "global:c6:total_cover",
               "isEnabled": true,
               "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend.png",
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_frac_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Total Vegetation Cover C6 (PV+NPV, Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_total_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Vegetation Cover Anomaly (Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_anom_frac_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Vegetation Cover Deciles (Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_decile_total_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
@@ -72,19 +145,19 @@
           ]
         },
         {
-          "name": "Vegetation Indices (500m)",
+          "name": "Vegetation Indices (MODIS, 500m)",
           "type": "group",
           "preserveOrder": true,
           "isOpen": true,
           "items": [
             {
-              "name": "Normalised Difference Vegetation Index (NDVI)",
+              "name": "Normalised Difference Vegetation Index (NDVI)\n\nC6",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
-              "layers": "modis:NDVI",
+              "layers": "modis:c6:NDVI",
               "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/NDVI_Legend.png",
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/NDVI_Legend_horiz.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
@@ -421,6 +494,15 @@
               "ignoreUnknownTileErrors": true
             },
             {
+              "name": "Vegetation height and structure",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "structuralForm",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
               "id": "93a9b3b8-00b1-44f0-a202-d0e4f86271b8",
               "name": "Interim Biogeographic Regionalisation for Australia (IBRA) version 7.0 Regions",
               "type": "esri-mapServer",
@@ -609,6 +691,20 @@
               "ignoreUnknownTileErrors": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Analysis Tools",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "name": "Analysis Tools (test)",
+          "url": "http://130.56.242.7/ows",
+          "type": "wps",
+          "identifier": "geometryDrill",
+          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation. \nTest instance, working with MODIS C6 and polygon size limit relaxed. "
         }
       ]
     }
