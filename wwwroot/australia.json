@@ -1,0 +1,36 @@
+{
+  "initialCamera": {
+    "west": 112,
+    "south": -44,
+    "east": 154,
+    "north": -10
+  },
+  "services": [],
+  "catalog": [
+    {
+      "name": "Australia",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "name": "Boundaries",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "4d4a1bf8-e943-4152-b422-03ebc627a4a3",
+              "name": "Natural Resource Management Regions 2015",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer/",
+              "layers": "NRM Regions",
+              "opacity": 1,
+              "isEnabled": true,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
