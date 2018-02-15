@@ -47,7 +47,6 @@
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
               "layers": "global:c6:total_cover",
-              "isEnabled": true,
               "opacity": 1,
               "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
               "initialTimeSource": "end",
@@ -89,6 +88,7 @@
               "cacheDuration": "2h",
               "layers": "global:c6:monthly_total_cover",
               "opacity": 1,
+              "isEnabled": true,
               "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
               "initialTimeSource": "end",
               "dateFormat": {
@@ -476,28 +476,29 @@
           "preserveOrder": true,
           "items": [
             {
-              "id": "7f857b39-04a0-4463-af8b-9fb039518060",
-              "name": "Catchment Scale Land Use 2016",
-              "url": "https://data.gov.au",
-              "type": "ckan-resource",
-              "datasetId": "catchment-scale-land-use-of-australia-update-may-2016",
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "9d0ec459-74a2-4793-b6a9-4485596f24c3",
-              "name": "Dynamic Land Cover Dataset (Geoscience Australia)",
+              "name": "Catchment Scale Land Use 2017",
+              "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_current/MapServer",
               "type": "esri-mapServer",
-              "url": "http://services.ga.gov.au/gis/rest/services/Land_Cover_WM/MapServer",
-              "layers": "Land_Cover_Class",
+              "opacity": 1,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
             {
-              "name": "Vegetation height and structure",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "structuralForm",
+              "id": "126ff747-1594-4168-b691-ddaf2202d56e",
+              "name": "Collaborative Australian Protected Areas Database (CAPAD)",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/capad/MapServer",
+              "layers": "Protected_Areas",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "bdb6a2aa-ad05-48bc-b8ce-216590485d2f",
+              "name": "Ramsar Wetlands of Australia",
+              "type": "esri-mapServer",
+              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Ramsar_Wetlands/MapServer",
+              "layers": "Ramsar_Wetlands",
               "opacity": 1,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
@@ -523,21 +524,41 @@
               "ignoreUnknownTileErrors": true
             },
             {
-              "id": "126ff747-1594-4168-b691-ddaf2202d56e",
-              "name": "Collaborative Australian Protected Areas Database (CAPAD)",
-              "type": "esri-mapServer",
-              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/capad/MapServer",
-              "layers": "Protected_Areas",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
               "id": "14887171-5354-4bb3-8395-986d6f41a947",
               "name": "Physiographic Regions of Australia",
               "type": "esri-mapServer",
               "url": "http://www.asris.csiro.au/arcgis/rest/services/ASRIS/ASRIS_L2/MapServer",
               "layers": "L2 Regions",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "name": "Generalised map of soil orders for Australia",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-soil-classification",
+              "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
+                  }
+                ],
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
+              }
+            },
+            {
+              "name": "Vegetation height and structure",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "structuralForm",
               "opacity": 1,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
@@ -562,79 +583,6 @@
                 "clipToRectangle": true,
                 "ignoreUnknownTileErrors": true
               }
-            },
-            {
-              "id": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
-              "name": "Australian land use at the national scale, 2010â€“11",
-              "debugFormat": "Esri REST",
-              "type": "ckan-resource",
-              "url": "proxy/_60s/https://data.gov.au",
-              "datasetId": "2016-soe-lan-aus-land-use",
-              "resourceId": "859254cb-58d8-4b96-9613-b330f7ba9ad6",
-              "cacheDuration": "1h",
-              "itemProperties": {
-                "hideSource": true,
-                "info": [
-                  {
-                    "name": "Metadata and Data Source",
-                    "content": "https://data.gov.au/dataset/2016-soe-lan-aus-land-use"
-                  }
-                ],
-                "clipToRectangle": true,
-                "ignoreUnknownTileErrors": true
-              }
-            },
-            {
-              "id": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
-              "name": "Extent of all forms of vegetation across Australia",
-              "debugFormat": "Esri REST",
-              "type": "ckan-resource",
-              "url": "proxy/_60s/https://data.gov.au",
-              "datasetId": "2016-soe-lan-integrated-vegetation",
-              "resourceId": "375427f2-b5f3-4854-8f91-01a88afe6ff8",
-              "cacheDuration": "1h",
-              "itemProperties": {
-                "hideSource": true,
-                "info": [
-                  {
-                    "name": "Metadata and Data Source",
-                    "content": "https://data.gov.au/dataset/2016-soe-lan-integrated-vegetation"
-                  }
-                ],
-                "clipToRectangle": true,
-                "ignoreUnknownTileErrors": true
-              }
-            },
-            {
-              "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
-              "name": "Generalised map of soil orders for Australia",
-              "debugFormat": "Esri REST",
-              "type": "ckan-resource",
-              "url": "proxy/_60s/https://data.gov.au",
-              "datasetId": "2016-soe-lan-soil-classification",
-              "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
-              "cacheDuration": "1h",
-              "itemProperties": {
-                "hideSource": true,
-                "info": [
-                  {
-                    "name": "Metadata and Data Source",
-                    "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
-                  }
-                ],
-                "clipToRectangle": true,
-                "ignoreUnknownTileErrors": true
-              }
-            },
-            {
-              "id": "bdb6a2aa-ad05-48bc-b8ce-216590485d2f",
-              "name": "Ramsar Wetlands of Australia",
-              "type": "esri-mapServer",
-              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Ramsar_Wetlands/MapServer",
-              "layers": "Ramsar_Wetlands",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
             }
           ]
         },
@@ -700,7 +648,7 @@
       "preserveOrder": true,
       "items": [
         {
-          "name": "Analysis Tools (test)",
+          "name": "Analysis Tools",
           "url": "http://130.56.242.7/ows",
           "type": "wps",
           "identifier": "geometryDrill",
