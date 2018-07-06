@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+### 2018-07-06
+
+* Update to [TerriaJS 6.0.2](https://github.com/TerriaJS/terriajs/blob/6.0.2/CHANGES.md).
+
 ### 2017-07-09
 
 * Change the server config to allow files up to 20MB in size.
