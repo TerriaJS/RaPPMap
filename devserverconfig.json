@@ -20,6 +20,8 @@
   ],
   "trustProxy": "loopback, linklocal, uniquelocal",
 
+  "proxyPostSizeLimit": 20000000,
+
   // The largest size, in bytes, of files we will convert using OGR2OGR.
   "maxConversionSize": 20000000
 }
