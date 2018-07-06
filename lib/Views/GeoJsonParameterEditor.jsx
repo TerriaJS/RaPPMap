@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import knockout from 'terriajs-cesium/Source/ThirdParty/knockout';
 
@@ -19,15 +20,17 @@ import SelectAPolygonParameterEditor from './SelectAPolygonParameterEditor';
 import RegionParameterEditor from 'terriajs/lib/ReactViews/Analytics/RegionParameterEditor';
 import RegionPicker from 'terriajs/lib/ReactViews/Analytics/RegionPicker';
 
+import createReactClass from 'create-react-class';
+
 import GeoJsonParameter from '../Models/GeoJsonParameter';
 
-const GeoJsonParameterEditor = React.createClass({
+const GeoJsonParameterEditor = createReactClass({
     mixins: [ObserveModelMixin],
 
     propTypes: {
-        previewed: React.PropTypes.object,
-        parameter: React.PropTypes.object,
-        viewState: React.PropTypes.object
+        previewed: PropTypes.object,
+        parameter: PropTypes.object,
+        viewState: PropTypes.object
     },
 
     componentWillMount() {
