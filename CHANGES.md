@@ -3,7 +3,7 @@ Change Log
 
 ### 2018-07-06
 
-* Update to [TerriaJS 6.0.2](https://github.com/TerriaJS/terriajs/blob/6.0.2/CHANGES.md).
+* Update to [TerriaJS 6.0.3](https://github.com/TerriaJS/terriajs/blob/6.0.3/CHANGES.md).
 
 ### 2017-07-09
 
@@ -14,6 +14,7 @@ Change Log
 * Update layer names to match recently changed names in auscover server
 ### 2017-XX-XX
 
+* Use `gtar` when building `make-package` on OSX to create GNU tar compatible tarballs.
 * Change deafult mobile view mode to a configuration parameter rather then hard coded to 2D.
 * Add Augmented Reality mode for iOS and Android devices with a compass and accelerometer, activated by enabling `experimentalFeatures` in `config.json` and adding the AugmentedVirtualityTool to the ExperimentalMenu in the customisable user interface.
 

@@ -8,16 +8,18 @@ import knockout from 'terriajs-cesium/Source/ThirdParty/knockout';
 import MapInteractionMode from 'terriajs/lib/Models/MapInteractionMode';
 import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Styles from 'terriajs/lib/ReactViews/Analytics/parameter-editors.scss';
 import when from 'terriajs-cesium/Source/ThirdParty/when';
+import createReactClass from 'create-react-class';
 
-const SelectAPolygonParameterEditor = React.createClass({
+const SelectAPolygonParameterEditor = createReactClass({
     mixins: [ObserveModelMixin],
 
     propTypes: {
-        previewed: React.PropTypes.object,
-        parameter: React.PropTypes.object,
-        viewState: React.PropTypes.object
+        previewed: PropTypes.object,
+        parameter: PropTypes.object,
+        viewState: PropTypes.object
     },
 
     setDisplayValue(e) {
