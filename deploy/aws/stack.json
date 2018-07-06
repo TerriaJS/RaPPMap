@@ -31,6 +31,10 @@
     }
   },
   "Parameters": {
+    "ElbIdleTimeout": {
+      "Default": "120",
+      "Type": "Number"
+    },
     "HostedZoneName": {
       "Default": "geoglam.d61.io.",
       "Type": "String"
@@ -150,6 +154,11 @@
         "ConnectionDrainingPolicy": {
           "Enabled": "true",
           "Timeout": "300"
+        },
+        "ConnectionSettings": {
+          "IdleTimeout": {
+            "Ref": "ElbIdleTimeout"
+          }
         },
         "CrossZone": "true",
         "HealthCheck": {
