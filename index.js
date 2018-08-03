@@ -2,21 +2,16 @@
 
 /*global require,window */
 
-var configuration = {
-    bingMapsKey: undefined, // use Cesium key
+var terriaOptions = {
+    appName: "GEOGLAM RAPP",
+    supportEmail: "geoglam.rapp@csiro.au",
+    defaultTo2D: true,
+    baseUrl: 'build/TerriaJS'
 };
 
-// Check browser compatibility early on.
-// A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
-// 'ui' is the name of the DOM element that should contain the error popup if the browser is not compatible
-//var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
-
 // checkBrowserCompatibility('ui');
-import React from 'react';
-import defined from 'terriajs-cesium/Source/Core/defined';
 import GoogleAnalytics from 'terriajs/lib/Core/GoogleAnalytics';
 import ShareDataService from 'terriajs/lib/Models/ShareDataService';
-import OgrCatalogItem from 'terriajs/lib/Models/OgrCatalogItem';
 import raiseErrorToUser from 'terriajs/lib/Models/raiseErrorToUser';
 import registerAnalytics from 'terriajs/lib/Models/registerAnalytics';
 import registerCatalogMembers from 'terriajs/lib/Models/registerCatalogMembers';
@@ -28,15 +23,14 @@ import ViewState from 'terriajs/lib/ReactViewModels/ViewState';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
+import defined from 'terriajs-cesium/Source/Core/defined';
 import render from './lib/Views/render';
-import WebProcessingServiceCatalogFunction from 'terriajs/lib/Models/WebProcessingServiceCatalogFunction';
-import ParameterEditor from 'terriajs/lib/ReactViews/Analytics/ParameterEditor';
-import geoJsonParameterConverter from './lib/CustomParameters/geoJsonParameterConverter';
-import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
-import SelectAPolygonParameterEditor from './lib/Views/SelectAPolygonParameterEditor';
 
-// Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
-OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
+import React from 'react';
+import ParameterEditor from 'terriajs/lib/ReactViews/Analytics/ParameterEditor';
+import GeoJsonParameterEditor from './lib/Views/GeoJsonParameterEditor';
+import geoJsonParameterConverter from './lib/CustomParameters/geoJsonParameterConverter';
+import WebProcessingServiceCatalogFunction from 'terriajs/lib/Models/WebProcessingServiceCatalogFunction';
 WebProcessingServiceCatalogFunction.parameterConverters.push(geoJsonParameterConverter());
 
 ParameterEditor.parameterTypeConverters.push({
@@ -55,20 +49,17 @@ ParameterEditor.parameterTypeConverters.push({
     }
 });
 
+
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 registerAnalytics();
 
+terriaOptions.analytics = new GoogleAnalytics();
+
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
-var terria = new Terria({
-    appName: "GEOGLAM RAPP",
-    supportEmail: "geoglam.rapp@csiro.au",
-    baseUrl: "build/TerriaJS",
-    cesiumBaseUrl: undefined, // for default
-    analytics: new GoogleAnalytics()
-});
+var terria = new Terria(terriaOptions);
 
 // Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
 // insert your custom version of the code in the registerCustomComponentTypes function here instead.
@@ -94,7 +85,6 @@ terria.start({
     // as well as the call to "updateApplicationOnHashChange" further down.
     applicationUrl: window.location,
     configUrl: 'config.json',
-    defaultTo2D: true,
     shareDataService: new ShareDataService({
         terria: terria
     })
@@ -118,24 +108,33 @@ terria.start({
         // Create the various base map options.
         var createGlobalBaseMapOptions = require('./lib/ViewModels/createGlobalBaseMapOptions');
         var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
-        var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
-
+        var globalBaseMaps = createGlobalBaseMapOptions(terria, terria.configParameters.bingMapsKey);
         selectBaseMap(terria, globalBaseMaps, 'Positron (Light)', false);
 
-        // Add the disclaimer, if specified
+        // Show a modal disclaimer before user can do anything else.
         if (defined(terria.configParameters.globalDisclaimer)) {
-            var disclaimer = terria.configParameters.globalDisclaimer;
-            var message = '';
-            message += require('./lib/Views/GlobalDisclaimer.html');
-            var options = {
-                title: 'GEOGLAM RAPP Map',
-                confirmText: 'Continue',
-                width: 600,
-                height: 550,
-                message: message
-            };
+            var globalDisclaimer = terria.configParameters.globalDisclaimer;
+            var hostname = window.location.hostname;
+            if (globalDisclaimer.enableOnLocalhost || hostname.indexOf('localhost') === -1) {
+                var message = '';
+                // Sometimes we want to show a preamble if the user is viewing a site other than the official production instance.
+                // This can be expressed as a devHostRegex ("any site starting with staging.") or a negative prodHostRegex ("any site not ending in .gov.au")
+                if (defined(globalDisclaimer.devHostRegex) && hostname.match(globalDisclaimer.devHostRegex) ||
+                    defined(globalDisclaimer.prodHostRegex) && !hostname.match(globalDisclaimer.prodHostRegex)) {
+                        message += require('./lib/Views/DevelopmentDisclaimerPreamble.html');
+                }
+                message += require('./lib/Views/GlobalDisclaimer.html');
 
-            viewState.notifications.push(options);
+                var options = {
+                    title: (globalDisclaimer.title !== undefined) ? globalDisclaimer.title : 'Warning',
+                    confirmText: (globalDisclaimer.buttonTitle || "Ok"),
+                    width: 600,
+                    height: 550,
+                    message: message,
+                    horizontalPadding : 100
+                };
+                viewState.notifications.push(options);
+            }
         }
 
         render(terria, globalBaseMaps, viewState);
