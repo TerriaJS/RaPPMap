@@ -9,8 +9,10 @@
         "googleAnalyticsOptions": null,
         "autoPlay": false,
         "globalDisclaimer": {
+            "enableOnLocalhost": true,
             "confirmationRequired": true,
-            "title": "Disclaimer"
+            "buttonTitle": "Continue",
+            "title": "GEOGLAM RAPP Map"
         },
         "appName": "GEOGLAM RAPP",
         "supportEmail": "geoglam.rapp@csiro.au",
