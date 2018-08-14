@@ -19,7 +19,7 @@
           "items": [
             {
               "id": "4d4a1bf8-e943-4152-b422-03ebc627a4a3",
-              "name": "Natural Resource Management Regions 2015",
+              "name": "Natural Resource Management Regions 2017",
               "type": "esri-mapServer",
               "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer",
               "layers": "NRM_Regions",
