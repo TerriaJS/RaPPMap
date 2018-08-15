@@ -22,7 +22,7 @@
               "name": "Natural Resource Management Regions 2017",
               "type": "esri-mapServer",
               "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer",
-              "layers": "NRM_Regions",
+              "layers": "Natural Resouce Management Regions",
               "opacity": 1,
               "isEnabled": true,
               "clipToRectangle": true,
