@@ -385,7 +385,95 @@
       "preserveOrder": true,
       "items": [
         {
-          "name": "TERN Auscover Layers",
+          "name": "Vegetation Cover - MODIS (500 meters)",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Total Vegetation Cover C6 (PV+NPV, Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_total_cover",
+              "opacity": 1,
+              "isEnabled": false,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_frac_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Vegetation Cover Anomaly (Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_anom_frac_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            },
+            {
+              "name": "Vegetation Cover Deciles (Monthly)\nC6",
+              "type": "wms",
+              "url": "http://gsky-geoglam.nci.org.au/ows",
+              "cacheDuration": "2h",
+              "layers": "global:c6:monthly_decile_total_cover",
+              "opacity": 1,
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
+              "initialTimeSource": "end",
+              "dateFormat": {
+                "currentTime": "d mmmm yyyy",
+                "timelineTic": "yyyy"
+              },
+              "ignoreUnknownTileErrors": true,
+              "getFeatureInfoFormats": [
+                {
+                  "type": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vegetation Cover - Landsat/Sentinel (30/20 meters)",
           "type": "group",
           "preserveOrder": true,
           "items": [
@@ -412,38 +500,6 @@
               "layers": "sentinel_fractional",
               "opacity": 1,
               "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "5270734b-48bc-41e6-9723-583dce66c356",
-              "name": "Seasonal ground cover (\"cover under trees\") - Landsat, JRSRP algorithm",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "ground_cover",
-              "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "835b0bc4-a803-4c75-913c-5200c7b8f35f",
-              "name": "Total Ground Cover (\"cover under trees\") - Landsat, JRSRP algorithm",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
-              "layers": "total_cover",
-              "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/total_cover_legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
