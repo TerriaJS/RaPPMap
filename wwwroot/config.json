@@ -3,6 +3,9 @@
         "geoglam"
     ],
     "parameters": {
+        "initFragmentPaths": [
+            "https://raw.githubusercontent.com/TerriaJS/geoglam-nm/master/wwwroot/init/"
+        ],
         "feedbackUrl": "feedback",
         "bingMapsKey": "Aiq2LTSa2-NVYowanNxUsVh5iHjM2Rp_kg6sb9iovRHv0B6NgLx3qui0p7Vyw7SU",
         "googleAnalyticsKey": "UA-75366509-1",
