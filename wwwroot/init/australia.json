@@ -22,13 +22,26 @@
               "name": "Natural Resource Management Regions 2017",
               "type": "esri-mapServer",
               "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer",
-              "layers": "NRM_Regions",
+              "layers": "Natural Resouce Management Regions",
               "opacity": 1,
               "isEnabled": true,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Regional Reports ",
+      "type": "group",
+      "isOpen": true,
+      "items": [
+        {
+          "name": "Regional Reports",
+          "type": "group",
+          "isOpen": true,
+          "description": "<h1 id=\"h.949oxi1eaxdw\" class=\"c2 title\"><span class=\"c8\">Vegetation Fractional Cover Reports</span></h1>\n<h1 id=\"h.jjbap541mc0j\" class=\"c0\"><span class=\"c9\"><a class=\"c5\" href=\"http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v310/stats/reports/nrm/\">Access Reports for NRM regions</a></span></h1>\n<h1 id=\"h.jjbap541mc0j-1\" class=\"c0\"><span class=\"c9\"><a class=\"c5\" href=\"http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v310/stats/reports/lga/\">Access Reports for LGA regions</a></span></h1>\n<p> </p>"
         }
       ]
     }
