@@ -388,6 +388,7 @@
           "name": "Vegetation Cover - MODIS (500 meters)",
           "type": "group",
           "preserveOrder": true,
+          "isOpen": true,
           "items": [
             {
               "name": "Total Vegetation Cover C6 (PV+NPV, Monthly)\nC6",
@@ -689,64 +690,72 @@
               }
             },
             {
-              "name": "Mesh Blocks (Australian Bureau of Statistics)",
-              "type": "wms",
-              "layers": "admin_bnds:MB_2011_ACT,admin_bnds:MB_2011_NSW,admin_bnds:MB_2011_NT,admin_bnds:MB_2011_OT,admin_bnds:MB_2011_QLD,admin_bnds:MB_2011_SA,admin_bnds:MB_2011_TAS,admin_bnds:MB_2011_VIC,admin_bnds:MB_2011_WA",
-              "opacity": 1,
-              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
-              "legendUrls": [],
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Suburbs (SSC) (Australian Bureau of Statistics)",
-              "type": "esri-mapServer",
-              "layers": "17",
-              "opacity": 1,
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/17",
-              "legendUrls": [],
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Statistical area level 1 (SA1) (Australian Bureau of Statistics)",
-              "type": "esri-mapServer",
-              "layers": "12",
-              "opacity": 1,
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/12",
-              "legendUrls": [],
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Statistical area level 2 (SA2) (Australian Bureau of Statistics)",
-              "type": "esri-mapServer",
-              "layers": "13",
-              "opacity": 1,
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/13",
-              "legendUrls": [],
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Statistical area level 3 (SA3) (Australian Bureau of Statistics)",
-              "type": "esri-mapServer",
-              "layers": "14",
-              "opacity": 1,
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/14",
-              "legendUrls": [],
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Statistical area level 4 (SA4) (Australian Bureau of Statistics)",
-              "type": "esri-mapServer",
-              "layers": "15",
-              "opacity": 1,
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/15",
-              "legendUrls": [],
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "name": "Statistical Regions (Australian Bureau of Statistics)",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
+                {
+                  "name": "Mesh Blocks (Australian Bureau of Statistics)",
+                  "type": "wms",
+                  "layers": "admin_bnds:MB_2011_ACT,admin_bnds:MB_2011_NSW,admin_bnds:MB_2011_NT,admin_bnds:MB_2011_OT,admin_bnds:MB_2011_QLD,admin_bnds:MB_2011_SA,admin_bnds:MB_2011_TAS,admin_bnds:MB_2011_VIC,admin_bnds:MB_2011_WA",
+                  "opacity": 1,
+                  "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
+                  "legendUrls": [],
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Suburbs (SSC) (Australian Bureau of Statistics)",
+                  "type": "esri-mapServer",
+                  "layers": "17",
+                  "opacity": 1,
+                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/17",
+                  "legendUrls": [],
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Statistical area level 1 (SA1) (Australian Bureau of Statistics)",
+                  "type": "esri-mapServer",
+                  "layers": "12",
+                  "opacity": 1,
+                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/12",
+                  "legendUrls": [],
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Statistical area level 2 (SA2) (Australian Bureau of Statistics)",
+                  "type": "esri-mapServer",
+                  "layers": "13",
+                  "opacity": 1,
+                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/13",
+                  "legendUrls": [],
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Statistical area level 3 (SA3) (Australian Bureau of Statistics)",
+                  "type": "esri-mapServer",
+                  "layers": "14",
+                  "opacity": 1,
+                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/14",
+                  "legendUrls": [],
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Statistical area level 4 (SA4) (Australian Bureau of Statistics)",
+                  "type": "esri-mapServer",
+                  "layers": "15",
+                  "opacity": 1,
+                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/15",
+                  "legendUrls": [],
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
             }
           ]
         }
