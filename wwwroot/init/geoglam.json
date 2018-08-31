@@ -22,123 +22,145 @@
           "isOpen": true,
           "items": [
             {
-              "name": "Vegetation Fractional Cover (PV, NPV & BS) (8-day) \nC6",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:frac_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+              "name": "Monthly",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
                 {
-                  "type": "none"
+                  "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_frac_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Total Vegetation Cover (PV+NPV, Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_total_cover",
+                  "opacity": 1,
+                  "isEnabled": true,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Vegetation Cover Anomaly (Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_anom_frac_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Vegetation Cover Deciles (Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_decile_total_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "name": "Total Vegetation Cover (PV+NPV, 8-day) \nC6",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:total_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+              "name": "8-days",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
                 {
-                  "type": "none"
-                }
-              ]
-            },
-            {
-              "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)\nC6",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_frac_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+                  "name": "Vegetation Fractional Cover (PV, NPV & BS) (8-day)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:frac_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
                 {
-                  "type": "none"
-                }
-              ]
-            },
-            {
-              "name": "Total Vegetation Cover C6 (PV+NPV, Monthly)\nC6",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_total_cover",
-              "opacity": 1,
-              "isEnabled": true,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
-                {
-                  "type": "none"
-                }
-              ]
-            },
-            {
-              "name": "Vegetation Cover Anomaly (Monthly)\nC6",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_anom_frac_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
-                {
-                  "type": "none"
-                }
-              ]
-            },
-            {
-              "name": "Vegetation Cover Deciles (Monthly)\nC6",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_decile_total_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
-                {
-                  "type": "none"
+                  "name": "Total Vegetation Cover (PV+NPV, 8-day)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:total_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
                 }
               ]
             }
@@ -151,7 +173,7 @@
           "isOpen": true,
           "items": [
             {
-              "name": "Normalised Difference Vegetation Index (NDVI)\n\nC6",
+              "name": "Normalised Difference Vegetation Index (NDVI)",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
@@ -159,6 +181,7 @@
               "opacity": 1,
               "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/NDVI_Legend_horiz.png",
               "initialTimeSource": "end",
+              "useOwnClock": true,
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
                 "timelineTic": "yyyy"
@@ -391,7 +414,7 @@
           "isOpen": true,
           "items": [
             {
-              "name": "Total Vegetation Cover C6 (PV+NPV, Monthly)\nC6",
+              "name": "Total Vegetation Cover (PV+NPV, Monthly)",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
@@ -400,6 +423,7 @@
               "isEnabled": false,
               "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
               "initialTimeSource": "end",
+              "useOwnClock": true,
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
                 "timelineTic": "yyyy"
@@ -412,7 +436,7 @@
               ]
             },
             {
-              "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)\nC6",
+              "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
@@ -420,6 +444,7 @@
               "opacity": 1,
               "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
               "initialTimeSource": "end",
+              "useOwnClock": true,
               "dateFormat": {
                 "currentTime": "d mmmm yyyy",
                 "timelineTic": "yyyy"
@@ -432,7 +457,7 @@
               ]
             },
             {
-              "name": "Vegetation Cover Anomaly (Monthly)\nC6",
+              "name": "Vegetation Cover Anomaly (Monthly)",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
@@ -452,7 +477,7 @@
               ]
             },
             {
-              "name": "Vegetation Cover Deciles (Monthly)\nC6",
+              "name": "Vegetation Cover Deciles (Monthly)",
               "type": "wms",
               "url": "http://gsky-geoglam.nci.org.au/ows",
               "cacheDuration": "2h",
@@ -487,6 +512,7 @@
               "opacity": 1,
               "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
               "initialTimeSource": "end",
+              "useOwnClock": true,
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
@@ -502,6 +528,7 @@
               "opacity": 1,
               "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
               "initialTimeSource": "end",
+              "useOwnClock": true,
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
@@ -518,6 +545,7 @@
               "opacity": 1,
               "legendUrl": "http://vegcover.com/vegmachine/assets/images/persistent_green_legend.png",
               "initialTimeSource": "end",
+              "useOwnClock": true,
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "mmm yyyy"
