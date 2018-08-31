@@ -115,7 +115,7 @@
               ]
             },
             {
-              "name": "8-days",
+              "name": "8-day",
               "type": "group",
               "preserveOrder": true,
               "isOpen": true,
@@ -142,7 +142,7 @@
                   ]
                 },
                 {
-                  "name": "Total Vegetation Cover (PV+NPV, 8-day)",
+                  "name": "Total Vegetation Cover (PV+NPV) (8-day)",
                   "type": "wms",
                   "url": "http://gsky-geoglam.nci.org.au/ows",
                   "cacheDuration": "2h",
