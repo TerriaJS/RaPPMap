@@ -10,6 +10,7 @@
         "bingMapsKey": "Aiq2LTSa2-NVYowanNxUsVh5iHjM2Rp_kg6sb9iovRHv0B6NgLx3qui0p7Vyw7SU",
         "googleAnalyticsKey": "UA-75366509-1",
         "googleAnalyticsOptions": null,
+        "cesiumIonAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkNTI1OTFjMi1mYzQ0LTRhNjktYTc2ZS1kYjg4MDRkMTRkMmIiLCJpZCI6Mjk5Miwic2NvcGVzIjpbImFzciIsImdjIl0sImlhdCI6MTUzODExMzA1OX0.tlv1I2M2CGZiSZ-8X0OacBbirAVzj1lqa69-rDPim98",
         "autoPlay": false,
         "globalDisclaimer": {
             "enableOnLocalhost": true,
