@@ -19,7 +19,7 @@
     "awsS3PackagesPath": "s3://geoglam-apps/map",
     "awsRegion": "ap-southeast-2",
     "awsEc2InstanceType": "t2.medium",
-    "awsEc2ImageId": "ami-f75a8195",
+    "awsEc2ImageId": "ami-00cc4908ffe2edda3",
     "awsKeyName": "mhenrikson",
     "awsS3ServerConfigOverridePath": "s3://geoglam-apps/map/privateserverconfig-2016-10-27.json",
     "awsS3ClientConfigOverridePath": "s3://geoglam-apps/map/privateclientconfig-2018-08-03.json",
