@@ -25,6 +25,7 @@
               "layers": "Natural Resouce Management Regions",
               "opacity": 1,
               "isEnabled": true,
+              "keepOnTop": true,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             }
