@@ -361,9 +361,42 @@
           ]
         },
         {
-          "name": "Ancillary",
+          "name": "Boundaries",
           "type": "group",
           "items": [
+            {
+              "name": "Global Administrative Areas Level 0 (Countries)",
+              "type": "wms",
+              "url": "https://rapp.auscover.net.au/geoserver/wms?",
+              "layers": "Global administrative areas V3.6 level 0",
+              "opacity": 0.75,
+              "ignoreUnknownTileErrors": true,
+              "keepOnTop": true,
+              "isEnabled": true,
+              "isLegendVisible": false
+            },
+            {
+              "name": "Global Administrative Areas Level 1 (Province, State)",
+              "type": "wms",
+              "url": "https://rapp.auscover.net.au/geoserver/wms?",
+              "layers": "Global administrative areas V3.6 level 1",
+              "opacity": 0.75,
+              "ignoreUnknownTileErrors": true,
+              "keepOnTop": true,
+              "isEnabled": false,
+              "isLegendVisible": false
+            },
+            {
+              "name": "Global Administrative Areas Level 2 (Shire, County)",
+              "type": "wms",
+              "url": "https://rapp.auscover.net.au/geoserver/wms?",
+              "layers": "Global administrative areas V3.6 level 2",
+              "opacity": 0.75,
+              "ignoreUnknownTileErrors": true,
+              "keepOnTop": true,
+              "isEnabled": false,
+              "isLegendVisible": false
+            },
             {
               "name": "Area Labels",
               "type": "wmts",
