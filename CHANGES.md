@@ -3,6 +3,11 @@ Change Log
 
 ### 2018-07-06
 
+* Update to [TerriaJS 6.3.5](https://github.com/TerriaJS/terriajs/blob/6.3.5/CHANGES.md).
+* Remove Varnish cache.
+
+### 2018-07-06
+
 * Update to [TerriaJS 6.0.3](https://github.com/TerriaJS/terriajs/blob/6.0.3/CHANGES.md).
 
 ### 2017-07-09

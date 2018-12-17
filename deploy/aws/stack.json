@@ -79,7 +79,7 @@
         "Type": "String"
     },
     "WebServerPort": {
-      "Default": "80",
+      "Default": "3001",
       "Type": "Number"
     }
   },
