@@ -11,4 +11,4 @@ Ancilliary datasets include:
 * Environmental: rainfall, temperature, and soil moisture
 * Livestock use: biomass use, production, feed efficiency, excretion, and greenhouse gas emissions
 
-GEOGLAM RAPP is based on NICTA's Open Source TerriaJS web geospatial platform: https://github.com/TerriaJS/terriajs
+GEOGLAM RAPP is based on Data61's Open Source TerriaJS web geospatial platform: https://github.com/TerriaJS/terriajs
