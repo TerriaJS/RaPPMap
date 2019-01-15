@@ -31,30 +31,30 @@
               "ignoreUnknownTileErrors": true
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "Transport",
-      "type": "group",
-      "preserveOrder": true,
-      "items": [
+        },
         {
-          "name": "Roads",
+          "name": "Transport",
           "type": "group",
           "preserveOrder": true,
           "items": [
             {
               "name": "Roads",
-              "type": "esri-mapServer",
-              "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
-              "layers": "All_Roads,Roads_Scale_600000_to_300000,Roads_Scale_7Million_to_600000,Major_Road_Network,No_Data",
-              "clipToRectangle": true,
-              "opacity": 1,
-              "isEnabled": true,
-              "keepOnTop": true,
-              "isLegendVisible": false,
-              "ignoreUnknownTileErrors": true
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Roads",
+                  "type": "esri-mapServer",
+                  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+                  "layers": "All_Roads,Roads_Scale_600000_to_300000,Roads_Scale_7Million_to_600000,Major_Road_Network,No_Data",
+                  "clipToRectangle": true,
+                  "opacity": 1,
+                  "isEnabled": true,
+                  "keepOnTop": true,
+                  "isLegendVisible": false,
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
             }
           ]
         }
