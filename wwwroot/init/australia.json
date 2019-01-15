@@ -26,6 +26,7 @@
               "opacity": 1,
               "isEnabled": true,
               "keepOnTop": true,
+              "isLegendVisible": false,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             }
