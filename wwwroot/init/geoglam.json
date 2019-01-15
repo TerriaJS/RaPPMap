@@ -828,6 +828,64 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Surface Water",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Water Observations from Space",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Water Observations from Space 25m Water Summary (WOfS Statistics)",
+                  "type": "wms",
+                  "url": "https://ows.services.dea.ga.gov.au/",
+                  "layers": "wofs_filtered_summary",
+                  "clipToRectangle": true,
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Transport",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "name": "Roads",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Roads",
+                  "type": "esri-mapServer",
+                  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+                  "layers": "All_Roads,Roads_Scale_600000_to_300000,Roads_Scale_7Million_to_600000,Major_Road_Network,No_Data",
+                  "clipToRectangle": true,
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Route Number Labels",
+                  "type": "esri-mapServer",
+                  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+                  "layers": "National_Route_Number_Labels,No_Data,No_Labels_National_Scale_to_10Million_Scale",
+                  "clipToRectangle": true,
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
