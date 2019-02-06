@@ -223,8 +223,8 @@
             {
               "name": "Rainfall Anomalies (Global, 5km) ",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Monthly Rainfall Anomaly (CHIRPS)",
+              "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+              "layers": "MonthlyRainfallAnomaly",
               "opacity": 1,
               "initialTimeSource": "end",
               "dateFormat": {
@@ -252,8 +252,8 @@
             {
               "name": "Land Cover (GlobCover, 2009)",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:GLOBCOVER_L4_200901_200912_V2.3.color._fixed",
+              "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+              "layers": "GLOBCOVER",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
@@ -263,8 +263,8 @@
             {
               "name": "Terrestrial Ecoregions of the World",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Terrestrial Ecoregions of the World",
+              "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+              "layers": "Terrestrial Ecoregions of the World",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
@@ -282,8 +282,8 @@
             {
               "name": "Global Livestock Production Systems",
               "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Livestock-prodsys",
+              "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+              "layers": "Livestock-prodsys",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
@@ -291,72 +291,188 @@
               }
             },
             {
-              "name": "Cattle Density",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Cattle-density",
-              "opacity": 1,
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
-                "name": "Cattle density in 2006",
-                "formats": {
-                  "Density (heads per sq km)": {
-                    "maximumFractionDigits": 2
+              "name": "Livestock Densities 2005 (Robinson et al 2014)",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Cattle Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "Cattle-density",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Cattle density in 2006",
+                    "formats": {
+                      "Density (heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Sheep Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "Sheep-density",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Sheep density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Goat Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "Goat-density",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Goat density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Cattle Equivalents",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "Cattle-equivalents",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "FAO Livestock Unit North America density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                   }
                 }
-              }
+              ]
             },
             {
-              "name": "Sheep Density",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Sheep-density",
-              "opacity": 1,
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-                "name": "Sheep density in 2006",
-                "formats": {
-                  "Density(heads per sq km)": {
-                    "maximumFractionDigits": 2
+              "name": "Livestock Densities 2010 (Gilbert et al 2018)",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Cattle Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "cattle_density_2010",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Cattle density in 2006",
+                    "formats": {
+                      "Density (heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Sheep Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "sheep_density_2010",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Sheep density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Goat Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "goat_density_2010",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "Goat density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Buffalo Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "buf_density_2010",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "FAO Livestock Unit North America density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Horse Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "horse_density_2010",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "FAO Livestock Unit North America density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "Pig Density",
+                  "type": "wms",
+                  "url": "https://rapp.auscover.net.au/geoserver/global/wms",
+                  "layers": "pig_density_2010",
+                  "opacity": 1,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
+                    "name": "FAO Livestock Unit North America density in 2006",
+                    "formats": {
+                      "Density(heads per sq km)": {
+                        "maximumFractionDigits": 2
+                      }
+                    }
                   }
                 }
-              }
-            },
-            {
-              "name": "Goat Density",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Goat-density",
-              "opacity": 1,
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-                "name": "Goat density in 2006",
-                "formats": {
-                  "Density(heads per sq km)": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
-            },
-            {
-              "name": "Cattle Equivalents",
-              "type": "wms",
-              "url": "http://qld.auscover.org.au/geoserver-rapp/ows",
-              "layers": "global:Cattle-equivalents",
-              "opacity": 1,
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
-                "name": "FAO Livestock Unit North America density in 2006",
-                "formats": {
-                  "Density(heads per sq km)": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
+              ]
             }
           ]
         },
