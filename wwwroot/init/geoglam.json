@@ -899,7 +899,7 @@
                       "name": "January - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Jan_50",
+                      "layers": "Jan_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -908,7 +908,7 @@
                       "name": "February - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Feb_50",
+                      "layers": "Feb_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -917,7 +917,7 @@
                       "name": "March - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Mar_50",
+                      "layers": "Mar_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -926,7 +926,7 @@
                       "name": "April - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Apr_50",
+                      "layers": "Apr_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -935,7 +935,7 @@
                       "name": "May - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "May_50",
+                      "layers": "May_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -944,7 +944,7 @@
                       "name": "June - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Jun_50",
+                      "layers": "Jun_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -953,7 +953,7 @@
                       "name": "July - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Jul_50",
+                      "layers": "Jul_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -962,7 +962,7 @@
                       "name": "August - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Aug_50",
+                      "layers": "Aug_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -971,7 +971,7 @@
                       "name": "September - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Sep_50",
+                      "layers": "Sep_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -980,7 +980,7 @@
                       "name": "October - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Oct_50",
+                      "layers": "Oct_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -989,7 +989,7 @@
                       "name": "November - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Nov_50",
+                      "layers": "Nov_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
@@ -998,7 +998,7 @@
                       "name": "December - Tot Cov below 70%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
-                      "layers": "Dec_50",
+                      "layers": "Dec_70",
                       "opacity": 1,
                       "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
