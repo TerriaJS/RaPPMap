@@ -503,91 +503,507 @@
       "preserveOrder": true,
       "items": [
         {
-          "name": "Vegetation Cover - MODIS (500 meters)",
+          "name": "Vegetation Cover (MODIS, 500m)",
           "type": "group",
           "preserveOrder": true,
           "isOpen": true,
           "items": [
             {
-              "name": "Total Vegetation Cover (PV+NPV, Monthly)",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_total_cover",
-              "opacity": 1,
-              "isEnabled": false,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
-              "initialTimeSource": "end",
-              "useOwnClock": true,
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+              "name": "Monthly",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
                 {
-                  "type": "none"
+                  "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_frac_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Total Vegetation Cover (PV+NPV, Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_total_cover",
+                  "opacity": 1,
+                  "isEnabled": false,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Vegetation Cover Anomaly (Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_anom_frac_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Vegetation Cover Deciles (Monthly)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:monthly_decile_total_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "name": "Vegetation Fractional Cover (PV, NPV & BS, Monthly)",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_frac_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
-              "initialTimeSource": "end",
-              "useOwnClock": true,
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+              "name": "8-day",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
                 {
-                  "type": "none"
+                  "name": "Vegetation Fractional Cover (PV, NPV & BS) (8-day)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:frac_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
+                },
+                {
+                  "name": "Total Vegetation Cover (PV+NPV) (8-day)",
+                  "type": "wms",
+                  "url": "http://gsky-geoglam.nci.org.au/ows",
+                  "cacheDuration": "2h",
+                  "layers": "global:c6:total_cover",
+                  "opacity": 1,
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
+                  "initialTimeSource": "end",
+                  "useOwnClock": true,
+                  "dateFormat": {
+                    "currentTime": "d mmmm yyyy",
+                    "timelineTic": "yyyy"
+                  },
+                  "ignoreUnknownTileErrors": true,
+                  "getFeatureInfoFormats": [
+                    {
+                      "type": "none"
+                    }
+                  ]
                 }
               ]
             },
             {
-              "name": "Vegetation Cover Anomaly (Monthly)",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_anom_frac_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+              "name": "summaries",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
                 {
-                  "type": "none"
-                }
-              ]
-            },
-            {
-              "name": "Vegetation Cover Deciles (Monthly)",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "global:c6:monthly_decile_total_cover",
-              "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
+                  "name": "Frequency of Total Veg Cover below 30%",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": false,
+                  "items": [
+                    {
+                      "name": "January - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jan_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "February - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Feb_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "March - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Mar_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "April - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Apr_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "May - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "May_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "June - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jun_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "July - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jul_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "August - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Aug_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "September - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Sep_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "October - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Oct_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "November - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Nov_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "December - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Dec_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
+                },
                 {
-                  "type": "none"
+                  "name": "Frequency of Total Veg Cover below 50%",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": false,
+                  "items": [
+                    {
+                      "name": "January - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jan_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "February - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Feb_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "March - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Mar_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "April - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Apr_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "May - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "May_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "June - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jun_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "July - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jul_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "August - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Aug_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "September - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Sep_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "October - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Oct_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "November - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Nov_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "December - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Dec_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
+                },
+                {
+                  "name": "Frequency of Total Veg Cover below 70%",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": false,
+                  "items": [
+                    {
+                      "name": "January - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jan_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "February - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Feb_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "March - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Mar_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "April - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Apr_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "May - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "May_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "June - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jun_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "July - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Jul_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "August - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Aug_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "September - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Sep_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "October - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Oct_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "November - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Nov_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "December - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "Dec_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
                 }
               ]
             }
