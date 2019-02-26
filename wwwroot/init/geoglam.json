@@ -664,6 +664,15 @@
                   "isOpen": false,
                   "items": [
                     {
+                      "name": "Annual - Tot Cov below 30%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "annual_30",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
                       "name": "January - Tot Cov below 30%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
@@ -780,6 +789,15 @@
                   "isOpen": false,
                   "items": [
                     {
+                      "name": "Annual - Tot Cov below 50%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "annual_50",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
                       "name": "January - Tot Cov below 50%",
                       "type": "wms",
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
@@ -895,6 +913,15 @@
                   "preserveOrder": true,
                   "isOpen": false,
                   "items": [
+                    {
+                      "name": "Annual - Tot Cov below 70%",
+                      "type": "wms",
+                      "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
+                      "layers": "annual_70",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "ignoreUnknownTileErrors": true
+                    },
                     {
                       "name": "January - Tot Cov below 70%",
                       "type": "wms",
