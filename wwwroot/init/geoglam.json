@@ -35,7 +35,12 @@
                   "layers": "global:c6:monthly_frac_cover",
                   "opacity": 1,
                   "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
-                  "description": "MODIS, CSIRO Land and Water algorithm, Global coverage. Monthly \n \n Vegetation Fractional Cover represents the exposed proportion of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS) within each pixel. The sum of the three fractions is 100% (+/- 3%) and shown in Red/Green/Blue colors. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil.  \n \n This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution. The monthly product is aggregated from the 8-day composites using the medoid method. Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html. \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d \n",
+                  "info": [
+                    {
+                      "name": "Data Description",
+                      "content": "MODIS, CSIRO Land and Water algorithm, Global coverage. Monthly \n \n Vegetation Fractional Cover represents the exposed proportion of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS) within each pixel. The sum of the three fractions is 100% (+/- 3%) and shown in Red/Green/Blue colors. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil.  \n \n This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution. The monthly product is aggregated from the 8-day composites using the medoid method. Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html. \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d \n"
+                    }
+                  ],
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
@@ -58,7 +63,12 @@
                   "opacity": 1,
                   "isEnabled": true,
                   "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
-                  "description": "MODIS, CSIRO Land and Water algorithm, Global coverage. monthly \n \n \nTotal Vegetation Cover represents the sum of the exposed proportion of Photosynthetic Vegetation (PV) and Non-Photosynthetic Vegetation (NPV) within each pixel and is calculated from the Vegetation Fractional Cover product. The sum of Total Vegetation cover and Bare Soil (BS) is 100%. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. The monthly product is aggregated from the 8-day composites using the medoid method. This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution.  \n \n Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.  \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n",
+                  "info": [
+                    {
+                      "name": "Data Description",
+                      "content": "MODIS, CSIRO Land and Water algorithm, Global coverage. monthly \n \n \nTotal Vegetation Cover represents the sum of the exposed proportion of Photosynthetic Vegetation (PV) and Non-Photosynthetic Vegetation (NPV) within each pixel and is calculated from the Vegetation Fractional Cover product. The sum of Total Vegetation cover and Bare Soil (BS) is 100%. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. The monthly product is aggregated from the 8-day composites using the medoid method. This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution.  \n \n Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.  \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n"
+                    }
+                  ],
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
@@ -80,7 +90,12 @@
                   "layers": "global:c6:monthly_anom_frac_cover",
                   "opacity": 1,
                   "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/v3.0.1/anomalies/Anomaly_Legend.png",
-                  "description": "MODIS, CSIRO Land and Water algorithm, Global coverage. monthly  \n \n \nTotal Vegetation Cover anomaly represents the difference between total vegetation cover (PV+NPV) in a given month and the mean total vegetation cover for that month in all years available, expressed in units of cover. For example, if the mean vegetation cover in January (2001-current year) was 40% and the vegetation cover for the pixel in January 2018 was 30%, the anomaly for the pixel in Jan 2018 would be -10%. This product is derived from the Total Vegetation Cover (monthly) product and has 500 meters spatial resolution.  \n \n  Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.  \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n",
+                  "info": [
+                    {
+                      "name": "Data Description",
+                      "content": "MODIS, CSIRO Land and Water algorithm, Global coverage. monthly  \n \n \nTotal Vegetation Cover anomaly represents the difference between total vegetation cover (PV+NPV) in a given month and the mean total vegetation cover for that month in all years available, expressed in units of cover. For example, if the mean vegetation cover in January (2001-current year) was 40% and the vegetation cover for the pixel in January 2018 was 30%, the anomaly for the pixel in Jan 2018 would be -10%. This product is derived from the Total Vegetation Cover (monthly) product and has 500 meters spatial resolution.  \n \n  Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.  \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n"
+                    }
+                  ],
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
@@ -102,7 +117,12 @@
                   "layers": "global:c6:monthly_decile_total_cover",
                   "opacity": 1,
                   "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/deciles%20legend.png",
-                  "description": "MODIS, CSIRO Land and Water algorithm, Global coverage. monthly   \n \n \nTotal Vegetation Cover decile represents the ranking (in ten value intervals) for the total vegetation cover in a given month in relation to the vegetation cover in that month for all years in the time-series. This product is derived from the Total Vegetation Cover (monthly) product and has 500 meters spatial resolution.   \n \n  Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.   \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d",
+                  "info": [
+                    {
+                      "name": "Data Description",
+                      "content": "MODIS, CSIRO Land and Water algorithm, Global coverage. monthly   \n \n \nTotal Vegetation Cover decile represents the ranking (in ten value intervals) for the total vegetation cover in a given month in relation to the vegetation cover in that month for all years in the time-series. This product is derived from the Total Vegetation Cover (monthly) product and has 500 meters spatial resolution.   \n \n  Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.   \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d"
+                    }
+                  ],
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
@@ -132,7 +152,13 @@
                   "layers": "global:c6:frac_cover",
                   "opacity": 1,
                   "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/RGB%20Triangle%20with%20percent.png",
-                  "description": "ODIS, CSIRO Land and Water algorithm, Global coverage. 8-day \n \n \nVegetation Fractional Cover represents the exposed proportion of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS) within each pixel. The sum of the three fractions is 100% and shown in Red/Green/Blue colors. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution.  \n \n Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.  \n \n The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n",
+                  "info": [
+                    {
+                      "name": "Data Description",
+                      "content": "MODIS, CSIRO Land and Water algorithm, Global coverage. 8-day \n \n \nVegetation Fractional Cover represents the exposed proportion of Photosynthetic Vegetation (PV), Non-Photosynthetic Vegetation (NPV) and Bare Soil (BS) within each pixel. The sum of the three fractions is 100% and shown in Red/Green/Blue colors. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution.  \n \n Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html.  \n \n The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n"
+                    }
+                  ],
+                  "description": "",
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
@@ -154,7 +180,12 @@
                   "layers": "global:c6:total_cover",
                   "opacity": 1,
                   "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/TotCover_Legend_horiz.png",
-                  "description": "MODIS, CSIRO Land and Water algorithm, Global coverage. 8-day \n \n \nTotal Vegetation Cover represents the sum of the exposed proportion of Photosynthetic Vegetation (PV) and Non-Photosynthetic Vegetation (NPV) within each pixel and is calculated from the Vegetation Fractional Cover product. The sum of Total Vegetation cover and Bare Soil (BS) is 100%. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution.  \n \n Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html. \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n",
+                  "info": [
+                    {
+                      "name": "Data Description",
+                      "content": "MODIS, CSIRO Land and Water algorithm, Global coverage. 8-day \n \n \nTotal Vegetation Cover represents the sum of the exposed proportion of Photosynthetic Vegetation (PV) and Non-Photosynthetic Vegetation (NPV) within each pixel and is calculated from the Vegetation Fractional Cover product. The sum of Total Vegetation cover and Bare Soil (BS) is 100%. In forested canopies the photosynthetic or non-photosynthetic portions of trees may obscure those of the grass layer and/or bare soil. This product is derived from the MODIS Nadir BRDF-Adjusted Reflectance product (MCD43A4) collection 6 and has 500 meters spatial resolution.  \n \n Access to the data is available in http://dapds00.nci.org.au/thredds/catalog/tc43/modis-fc/v310/tiles/catalog.html. \n \n  The following publications provide details of the product: http://dx.doi.org/10.1016/j.rse.2015.01.021, http://doi.org/10.1080/2150704X.2018.1465611 and https://doi.org/10.25919/5bf84026e556d\n"
+                    }
+                  ],
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
