@@ -1,6 +1,6 @@
 .btn-location-selector {
-  composes: btn from 'terriajs/lib/Sass/common/_buttons.scss';
-  composes: btn--tertiary from 'terriajs/lib/Sass/common/_buttons.scss';
+  composes: btn from '~terriajs/lib/Sass/common/_buttons.scss';
+  composes: btn--tertiary from '~terriajs/lib/Sass/common/_buttons.scss';
   border: 2px solid #404855;
   font-size: 0.9rem;
   padding: 10px 12px;

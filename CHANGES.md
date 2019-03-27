@@ -1,6 +1,11 @@
 Change Log
 ==========
 
+### Next Release
+
+* Update to [TerriaJS 7.1.0](https://github.com/TerriaJS/terriajs/blob/7.1.0/CHANGES.md).
+* Fix the hot reload script.
+
 ### 2018-07-06
 
 * Update to [TerriaJS 6.3.5](https://github.com/TerriaJS/terriajs/blob/6.3.5/CHANGES.md).
@@ -17,6 +22,7 @@ Change Log
 ### 2016-08-22
 
 * Update layer names to match recently changed names in auscover server
+
 ### 2017-XX-XX
 
 * Use `gtar` when building `make-package` on OSX to create GNU tar compatible tarballs.
