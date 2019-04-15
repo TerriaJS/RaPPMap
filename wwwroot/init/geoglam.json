@@ -4,9 +4,9 @@
   ],
   "homeCamera": {
     "west": -170,
-    "south": -60,
+    "south": -50,
     "east": 170,
-    "north": 60
+    "north": 50
   },
   "services": [],
   "catalog": [
@@ -42,12 +42,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Total Vegetation Cover (PV+NPV, Monthly)",
@@ -65,12 +60,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Vegetation Cover Anomaly (Monthly)",
@@ -87,12 +77,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Vegetation Cover Deciles (Monthly)",
@@ -109,12 +94,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 }
               ]
             },
@@ -139,12 +119,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Total Vegetation Cover (PV+NPV) (8-day)",
@@ -161,12 +136,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 }
               ]
             }
@@ -192,12 +162,7 @@
                 "currentTime": "d mmmm yyyy",
                 "timelineTic": "yyyy"
               },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
-                {
-                  "type": "none"
-                }
-              ]
+              "ignoreUnknownTileErrors": true
             }
           ]
         },
@@ -219,12 +184,7 @@
                 "currentTime": "mmmm yyyy",
                 "timelineTic": "yyyy"
               },
-              "ignoreUnknownTileErrors": true,
-              "getFeatureInfoFormats": [
-                {
-                  "type": "none"
-                }
-              ]
+              "ignoreUnknownTileErrors": true
             },
             {
               "name": "Rainfall Anomalies (Global, 5km) ",
@@ -535,12 +495,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Total Vegetation Cover (PV+NPV, Monthly)",
@@ -558,12 +513,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Vegetation Cover Anomaly (Monthly)",
@@ -580,12 +530,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Vegetation Cover Deciles (Monthly)",
@@ -602,12 +547,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 }
               ]
             },
@@ -632,12 +572,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 },
                 {
                   "name": "Total Vegetation Cover (PV+NPV) (8-day)",
@@ -654,12 +589,7 @@
                     "currentTime": "d mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
-                  "ignoreUnknownTileErrors": true,
-                  "getFeatureInfoFormats": [
-                    {
-                      "type": "none"
-                    }
-                  ]
+                  "ignoreUnknownTileErrors": true
                 }
               ]
             },
