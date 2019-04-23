@@ -426,14 +426,14 @@
               "isLegendVisible": false
             },
             {
-              "name": "Area Labels",
+              "name": "Place Labels",
               "type": "wmts",
               "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
               "layer": "Reference_Labels",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "keepOnTop": true,
-              "isEnabled": false,
+              "isEnabled": true,
               "isLegendVisible": false,
               "info": [
                 {
@@ -443,14 +443,14 @@
               ]
             },
             {
-              "name": "Area Borders",
+              "name": "Coastlines / Borders / Roads",
               "type": "wmts",
               "url": "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/wmts.cgi",
               "layer": "Reference_Features",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "keepOnTop": true,
-              "isEnabled": false,
+              "isEnabled": true,
               "isLegendVisible": false,
               "info": [
                 {
