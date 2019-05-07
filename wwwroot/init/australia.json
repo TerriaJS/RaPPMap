@@ -49,7 +49,7 @@
                   "layers": "All_Roads,Roads_Scale_600000_to_300000,Roads_Scale_7Million_to_600000,Major_Road_Network,No_Data",
                   "clipToRectangle": true,
                   "opacity": 1,
-                  "isEnabled": true,
+                  "isEnabled": false,
                   "keepOnTop": true,
                   "isLegendVisible": false,
                   "ignoreUnknownTileErrors": true
