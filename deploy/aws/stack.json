@@ -347,7 +347,7 @@
         },
         "Path": "/",
         "ManagedPolicyArns": [
-          "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
+          "arn:aws:iam::242476885589:policy/SSM-Policy"
         ],
         "Policies": [
           {
