@@ -346,6 +346,9 @@
           ]
         },
         "Path": "/",
+        "ManagedPolicyArns": [
+          "arn:aws:iam::242476885589:policy/SSM-Policy"
+        ],
         "Policies": [
           {
             "PolicyDocument": {
