@@ -156,7 +156,7 @@
               "cacheDuration": "2h",
               "layers": "modis:c6:NDVI",
               "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/NDVI_Legend_horiz.png",
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/NDVI_Legend_horiz.png",
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
@@ -179,7 +179,7 @@
               "cacheDuration": "2h",
               "layers": "chirps",
               "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/CHIRPS_Legend.png",
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/CHIRPS_Legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -612,7 +612,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "annual_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -621,7 +621,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jan_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -630,7 +630,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Feb_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -639,7 +639,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Mar_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -648,7 +648,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Apr_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -657,7 +657,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "May_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -666,7 +666,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jun_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -675,7 +675,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jul_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -684,7 +684,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Aug_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -693,7 +693,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Sep_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -702,7 +702,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Oct_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -711,7 +711,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Nov_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -720,7 +720,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Dec_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_30.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -737,7 +737,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "annual_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -746,7 +746,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jan_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -755,7 +755,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Feb_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -764,7 +764,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Mar_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -773,7 +773,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Apr_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -782,7 +782,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "May_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -791,7 +791,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jun_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -800,7 +800,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jul_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -809,7 +809,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Aug_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -818,7 +818,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Sep_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -827,7 +827,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Oct_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -836,7 +836,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Nov_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -845,7 +845,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Dec_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_50.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -862,7 +862,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "annual_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -871,7 +871,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jan_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -880,7 +880,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Feb_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -889,7 +889,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Mar_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -898,7 +898,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Apr_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -907,7 +907,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "May_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -916,7 +916,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jun_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -925,7 +925,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Jul_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -934,7 +934,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Aug_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -943,7 +943,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Sep_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -952,7 +952,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Oct_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -961,7 +961,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Nov_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -970,7 +970,7 @@
                       "url": "https://rapp.auscover.net.au/geoserver/aust/wms",
                       "layers": "Dec_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/Guerschman_etal_RSE2009/misc/frec_below_70.png",
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
