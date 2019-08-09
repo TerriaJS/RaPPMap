@@ -2,6 +2,9 @@
     "initializationUrls" : [
         "geoglam"
     ],
+    "proxyDomains": [ 
+        "geoglam.ternlandscapes.net.au"
+    ],
     "parameters": {
         "initFragmentPaths": [
             "https://raw.githubusercontent.com/TerriaJS/geoglam-nm/master/wwwroot/init/"
