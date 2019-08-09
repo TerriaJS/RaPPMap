@@ -1,6 +1,7 @@
 {
   "corsDomains": [
-    "gibs.earthdata.nasa.gov"
+    "gibs.earthdata.nasa.gov",
+    "geoglam.ternlandscapes.net.au"
   ],
   "homeCamera": {
     "west": -170,
