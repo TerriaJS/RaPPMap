@@ -974,6 +974,381 @@
                       "ignoreUnknownTileErrors": true
                     }
                   ]
+                },
+                {
+                  "name": "Frequency of Total Veg Cover below 80%",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": false,
+                  "items": [
+                    {
+                      "name": "Annual - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "annual_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "January - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jan_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "February - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Feb_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "March - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Mar_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "April - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Apr_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "May - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "May_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "June - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jun_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "July - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jul_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "August - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Aug_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "September - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Sep_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "October - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Oct_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "November - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Nov_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "December - Tot Cov below 80%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Dec_80",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
+                },
+                {
+                  "name": "Frequency of Total Veg Cover below 90%",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": false,
+                  "items": [
+                    {
+                      "name": "Annual - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "annual_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "January - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jan_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "February - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Feb_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "March - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Mar_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "April - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Apr_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "May - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "May_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "June - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jun_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "July - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jul_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "August - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Aug_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "September - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Sep_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "October - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Oct_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "November - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Nov_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "December - Tot Cov below 90%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Dec_90",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
+                },
+                {
+                  "name": "Frequency of Total Veg Cover below 95%",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "isOpen": false,
+                  "items": [
+                    {
+                      "name": "Annual - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "annual_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "January - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jan_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "February - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Feb_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "March - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Mar_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "April - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Apr_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "May - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "May_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "June - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jun_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "July - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Jul_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "August - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Aug_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "September - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Sep_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "October - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Oct_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "November - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Nov_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    },
+                    {
+                      "name": "December - Tot Cov below 95%",
+                      "type": "wms",
+                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "layers": "Dec_95",
+                      "opacity": 1,
+                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "ignoreUnknownTileErrors": true
+                    }
+                  ]
                 }
               ]
             }
