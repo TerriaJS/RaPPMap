@@ -1465,37 +1465,6 @@
               "ignoreUnknownTileErrors": true
             },
             {
-              "id": "14887171-5354-4bb3-8395-986d6f41a947",
-              "name": "Physiographic Regions of Australia",
-              "type": "esri-mapServer",
-              "url": "http://www.asris.csiro.au/arcgis/rest/services/ASRIS/ASRIS_L2/MapServer",
-              "layers": "L2 Regions",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
-              "name": "Generalised map of soil orders for Australia",
-              "debugFormat": "Esri REST",
-              "type": "ckan-resource",
-              "url": "proxy/_60s/https://data.gov.au",
-              "datasetId": "2016-soe-lan-soil-classification",
-              "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
-              "cacheDuration": "1h",
-              "itemProperties": {
-                "hideSource": true,
-                "info": [
-                  {
-                    "name": "Metadata and Data Source",
-                    "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
-                  }
-                ],
-                "clipToRectangle": true,
-                "ignoreUnknownTileErrors": true
-              }
-            },
-            {
               "name": "Vegetation height and structure",
               "type": "wms",
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
@@ -1519,6 +1488,53 @@
                   {
                     "name": "Metadata and Data Source",
                     "content": "https://data.gov.au/dataset/2016-soe-lan-climate-scenarios-observed"
+                  }
+                ],
+                "clipToRectangle": true,
+                "ignoreUnknownTileErrors": true
+              }
+            }
+          ]
+        },
+        {
+          "name": "Landcaspe Attributes",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            {
+              "id": "14887171-5354-4bb3-8395-986d6f41a947",
+              "name": "Physiographic Regions of Australia",
+              "type": "esri-mapServer",
+              "url": "http://www.asris.csiro.au/arcgis/rest/services/ASRIS/ASRIS_L2/MapServer",
+              "layers": "L2 Regions",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Slope [percent] Median 300m Radius",
+              "type": "esri-mapServer",
+              "url": "http://www.asris.csiro.au/arcgis/rest/services/TERN/SRTM_attributes_3s_ACLEP_AU/MapServer",
+              "layers": "9",
+              "opacity": 1,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "id": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "name": "Generalised map of soil orders for Australia",
+              "debugFormat": "Esri REST",
+              "type": "ckan-resource",
+              "url": "proxy/_60s/https://data.gov.au",
+              "datasetId": "2016-soe-lan-soil-classification",
+              "resourceId": "ee9d9cae-188e-4160-9d36-3d1b19b3ea58",
+              "cacheDuration": "1h",
+              "itemProperties": {
+                "hideSource": true,
+                "info": [
+                  {
+                    "name": "Metadata and Data Source",
+                    "content": "https://data.gov.au/dataset/2016-soe-lan-soil-classification"
                   }
                 ],
                 "clipToRectangle": true,
