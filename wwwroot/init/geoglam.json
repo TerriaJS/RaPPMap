@@ -1417,8 +1417,9 @@
           "preserveOrder": true,
           "items": [
             {
-              "name": "Catchment Scale Land Use 2017",
-              "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_current/MapServer",
+              "name": "Catchment Scale Land Use 2018",
+              "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_2018/MapServer/0",
+              "layer name": 0,
               "type": "esri-mapServer",
               "opacity": 1,
               "clipToRectangle": true,
@@ -1725,6 +1726,43 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Regional Reports",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "name": "NRM Regions Reports (Australia)",
+          "url": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/test/others/feature_files/nrm2016_4326_simple.geojson",
+          "type": "geojson",
+          "featureInfoTemplate": {
+            "template": "This NRM is in the state of {{STATE}}, the NRM body is {{NRM_BODY}} and the NRM name is {{NRM_REGION}}.\n\nThis report provides information about vegetation covering the soil surface for a region during a single month with comparison to previous years. Vegetation cover indicates where soil is likely to be protected from wind and or water (hillslope) erosion. Results are shown for the whole region (polygon) and also separated by land use and tree cover. Different land uses are likely to have different cover patterns and targets. Reporting is most reliable with less than 20% tree cover.\n\nYou can download the entire report as a PDF in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}_landuse_{{year_month}}.pdf'>{{NRM_REGION}}_landuse_{{year_month}}.pdf</a>\n\nReports for previous months for this region available in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/'></a>\n\nA csv file with the data used for this report available in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}.csv'>{{NRM_REGION}}.csv</a>\n\nLatest report for the whole region\n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/main_map.{{year_month}}.png'/>\n\n Time series for the whole region: \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/timeseries_chart.{{year_month}}.png'/>\n\nReport for Grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/Grazing_no_forest_map.{{year_month}}.png'/>\n\n Time series for the Grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/Grazing_no_forest_timeseries.{{year_month}}.png'/>\n\nReport for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/Agriculture_map.{{year_month}}.png'/>\n\n Time series for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/Agriculture_timeseries.{{year_month}}.png'/>\n\nReport for Protected areas (non protected areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/Protected_area_no_forest_map.{{year_month}}.png'/>\n\n Time series for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/Protected_area_no_forest_timeseries.{{year_month}}.png'/>\n\nExplanatory notes: \n\nThis report has been generated using MODIS fractional vegetation cover information available in the Rangelands and Pasture Productivity (RAPP) map tool. The report is based on an analysis of 500 metre pixels. Pixels with greater than or equal to 50% vegetation cover are generally considered to be protected from or have reduced soil loss by wind erosion, and pixels with greater than or equal to 70% vegetation cover are generally considered to also be protected from or have reduced soil loss from water (hillslope) erosion. Higher cover thresholds may be required for erosion protection in some regions. This report will be less applicable in areas with sparse forest (20-50% tree cover) or dense forest (> 50% tree cover). Therefore land use classes are divided by tree cover: 1) No forest is when there is less than 20% tree cover 2) Sparse forest, is when there is less than 20 to 50 % tree cover 3) Dense forest is greater than 50% tree cover\n\nAcknowledgment of data: \n\n1. Australian Land Use and Management Classification http://www.agriculture.gov.au/abares/aclump/land-use/alum-classification \n\n2. Australia's State of the Forests Report http://www.agriculture.gov.au/abares/forestsaustralia/sofr/sofr-2018 \n\n3. Maintaining groundcover to reduce erosion and sustain production https://www.dpi.nsw.gov.au/agriculture/pastures-and-rangelands/establishment-mgmt/production-management2/groundcover \n\n4. MODIS Fractional cover algorithm: https://doi.org/10.4225/08/5848a3f19a7b3",
+            "info": [
+              {
+                "name": "Abstract",
+                "content": ""
+              },
+              {
+                "name": "Overview",
+                "content": ""
+              },
+              {
+                "name": "Accuracy and limitations",
+                "content": ""
+              },
+              {
+                "name": "File naming",
+                "content": ""
+              },
+              {
+                "name": "References",
+                "content": ""
+              }
+            ]
+          }
         }
       ]
     },
