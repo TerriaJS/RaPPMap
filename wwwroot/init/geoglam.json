@@ -506,7 +506,7 @@
                   "cacheDuration": "2h",
                   "layers": "modis_tot_cov_monthly",
                   "opacity": 1,
-                  "isEnabled": false,
+                  "isEnabled": true,
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
