@@ -160,6 +160,70 @@
   content: "Water/No data"
 }
 
+.forestclass1:after {
+  content: "Non-forest"
+}
+
+.forestclass2:after {
+  content: "Woodland Forest"
+}
+
+.forestclass3:after {
+  content: "non-woodland forest"
+}
+
+.landuseforest1:after {
+  content: "Conservation and natural environments - Non-forest"
+}
+
+.landuseforest2:after {
+  content: "Conservation and natural environments - Woodland forest"
+}
+
+.landuseforest3:after {
+  content: "Conservation and natural environments - Non woodland forest"
+}
+
+.landuseforest4:after {
+  content: "Agriculture - Grazing - Non-forest"
+}
+
+.landuseforest5:after {
+  content: "Agriculture - Grazing - Woodland forest"
+}
+
+.landuseforest6:after {
+  content: "Agriculture - Grazing - Non woodland forest"
+}
+
+.landuseforest7:after {
+  content: "Agriculture - Grazing - Irrigated"
+}
+
+.landuseforest8:after {
+  content: "Agriculture - Crops - Non irrigated"
+}
+
+.landuseforest9:after {
+  content: "Agriculture - Crops - Irrigated"
+}
+
+.landuseforest10:after {
+  content: "Agriculture - Horticulture - Non irrigated"
+}
+
+.landuseforest11:after {
+  content: "Agriculture - Horticulture - Irrigated"
+}
+
+.landuseforest12:after {
+  content: "Production native forests and plantation forests"
+}
+
+.landuseforest13:after {
+  content: "Other"
+}
+
 /* GlobalDisclaimer.html styles */
 .logoArea {
     background: white;
