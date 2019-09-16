@@ -1447,6 +1447,7 @@
               "type": "wms",
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
               "layers": "aus_forest2018_3class",
+              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/sItMvgy5pEf_uRU5JcKvSOw.png",
               "opacity": 1,
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
