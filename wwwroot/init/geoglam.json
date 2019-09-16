@@ -223,7 +223,7 @@
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
-                "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='globcover{{PALETTE_INDEX}}'></span></p>"
+                "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='globcover{{PALETTE_INDEX}}'></span></p>"
               }
             },
             {
@@ -253,7 +253,7 @@
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
-                "template": "<p style='clear: right'><strong>Classification:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
+                "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
               }
             },
             {
@@ -1422,44 +1422,66 @@
               "layers": "aus_forest_landuse2018",
               "opacity": 1,
               "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "ignoreUnknownTileErrors": true,
+              "featureInfoTemplate": {
+                "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='landuseforest{{class}}'></span></p>"
+              }
             },
             {
-              "name": "Catchment Scale Land Use 2018 [18 class]",
-              "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_2018/MapServer/0",
-              "layer name": 0,
-              "type": "esri-mapServer",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "name": " Catchment Scale Land Use 2018",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
+                {
+                  "name": "Catchment Scale Land Use 2018 [18 class]",
+                  "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_2018/MapServer/0",
+                  "layer name": 0,
+                  "type": "esri-mapServer",
+                  "opacity": 1,
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Catchment Scale Land Use 2018 [Secondary classification]",
+                  "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_2018/MapServer/2",
+                  "layer name": 0,
+                  "type": "esri-mapServer",
+                  "opacity": 1,
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
             },
             {
-              "name": "Catchment Scale Land Use 2018 [Secondary classification]",
-              "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/clum_50m_2018/MapServer/2",
-              "layer name": 0,
-              "type": "esri-mapServer",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Forests of Australia 2018 [by forest type-condensed]",
-              "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
-              "layers": "aus_forest2018_3class",
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/sItMvgy5pEf_uRU5JcKvSOw.png",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Forests of Australia 2018 [by forest type]",
-              "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/forests_of_australia_2018/MapServer/0",
-              "layer name": 0,
-              "type": "esri-mapServer",
-              "opacity": 1,
-              "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "name": " Forests of Australia 2018",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
+                {
+                  "name": "Forests of Australia 2018 [by forest type-condensed]",
+                  "type": "wms",
+                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                  "layers": "aus_forest2018_3class",
+                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/sItMvgy5pEf_uRU5JcKvSOw.png",
+                  "opacity": 1,
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true,
+                  "featureInfoTemplate": {
+                    "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='forestclass{{class}}'></span></p>"
+                  }
+                },
+                {
+                  "name": "Forests of Australia 2018 [by forest type]",
+                  "url": "http://www.asris.csiro.au/arcgis/rest/services/abares/forests_of_australia_2018/MapServer/0",
+                  "layer name": 0,
+                  "type": "esri-mapServer",
+                  "opacity": 1,
+                  "clipToRectangle": true,
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
             },
             {
               "id": "126ff747-1594-4168-b691-ddaf2202d56e",
