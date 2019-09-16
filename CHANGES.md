@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+### 2019-09-17
+
+* Update to [TerriaJS 7.6.11](https://github.com/TerriaJS/terriajs/blob/7.6.2/CHANGES.md).
+
 ### 2019-06-17
 
 * Update to [TerriaJS 7.6.2](https://github.com/TerriaJS/terriajs/blob/7.6.2/CHANGES.md).
