@@ -1,8 +1,0 @@
-      "featureInfoTemplate" : {
-         "name": "NRM summary report",
-         "template": "<p><div><strong>Summary Report for {{NRM name}} </div></p> <table> <tbody> <tr><td>Region </td> <td>{{NRM name}} </td> <td> Baseline target - percentage of region protected from wind erosion</td> <td>{{Wind erosion target}}      </td><td>Baseline target - percentage of region protected from water erosion </td><td>{{Water erosion target}}      </td><td>Months target not met for wind erosion  </td><td>{{2018/19 Wind}} </td><td> Months target not met for water erosion </td>  <td>{{2018/19 Water}}  </td></tr></tbody></table>" 
-      },
-      "tableStyle": {
-         "dataVariable": "NRM name"
-        
-    }
