@@ -155,7 +155,7 @@
               "cacheDuration": "2h",
               "layers": "modis:c6:NDVI",
               "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/NDVI_Legend_horiz.png",
+              "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/NDVI_Legend_horiz.png",
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
@@ -178,7 +178,7 @@
               "cacheDuration": "2h",
               "layers": "chirps",
               "opacity": 1,
-              "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/CHIRPS_Legend.png",
+              "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/CHIRPS_Legend.png",
               "initialTimeSource": "end",
               "dateFormat": {
                 "currentTime": "mmmm yyyy",
@@ -611,7 +611,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "annual_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -620,7 +620,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jan_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -629,7 +629,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Feb_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -638,7 +638,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Mar_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -647,7 +647,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Apr_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -656,7 +656,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "May_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -665,7 +665,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jun_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -674,7 +674,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jul_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -683,7 +683,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Aug_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -692,7 +692,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Sep_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -701,7 +701,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Oct_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -710,7 +710,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Nov_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -719,7 +719,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Dec_30",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_30.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -736,7 +736,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "annual_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -745,7 +745,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jan_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -754,7 +754,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Feb_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -763,7 +763,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Mar_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -772,7 +772,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Apr_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -781,7 +781,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "May_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -790,7 +790,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jun_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -799,7 +799,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jul_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -808,7 +808,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Aug_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -817,7 +817,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Sep_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -826,7 +826,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Oct_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -835,7 +835,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Nov_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -844,7 +844,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Dec_50",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_50.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -861,7 +861,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "annual_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -870,7 +870,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jan_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -879,7 +879,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Feb_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -888,7 +888,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Mar_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -897,7 +897,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Apr_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -906,7 +906,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "May_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -915,7 +915,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jun_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -924,7 +924,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jul_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -933,7 +933,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Aug_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -942,7 +942,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Sep_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -951,7 +951,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Oct_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -960,7 +960,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Nov_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -969,7 +969,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Dec_70",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_70.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -986,7 +986,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "annual_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -995,7 +995,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jan_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1004,7 +1004,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Feb_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1013,7 +1013,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Mar_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1022,7 +1022,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Apr_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1031,7 +1031,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "May_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1040,7 +1040,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jun_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1049,7 +1049,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jul_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1058,7 +1058,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Aug_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1067,7 +1067,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Sep_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1076,7 +1076,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Oct_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1085,7 +1085,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Nov_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1094,7 +1094,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Dec_80",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_80.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -1111,7 +1111,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "annual_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1120,7 +1120,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jan_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1129,7 +1129,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Feb_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1138,7 +1138,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Mar_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1147,7 +1147,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Apr_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1156,7 +1156,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "May_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1165,7 +1165,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jun_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1174,7 +1174,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jul_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1183,7 +1183,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Aug_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1192,7 +1192,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Sep_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1201,7 +1201,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Oct_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1210,7 +1210,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Nov_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1219,7 +1219,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Dec_90",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_90.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -1236,7 +1236,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "annual_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1245,7 +1245,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jan_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1254,7 +1254,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Feb_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1263,7 +1263,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Mar_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1272,7 +1272,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Apr_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1281,7 +1281,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "May_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1290,7 +1290,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jun_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1299,7 +1299,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Jul_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1308,7 +1308,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Aug_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1317,7 +1317,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Sep_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1326,7 +1326,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Oct_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1335,7 +1335,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Nov_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     },
                     {
@@ -1344,7 +1344,7 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "layers": "Dec_95",
                       "opacity": 1,
-                      "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/frec_below_95.png",
+                      "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
                       "ignoreUnknownTileErrors": true
                     }
                   ]
@@ -1464,7 +1464,7 @@
                   "type": "wms",
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                   "layers": "aus_forest2018_3class",
-                  "legendUrl": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/sItMvgy5pEf_uRU5JcKvSOw.png",
+                  "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/sItMvgy5pEf_uRU5JcKvSOw.png",
                   "opacity": 1,
                   "clipToRectangle": true,
                   "ignoreUnknownTileErrors": true,
@@ -1794,11 +1794,11 @@
       "items": [
         {
           "name": "NRM Regions Reports (Australia)",
-          "url": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/source_files/nrm2017_transparent.geojson",
+          "url": "https://eo-data.csiro.au/remotesensing/misc/source_files/nrm2017_transparent.geojson",
           "type": "geojson",
           "preserveOrder": true,
           "featureInfoTemplate": {
-            "template": "{{NRM_REGION}} NRM, {{STATE}}. \n\nThis report provides information about vegetation covering the soil surface for the {{NRM_REGION}} NRM region ({{STATE}}) during a single month with comparison to previous years. Vegetation cover indicates where soil is likely to be protected from wind and or water (hillslope) erosion. Results are shown for the whole region (polygon) and also separated by land use and tree cover. Different land uses are likely to have different cover patterns and targets. Reporting is most reliable with less than 20% tree cover.\n\nYou can download the entire report as a PDF in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/{{NRM_REGION}}_landuse_fc.pdf'>this link</a>.\n\nReports for previous months for this region available in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/'> this link</a>.\n\nA CSV file with the data used for this report available in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/{{STATE}}/{{NRM_REGION}}/{{NRM_REGION}}.csv'>this link</a>.\n\nMost recent report for the entire region\n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/entire_region.png'/>\n\n Time series for the entire region: \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/entire_region_timeseries.png'/>\n\nReport for grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/grz_map.png'/>\n\n Time series for the grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/grz_timeseries.png'/>\n\nReport for agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/agr_map.png'/>\n\n Time series for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/agr_timeseries.png'/>\n\nReport for Conservation and Natural Environment areas : \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/cne_map.png'/>\n\n Time series for Conservation and Natural Environment areas: \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/cne_timeseries.png'/>\n\nExplanatory notes: \n\nThis report has been generated using MODIS fractional vegetation cover information available in the Rangelands and Pasture Productivity (RAPP) map tool. The report is based on an analysis of 500 metre pixels. Pixels with greater than or equal to 50% vegetation cover are generally considered to be protected from or have reduced soil loss by wind erosion, and pixels with greater than or equal to 70% vegetation cover are generally considered to also be protected from or have reduced soil loss from water (hillslope) erosion. Higher cover thresholds may be required for erosion protection in some regions. This report will be less applicable in areas with sparse forest (20-50% tree cover) or dense forest (> 50% tree cover). Therefore land use classes are divided by tree cover: 1) No forest is when there is less than 20% tree cover 2) Sparse forest, is when there is less than 20 to 50 % tree cover 3) Dense forest is greater than 50% tree cover\n\nAcknowledgment of data: \n\n1. Australian Land Use and Management Classification http://www.agriculture.gov.au/abares/aclump/land-use/alum-classification \n\n2. Australia's State of the Forests Report http://www.agriculture.gov.au/abares/forestsaustralia/sofr/sofr-2018 \n\n3. Maintaining groundcover to reduce erosion and sustain production https://www.dpi.nsw.gov.au/agriculture/pastures-and-rangelands/establishment-mgmt/production-management2/groundcover \n\n4. MODIS Fractional cover algorithm: https://doi.org/10.4225/08/5848a3f19a7b3",
+            "template": "{{NRM_REGION}} NRM, {{STATE}}. \n\nThis report provides information about vegetation covering the soil surface for the {{NRM_REGION}} NRM region ({{STATE}}) during a single month with comparison to previous years. Vegetation cover indicates where soil is likely to be protected from wind and or water (hillslope) erosion. Results are shown for the whole region (polygon) and also separated by land use and tree cover. Different land uses are likely to have different cover patterns and targets. Reporting is most reliable with less than 20% tree cover.\n\nYou can download the entire report as a PDF in <a href='https://eo-data.csiro.au/remotesensing/reports/nrm/{{STATE}}/{{NRM_REGION}}/{{NRM_REGION}}_landuse_fc.pdf'>this link</a>.\n\nReports for previous months for this region available in <a href='https://eo-data.csiro.au/remotesensing/reports/nrm/{{STATE}}/{{NRM_REGION}}/'> this link</a>.\n\nA CSV file with the data used for this report available in <a href='https://eo-data.csiro.au/remotesensing/reports/nrm/{{STATE}}/{{NRM_REGION}}/{{NRM_REGION}}.csv'>this link</a>.\n\nMost recent report for the entire region\n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/entire_region.png'/>\n\n Time series for the entire region: \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/entire_region_timeseries.png'/>\n\nReport for grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/grz_map.png'/>\n\n Time series for the grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/grz_timeseries.png'/>\n\nReport for agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/agr_map.png'/>\n\n Time series for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/agr_timeseries.png'/>\n\nReport for Conservation and Natural Environment areas : \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/cne_map.png'/>\n\n Time series for Conservation and Natural Environment areas: \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/nrm/{{STATE}}/{{NRM_REGION}}/cne_timeseries.png'/>\n\nExplanatory notes: \n\nThis report has been generated using MODIS fractional vegetation cover information available in the Rangelands and Pasture Productivity (RAPP) map tool. The report is based on an analysis of 500 metre pixels. Pixels with greater than or equal to 50% vegetation cover are generally considered to be protected from or have reduced soil loss by wind erosion, and pixels with greater than or equal to 70% vegetation cover are generally considered to also be protected from or have reduced soil loss from water (hillslope) erosion. Higher cover thresholds may be required for erosion protection in some regions. This report will be less applicable in areas with sparse forest (20-50% tree cover) or dense forest (> 50% tree cover). Therefore land use classes are divided by tree cover: 1) No forest is when there is less than 20% tree cover 2) Sparse forest, is when there is less than 20 to 50 % tree cover 3) Dense forest is greater than 50% tree cover\n\nAcknowledgment of data: \n\n1. Australian Land Use and Management Classification http://www.agriculture.gov.au/abares/aclump/land-use/alum-classification \n\n2. Australia's State of the Forests Report http://www.agriculture.gov.au/abares/forestsaustralia/sofr/sofr-2018 \n\n3. Maintaining groundcover to reduce erosion and sustain production https://www.dpi.nsw.gov.au/agriculture/pastures-and-rangelands/establishment-mgmt/production-management2/groundcover \n\n4. MODIS Fractional cover algorithm: https://doi.org/10.4225/08/5848a3f19a7b3",
             "info": [
               {
                 "name": "Abstract",
@@ -1825,11 +1825,11 @@
         },
         {
           "name": "LGA Reports (Australia)",
-          "url": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/source_files/LGA_2016_AUST_native_simplify.geojson",
+          "url": "https://eo-data.csiro.au/remotesensing/misc/source_files/LGA_2016_AUST_native_simplify.geojson",
           "type": "geojson",
           "preserveOrder": true,
           "featureInfoTemplate": {
-            "template": "{{LGA_NAME16}} LGA, {{STATE}}. \n\nThis report provides information about vegetation covering the soil surface for the {{LGA_NAME16}} LGA region ({{STATE}}) during a single month with comparison to previous years. Vegetation cover indicates where soil is likely to be protected from wind and or water (hillslope) erosion. Results are shown for the whole region (polygon) and also separated by land use and tree cover. Different land uses are likely to have different cover patterns and targets. Reporting is most reliable with less than 20% tree cover.\n\nYou can download the entire report as a PDF in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/lga/{{STATE}}/{{LGA_NAME16}}/{{LGA_NAME16}}_landuse_fc.pdf'>this link</a>.\n\nReports for previous months for this region available in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/lga/{{STATE}}/{{LGA_NAME16}}/'> this link</a>.\n\nA CSV file with the data used for this report available in <a href='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/lga/{{STATE}}/{{LGA_NAME16}}/{{LGA_NAME16}}.csv'>this link</a>.\n\nMost recent report for the entire region\n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/entire_region.png'/>\n\n Time series for the entire region: \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/entire_region_timeseries.png'/>\n\nReport for grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/grz_map.png'/>\n\n Time series for the grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/grz_timeseries.png'/>\n\nReport for agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/agr_map.png'/>\n\n Time series for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/agr_timeseries.png'/>\n\nReport for Conservation and Natural Environment areas : \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/cne_map.png'/>\n\n Time series for Conservation and Natural Environment areas: \n<figure> <img style='width: 100%' src='http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/cne_timeseries.png'/>\n\nExplanatory notes: \n\nThis report has been generated using MODIS fractional vegetation cover information available in the Rangelands and Pasture Productivity (RAPP) map tool. The report is based on an analysis of 500 metre pixels. Pixels with greater than or equal to 50% vegetation cover are generally considered to be protected from or have reduced soil loss by wind erosion, and pixels with greater than or equal to 70% vegetation cover are generally considered to also be protected from or have reduced soil loss from water (hillslope) erosion. Higher cover thresholds may be required for erosion protection in some regions. This report will be less applicable in areas with sparse forest (20-50% tree cover) or dense forest (> 50% tree cover). Therefore land use classes are divided by tree cover: 1) No forest is when there is less than 20% tree cover 2) Sparse forest, is when there is less than 20 to 50 % tree cover 3) Dense forest is greater than 50% tree cover\n\nAcknowledgment of data: \n\n1. Australian Land Use and Management Classification http://www.agriculture.gov.au/abares/aclump/land-use/alum-classification \n\n2. Australia's State of the Forests Report http://www.agriculture.gov.au/abares/forestsaustralia/sofr/sofr-2018 \n\n3. Maintaining groundcover to reduce erosion and sustain production https://www.dpi.nsw.gov.au/agriculture/pastures-and-rangelands/establishment-mgmt/production-management2/groundcover \n\n4. MODIS Fractional cover algorithm: https://doi.org/10.4225/08/5848a3f19a7b3",
+            "template": "{{LGA_NAME16}} LGA, {{STATE}}. \n\nThis report provides information about vegetation covering the soil surface for the {{LGA_NAME16}} LGA region ({{STATE}}) during a single month with comparison to previous years. Vegetation cover indicates where soil is likely to be protected from wind and or water (hillslope) erosion. Results are shown for the whole region (polygon) and also separated by land use and tree cover. Different land uses are likely to have different cover patterns and targets. Reporting is most reliable with less than 20% tree cover.\n\nYou can download the entire report as a PDF in <a href='https://eo-data.csiro.au/remotesensing/reports/lga/{{STATE}}/{{LGA_NAME16}}/{{LGA_NAME16}}_landuse_fc.pdf'>this link</a>.\n\nReports for previous months for this region available in <a href='https://eo-data.csiro.au/remotesensing/reports/lga/{{STATE}}/{{LGA_NAME16}}/'> this link</a>.\n\nA CSV file with the data used for this report available in <a href='https://eo-data.csiro.au/remotesensing/reports/lga/{{STATE}}/{{LGA_NAME16}}/{{LGA_NAME16}}.csv'>this link</a>.\n\nMost recent report for the entire region\n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/entire_region.png'/>\n\n Time series for the entire region: \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/entire_region_timeseries.png'/>\n\nReport for grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/grz_map.png'/>\n\n Time series for the grazing areas (non-grazing areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/grz_timeseries.png'/>\n\nReport for agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/agr_map.png'/>\n\n Time series for Agriculture areas (grazing and crops, non agriculture areas masked out): \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/agr_timeseries.png'/>\n\nReport for Conservation and Natural Environment areas : \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/cne_map.png'/>\n\n Time series for Conservation and Natural Environment areas: \n<figure> <img style='width: 100%' src='https://eo-data.csiro.au/remotesensing/misc/report_png/lga/{{STATE}}/{{LGA_NAME16}}/cne_timeseries.png'/>\n\nExplanatory notes: \n\nThis report has been generated using MODIS fractional vegetation cover information available in the Rangelands and Pasture Productivity (RAPP) map tool. The report is based on an analysis of 500 metre pixels. Pixels with greater than or equal to 50% vegetation cover are generally considered to be protected from or have reduced soil loss by wind erosion, and pixels with greater than or equal to 70% vegetation cover are generally considered to also be protected from or have reduced soil loss from water (hillslope) erosion. Higher cover thresholds may be required for erosion protection in some regions. This report will be less applicable in areas with sparse forest (20-50% tree cover) or dense forest (> 50% tree cover). Therefore land use classes are divided by tree cover: 1) No forest is when there is less than 20% tree cover 2) Sparse forest, is when there is less than 20 to 50 % tree cover 3) Dense forest is greater than 50% tree cover\n\nAcknowledgment of data: \n\n1. Australian Land Use and Management Classification http://www.agriculture.gov.au/abares/aclump/land-use/alum-classification \n\n2. Australia's State of the Forests Report http://www.agriculture.gov.au/abares/forestsaustralia/sofr/sofr-2018 \n\n3. Maintaining groundcover to reduce erosion and sustain production https://www.dpi.nsw.gov.au/agriculture/pastures-and-rangelands/establishment-mgmt/production-management2/groundcover \n\n4. MODIS Fractional cover algorithm: https://doi.org/10.4225/08/5848a3f19a7b3",
             "info": [
               {
                 "name": "Abstract",

@@ -1,0 +1,24 @@
+{
+"catalog": [
+    {
+  "id": "54a553b4",
+  "name": "2018-19 Report",
+  "type": "csv",
+  "preserveOrder": true,
+  "items": [
+    {
+      "name": "2018-19 Report - erosion protection Natural Resource Management Regions",
+      "url": "http://www-data.wron.csiro.au/remotesensing/MODIS/products/public/reports/nrm/national_rep/national_nrm_report.csv",
+      "featureInfoTemplate" : {
+         "name": "NRM summary report",
+         "template": "<table> <tbody> <tr><td>Region </td> <td>{{NRM name}} </td> <td> Baseline target - percentage of region protected from wind erosion</td> <td>{{Wind erosion target}}      </td><td>Baseline target - percentage of region protected from water erosion </td><td>{{Water erosion target}}      </td><td>Months target not met for wind erosion  </td><td>{{2018/19 Wind}} </td><td> Months target not met for water erosion </td>  <td>{{2018/19 Water}}  </td></tr></tbody></table>" 
+      },
+      "tableStyle": {
+         "dataVariable": "NRM name",
+         "timeColumn": null
+    }
+    },
+  ]
+}
+]
+}      
