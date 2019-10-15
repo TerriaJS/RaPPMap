@@ -1790,6 +1790,7 @@
     {
       "name": "Regional Reports",
       "type": "group",
+      "description": "The Regional Reports provide a comprehensive description of the vegetation cover condition for the most recent month on record for the Natural Resources Management regions and the Local Government Areas of Australia. \n\nAdd either NRM or LGA to the Map and then click on the region of interest to see the report. ",
       "preserveOrder": true,
       "items": [
         {
@@ -1859,14 +1860,22 @@
     {
       "name": "Analysis Tools",
       "type": "group",
+      "description": "The Analysis Tools provide time-series data for selected points (pixels) or regions (polygons). \n\nThe \"Mean for point or region\" function returns the mean value for the vegetation fractional cover fractions and precipitation for a given region or pixel.\n\nThe \"Proportion of region within a Total Vegetation Cover range\" function returns the proportion of a given region within a range of Total Vegetation Cover that you can select. \n\nSimply click on the function and follow the instructions. ",
       "preserveOrder": true,
       "items": [
         {
-          "name": "Analysis Tools",
+          "name": "Mean for point or region",
           "url": "http://gsky.nci.org.au/ows/geoglam",
           "type": "wps",
           "identifier": "geometryDrill",
-          "description": "This function can be used to query the Vegetation Fractional Cover layer data. The output is a graph which includes NPV, PV, NPV+PV Total, BS, and Precipitation. "
+          "description": "This function returns the mean value for the vegetation fractional cover fractions and precipitation for a given region or pixel. Fractional cover includes green cover, non-green cover and bare ground. Total vegetation cover is green+non-green. \n\nYou can provide the name of the polygon or pixel. You can click on a point, draw a polygon or select a polygon already displayed in the screen.\n\nThe output is a graph and the data can be downloaded as a csv file. "
+        },
+        {
+          "name": "Proportion of region within a Total Vegetation Cover range ",
+          "url": "http://gsky.nci.org.au/ows/geoglam",
+          "type": "wps",
+          "identifier": "geometryDrillPixelFraction",
+          "description": "This function returns the proportion of a given region within a range of Total Vegetation Cover. Total cover is the sum of green and non-green cover. You can provide the name of the polygon. You must provide the lower and upper limits of total vegetation cover. You can click on a point, draw a polygon or select a polygon already diplayed in the screen.\n\nThe output is a graph and the data can be downloaded as a csv file. "
         }
       ]
     }
