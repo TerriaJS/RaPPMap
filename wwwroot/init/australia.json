@@ -24,7 +24,7 @@
               "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer",
               "layers": "Natural Resouce Management Regions",
               "opacity": 1,
-              "isEnabled": true,
+              "isEnabled": false,
               "keepOnTop": true,
               "isLegendVisible": false,
               "clipToRectangle": true,
