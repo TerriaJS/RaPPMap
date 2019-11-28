@@ -1617,21 +1617,18 @@
               "ignoreUnknownTileErrors": true
             },
             {
-              "id": "4d4a1bf8-e943-4152-b422-03ebc627a4a3",
-              "name": "Natural Resource Management Regions 2017",
-              "type": "esri-mapServer",
-              "url": "http://www.environment.gov.au/mapping/rest/services/ogc_services/Natural_Resource_Management_Regions/MapServer/",
-              "layers": "Natural Resouce Management Regions",
+              "name": "NRM Regions 2017",
+              "type": "wms",
+              "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+              "layers": "NRM_2017",
               "opacity": 1,
-              "keepOnTop": true,
-              "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
             },
             {
               "id": "061918ff-d997-4c42-8e5e-6dd9452ceb61",
               "name": "Local Government Areas",
               "type": "esri-mapServer",
-              "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/7",
+              "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2019/LGA/MapServer/0",
               "opacity": 1,
               "keepOnTop": true,
               "clipToRectangle": true,
@@ -1674,7 +1671,7 @@
                   "layers": "17",
                   "opacity": 1,
                   "keepOnTop": true,
-                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/17",
+                  "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SSC/MapServer/0",
                   "legendUrls": [],
                   "clipToRectangle": true,
                   "ignoreUnknownTileErrors": true
@@ -1685,7 +1682,7 @@
                   "layers": "12",
                   "opacity": 1,
                   "keepOnTop": true,
-                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/12",
+                  "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA1/MapServer/1",
                   "legendUrls": [],
                   "clipToRectangle": true,
                   "ignoreUnknownTileErrors": true
@@ -1696,7 +1693,7 @@
                   "layers": "13",
                   "opacity": 1,
                   "keepOnTop": true,
-                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/13",
+                  "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA2/MapServer/1",
                   "legendUrls": [],
                   "clipToRectangle": true,
                   "ignoreUnknownTileErrors": true
@@ -1707,7 +1704,7 @@
                   "layers": "14",
                   "opacity": 1,
                   "keepOnTop": true,
-                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/14",
+                  "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA3/MapServer/1",
                   "legendUrls": [],
                   "clipToRectangle": true,
                   "ignoreUnknownTileErrors": true
@@ -1718,7 +1715,7 @@
                   "layers": "15",
                   "opacity": 1,
                   "keepOnTop": true,
-                  "url": "http://censusdata.abs.gov.au/arcgis/rest/services/ASGS2016/ASGS2016BoundariesOnline/MapServer/15",
+                  "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA4/MapServer/1",
                   "legendUrls": [],
                   "clipToRectangle": true,
                   "ignoreUnknownTileErrors": true
