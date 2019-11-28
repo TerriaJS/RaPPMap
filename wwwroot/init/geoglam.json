@@ -1756,6 +1756,15 @@
                   "ignoreUnknownTileErrors": true
                 },
                 {
+                  "name": "Vic- \"Vicmap Property with Address Join\"",
+                  "type": "wms",
+                  "layers": "VMPROP_PROPERTY_ADDRESS",
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "url": "http://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
+                  "ignoreUnknownTileErrors": true
+                },
+                {
                   "name": "Wa - \"Cadastre\"",
                   "type": "esri-mapServer",
                   "layers": "2",
