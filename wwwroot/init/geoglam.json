@@ -1721,6 +1721,50 @@
                   "ignoreUnknownTileErrors": true
                 }
               ]
+            },
+            {
+              "name": "Cadastre",
+              "type": "group",
+              "preserveOrder": true,
+              "isOpen": true,
+              "items": [
+                {
+                  "name": "QLD - Cadastral Parcels - gt 10ha",
+                  "type": "esri-mapServer",
+                  "layers": "6",
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/PlanningCadastre/LandParcelPropertyFramework/MapServer",
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "NSW - \"Rural Plan Extent\"",
+                  "type": "esri-mapServer",
+                  "layers": "6",
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "url": "http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Cadastre/MapServer",
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "NSW - \"Lot\"",
+                  "type": "esri-mapServer",
+                  "layers": "9",
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "url": "http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Cadastre/MapServer",
+                  "ignoreUnknownTileErrors": true
+                },
+                {
+                  "name": "Wa - \"Cadastre\"",
+                  "type": "esri-mapServer",
+                  "layers": "2",
+                  "opacity": 1,
+                  "keepOnTop": true,
+                  "url": "https://services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Property_and_Planning/MapServer/2",
+                  "ignoreUnknownTileErrors": true
+                }
+              ]
             }
           ]
         },
