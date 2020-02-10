@@ -143,36 +143,12 @@
           ]
         },
         {
-          "name": "Vegetation Indices (MODIS, 500m)",
-          "type": "group",
-          "preserveOrder": true,
-          "isOpen": true,
-          "items": [
-            {
-              "name": "Normalised Difference Vegetation Index (NDVI)",
-              "type": "wms",
-              "url": "http://gsky-geoglam.nci.org.au/ows",
-              "cacheDuration": "2h",
-              "layers": "modis:c6:NDVI",
-              "opacity": 1,
-              "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/NDVI_Legend_horiz.png",
-              "initialTimeSource": "end",
-              "useOwnClock": true,
-              "dateFormat": {
-                "currentTime": "d mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true
-            }
-          ]
-        },
-        {
           "name": "Climate",
           "type": "group",
           "preserveOrder": true,
           "items": [
             {
-              "name": "Rainfall (Global, 5km)",
+              "name": "Rainfall (CHIRPS, Global, 5km)",
               "type": "wms",
               "url": "http://gsky.nci.org.au/ows/geoglam",
               "cacheDuration": "2h",
@@ -185,28 +161,6 @@
                 "timelineTic": "yyyy"
               },
               "ignoreUnknownTileErrors": true
-            },
-            {
-              "name": "Rainfall Anomalies (Global, 5km) ",
-              "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
-              "layers": "MonthlyRainfallAnomaly",
-              "opacity": 1,
-              "initialTimeSource": "end",
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "yyyy"
-              },
-              "ignoreUnknownTileErrors": true,
-              "featureInfoTemplate": {
-                "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Rainfall Anomaly</td>    <td>{{Rainfall anomaly [mm per month]}} mm/month</td>  </tr></tbody></table>",
-                "name": "Rainfall Anomaly",
-                "formats": {
-                  "Rainfall anomaly [mm per month]": {
-                    "maximumFractionDigits": 2
-                  }
-                }
-              }
             }
           ]
         },
