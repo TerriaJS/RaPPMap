@@ -1,6 +1,7 @@
 {
   "corsDomains": [
-    "gibs.earthdata.nasa.gov"
+    "gibs.earthdata.nasa.gov",
+    "data-cbr.it.csiro.au"
   ],
   "homeCamera": {
     "west": -170,
