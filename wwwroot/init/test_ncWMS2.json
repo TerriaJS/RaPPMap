@@ -1,0 +1,76 @@
+{
+  "services": [],
+  "catalog": [
+    {
+      "name": "test",
+      "type": "group",
+      "items": [
+        {
+          "name": "test",
+          "type": "group",
+          "items": [
+            {
+              "name": "rainfall anomaly",
+              "url": "http://data-cbr.csiro.au/thredds/wms/catch_all/LW_LANDSCAPE/monthly_rainfall/anomaly/bom-rain_monthly_anomaly_20010101_20200101.nc",
+              "type": "wms",
+              "isOpen": false,
+              "supportsColorScaleRange": false,
+              "disableUserChanges": true,
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmmm yyyy"
+              },
+              "parameters": {
+                "ABOVEMAXCOLOR": "extend",
+                "BELOWMINCOLOR": "extend",
+                "COLORSCALERANGE": "-100,100",
+                "PALETTE": "div-rdylbu",
+                "STYLES": "boxfill/div-rdylbu",
+                "NUMCOLORBANDS": "17"
+              },
+              "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/Anomaly_SM.png",
+              "layers": "rain_month",
+              "opacity": 1,
+              "isLegendVisible": true,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Peter's data",
+              "url": "https://data-cbr.it.csiro.au/thredds/wms/catch_all/bios2cwo_draft/draft.nc",
+              "type": "wms",
+              "isOpen": false,
+              "supportsColorScaleRange": false,
+              "disableUserChanges": false,
+              "dateFormat": {
+                "currentTime": "mmmm yyyy",
+                "timelineTic": "mmmm yyyy"
+              },
+              "parameters": {
+                "ABOVEMAXCOLOR": "extend",
+                "BELOWMINCOLOR": "extend",
+                "COLORSCALERANGE": "-100,100",
+                "PALETTE": "div-rdylbu",
+                "STYLES": "boxfill/div-rdylbu",
+                "NUMCOLORBANDS": "17"
+              },
+              "layers": "Tabar",
+              "opacity": 1,
+              "isLegendVisible": true,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true
+            }
+          ],
+          "preserveOrder": true
+        }
+      ],
+      "preserveOrder": true
+    }
+  ],
+  "initialCamera": {
+    "west": 112,
+    "south": -44,
+    "east": 154,
+    "north": -10
+  }
+}
