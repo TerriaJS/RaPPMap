@@ -19,7 +19,8 @@
             "enableOnLocalhost": true,
             "confirmationRequired": true,
             "buttonTitle": "Continue",
-            "title": "GEOGLAM RAPP Map"
+            "title": "GEOGLAM RAPP Map",
+            "downtimeNoticeUrl": "https://raw.githubusercontent.com/TerriaJS/geoglam-nm/master/wwwroot/downtimeNotice.html"
         },
         "appName": "GEOGLAM RAPP",
         "supportEmail": "geoglam.rapp@csiro.au",
