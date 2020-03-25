@@ -41,7 +41,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -58,7 +58,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -75,7 +75,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -92,7 +92,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -447,7 +447,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -465,7 +465,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -482,7 +482,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
@@ -499,7 +499,7 @@
                   "initialTimeSource": "end",
                   "useOwnClock": true,
                   "dateFormat": {
-                    "currentTime": "d mmmm yyyy",
+                    "currentTime": "mmmm yyyy",
                     "timelineTic": "yyyy"
                   },
                   "ignoreUnknownTileErrors": true
