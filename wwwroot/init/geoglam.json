@@ -1320,7 +1320,7 @@
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
               "layers": "fractional_cover",
               "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "legendUrl": "https://vegmachine.net/assets/images/legend_triangleonly.png",
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
@@ -1336,7 +1336,7 @@
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
               "layers": "sentinel_fractional",
               "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/legend_triangleonly.png",
+              "legendUrl": "https://vegmachine.net/assets/images/legend_triangleonly.png",
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
@@ -1353,7 +1353,7 @@
               "url": "http://qld.auscover.org.au/geoserver/aus/wms",
               "layers": "persistent_green",
               "opacity": 1,
-              "legendUrl": "http://vegcover.com/vegmachine/assets/images/persistent_green_legend.png",
+              "legendUrl": "https://vegmachine.net/assets/images/persistent_green_legend.png",
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
