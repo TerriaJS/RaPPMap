@@ -23,7 +23,7 @@
     "awsEc2ImageId": "ami-0065540df76a93885",
     "awsKeyName": "mhenrikson",
     "awsS3ServerConfigOverridePath": "s3://geoglam-apps/map/privateserverconfig-2016-10-27.json",
-    "awsS3ClientConfigOverridePath": "s3://geoglam-apps/map/privateclientconfig-2018-08-03.json",
+    "awsS3ClientConfigOverridePath": "s3://geoglam-apps/map/privateclientconfig-2020-10-30.json",
     "docker": {
       "name": "data61/terria-terriamap",
       "include": "wwwroot node_modules devserverconfig.json index.js package.json version.js"
