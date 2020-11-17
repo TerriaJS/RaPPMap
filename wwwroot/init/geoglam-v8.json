@@ -1,12 +1,4 @@
 {
-  "corsDomains": ["gibs.earthdata.nasa.gov", "data-cbr.it.csiro.au"],
-  "homeCamera": {
-    "west": -170,
-    "south": -50,
-    "east": 170,
-    "north": 50
-  },
-  "viewerMode": "2d",
   "catalog": [
     {
       "type": "group",
@@ -31,7 +23,9 @@
                   "layers": "modis_fract_cov_monthly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_fract_cov_monthly",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -44,7 +38,9 @@
                   "layers": "modis_tot_cov_monthly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_monthly",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -57,7 +53,9 @@
                   "layers": "modis_tot_cov_anomaly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_anomaly",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -70,7 +68,9 @@
                   "layers": "modis_tot_cov_decile",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_decile",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 }
               ],
               "isOpen": true
@@ -90,7 +90,9 @@
                   "layers": "modis_fract_cov_8day",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_fract_cov_8day",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -103,7 +105,9 @@
                   "layers": "modis_tot_cov_8day",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_8day",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 }
               ],
               "isOpen": true
@@ -124,12 +128,14 @@
               "dateFormat": "yyyy",
               "initialTimeSource": "stop",
               "layers": "chirps",
-              "ignoreUnknownTileErrors": true,
               "legends": [
                 {
                   "url": "https://eo-data.csiro.au/remotesensing/misc/CHIRPS_Legend.png"
                 }
-              ]
+              ],
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             }
           ]
         },
@@ -143,9 +149,11 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
               "opacity": 1,
               "layers": "GLOBCOVER",
-              "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
                 "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='globcover{{PALETTE_INDEX}}'></span></p>"
+              },
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -154,10 +162,12 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
               "opacity": 1,
               "layers": "Terrestrial Ecoregions of the World",
-              "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
                 "name": "Terrestrial Ecoregions",
                 "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Ecoregion Name</td>    <td>{{eco_name}}</td>  </tr><tr>    <td>Realm</td>    <td>{{wwf_realm2}}</td>  </tr><tr>    <td>Major Habitat Type</td>    <td>{{wwf_mhtnam}}</td>  </tr><tr>    <td>Data Source</td>    <td>{{sourcedata}}</td>  </tr></tbody></table>"
+              },
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
               }
             }
           ]
@@ -172,9 +182,11 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
               "opacity": 1,
               "layers": "Livestock-prodsys",
-              "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
                 "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='livestock{{Classification}}'></span></p>"
+              },
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -187,7 +199,6 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "Cattle-density",
-                  "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "name": "Cattle density in 2006",
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density (heads per sq km)}}</td>  </tr></tbody></table>",
@@ -196,6 +207,9 @@
                         "maximumFractionDigits": 2
                       }
                     }
+                  },
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
                   }
                 },
                 {
@@ -204,7 +218,6 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "Sheep-density",
-                  "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "name": "Sheep density in 2006",
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -213,6 +226,9 @@
                         "maximumFractionDigits": 2
                       }
                     }
+                  },
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
                   }
                 },
                 {
@@ -221,7 +237,6 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "Goat-density",
-                  "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "name": "Goat density in 2006",
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -230,6 +245,9 @@
                         "maximumFractionDigits": 2
                       }
                     }
+                  },
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
                   }
                 },
                 {
@@ -238,7 +256,6 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "Cattle-equivalents",
-                  "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "name": "FAO Livestock Unit North America density in 2006",
                     "template": "<table class='cesium-infoBox-defaultTable'><tbody>  <tr>    <td>Density (heads per sq km)</td>    <td>{{Density(heads per sq km)}}</td>  </tr></tbody></table>",
@@ -247,6 +264,9 @@
                         "maximumFractionDigits": 2
                       }
                     }
+                  },
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
                   }
                 }
               ]
@@ -261,7 +281,9 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "cattle_density_2010",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -269,7 +291,9 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "sheep_density_2010",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -277,7 +301,9 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "goat_density_2010",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -285,7 +311,9 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "buf_density_2010",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -293,7 +321,9 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "horse_density_2010",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -301,7 +331,9 @@
                   "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
                   "opacity": 1,
                   "layers": "pig_density_2010",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 }
               ]
             }
@@ -318,7 +350,9 @@
               "opacity": 0.75,
               "hideLegendInWorkbench": true,
               "layers": "Global administrative areas V3.6 level 0",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "wms",
@@ -327,7 +361,9 @@
               "opacity": 0.75,
               "hideLegendInWorkbench": true,
               "layers": "Global administrative areas V3.6 level 1",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "wms",
@@ -336,7 +372,9 @@
               "opacity": 0.75,
               "hideLegendInWorkbench": true,
               "layers": "Global administrative areas V3.6 level 2",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "wms",
@@ -351,7 +389,9 @@
               "opacity": 1,
               "hideLegendInWorkbench": true,
               "layers": "Reference_Labels",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "wms",
@@ -366,7 +406,9 @@
               "opacity": 1,
               "hideLegendInWorkbench": true,
               "layers": "Reference_Features",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             }
           ]
         }
@@ -395,7 +437,9 @@
                   "layers": "modis_fract_cov_monthly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_fract_cov_monthly",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -408,7 +452,9 @@
                   "layers": "modis_tot_cov_monthly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_monthly",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -421,7 +467,9 @@
                   "layers": "modis_tot_cov_anomaly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_anomaly",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -434,7 +482,9 @@
                   "layers": "modis_tot_cov_decile",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_decile",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 }
               ],
               "isOpen": true
@@ -454,7 +504,9 @@
                   "layers": "modis_fract_cov_8day",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_fract_cov_8day",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "wms",
@@ -467,7 +519,9 @@
                   "layers": "modis_tot_cov_8day",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_8day",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 }
               ],
               "isOpen": true
@@ -486,12 +540,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "annual_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -499,12 +555,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jan_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -512,12 +570,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Feb_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -525,12 +585,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Mar_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -538,12 +600,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Apr_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -551,12 +615,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "May_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -564,12 +630,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jun_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -577,12 +645,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jul_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -590,12 +660,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Aug_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -603,12 +675,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Sep_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -616,12 +690,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Oct_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -629,12 +705,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Nov_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -642,12 +720,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Dec_30",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     }
                   ],
                   "isOpen": false
@@ -662,12 +742,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "annual_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -675,12 +757,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jan_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -688,12 +772,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Feb_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -701,12 +787,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Mar_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -714,12 +802,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Apr_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -727,12 +817,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "May_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -740,12 +832,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jun_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -753,12 +847,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jul_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -766,12 +862,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Aug_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -779,12 +877,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Sep_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -792,12 +892,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Oct_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -805,12 +907,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Nov_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -818,12 +922,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Dec_50",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     }
                   ],
                   "isOpen": false
@@ -838,12 +944,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "annual_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -851,12 +959,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jan_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -864,12 +974,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Feb_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -877,12 +989,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Mar_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -890,12 +1004,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Apr_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -903,12 +1019,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "May_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -916,12 +1034,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jun_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -929,12 +1049,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jul_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -942,12 +1064,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Aug_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -955,12 +1079,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Sep_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -968,12 +1094,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Oct_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -981,12 +1109,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Nov_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -994,12 +1124,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Dec_70",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     }
                   ],
                   "isOpen": false
@@ -1014,12 +1146,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "annual_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1027,12 +1161,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jan_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1040,12 +1176,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Feb_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1053,12 +1191,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Mar_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1066,12 +1206,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Apr_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1079,12 +1221,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "May_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1092,12 +1236,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jun_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1105,12 +1251,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jul_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1118,12 +1266,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Aug_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1131,12 +1281,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Sep_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1144,12 +1296,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Oct_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1157,12 +1311,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Nov_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1170,12 +1326,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Dec_80",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     }
                   ],
                   "isOpen": false
@@ -1190,12 +1348,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "annual_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1203,12 +1363,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jan_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1216,12 +1378,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Feb_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1229,12 +1393,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Mar_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1242,12 +1408,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Apr_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1255,12 +1423,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "May_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1268,12 +1438,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jun_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1281,12 +1453,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jul_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1294,12 +1468,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Aug_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1307,12 +1483,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Sep_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1320,12 +1498,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Oct_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1333,12 +1513,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Nov_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1346,12 +1528,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Dec_90",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     }
                   ],
                   "isOpen": false
@@ -1366,12 +1550,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "annual_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1379,12 +1565,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jan_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1392,12 +1580,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Feb_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1405,12 +1595,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Mar_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1418,12 +1610,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Apr_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1431,12 +1625,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "May_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1444,12 +1640,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jun_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1457,12 +1655,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Jul_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1470,12 +1670,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Aug_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1483,12 +1685,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Sep_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1496,12 +1700,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Oct_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1509,12 +1715,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Nov_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     },
                     {
                       "type": "wms",
@@ -1522,12 +1730,14 @@
                       "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
                       "opacity": 1,
                       "layers": "Dec_95",
-                      "ignoreUnknownTileErrors": true,
                       "legends": [
                         {
                           "url": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png"
                         }
-                      ]
+                      ],
+                      "tileErrorHandlingOptions": {
+                        "ignoreUnknownTileErrors": true
+                      }
                     }
                   ],
                   "isOpen": false
@@ -1552,12 +1762,14 @@
               "initialTimeSource": "stop",
               "clipToRectangle": true,
               "layers": "fractional_cover",
-              "ignoreUnknownTileErrors": true,
               "legends": [
                 {
                   "url": "https://vegmachine.net/assets/images/legend_triangleonly.png"
                 }
-              ]
+              ],
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "wms",
@@ -1568,12 +1780,14 @@
               "initialTimeSource": "stop",
               "clipToRectangle": true,
               "layers": "sentinel_fractional",
-              "ignoreUnknownTileErrors": true,
               "legends": [
                 {
                   "url": "https://vegmachine.net/assets/images/legend_triangleonly.png"
                 }
-              ]
+              ],
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "wms",
@@ -1585,12 +1799,14 @@
               "initialTimeSource": "stop",
               "clipToRectangle": true,
               "layers": "persistent_green",
-              "ignoreUnknownTileErrors": true,
               "legends": [
                 {
                   "url": "https://vegmachine.net/assets/images/persistent_green_legend.png"
                 }
-              ]
+              ],
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             }
           ]
         },
@@ -1605,9 +1821,11 @@
               "opacity": 1,
               "clipToRectangle": true,
               "layers": "aus_forest_landuse2018",
-              "ignoreUnknownTileErrors": true,
               "featureInfoTemplate": {
                 "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='landuseforest{{class}}'></span></p>"
+              },
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
               }
             },
             {
@@ -1642,7 +1860,6 @@
                   "opacity": 1,
                   "clipToRectangle": true,
                   "layers": "aus_forest2018_3class",
-                  "ignoreUnknownTileErrors": true,
                   "featureInfoTemplate": {
                     "template": "<p style='clear: right'><strong>Class:</strong> <br/> <span style='white-space: nowrap' class='forestclass{{class}}'></span></p>"
                   },
@@ -1650,7 +1867,10 @@
                     {
                       "url": "https://eo-data.csiro.au/remotesensing/misc/sItMvgy5pEf_uRU5JcKvSOw.png"
                     }
-                  ]
+                  ],
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "esri-mapServer",
@@ -1705,7 +1925,9 @@
               "opacity": 1,
               "clipToRectangle": true,
               "layers": "structuralForm",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "ckan-item",
@@ -1792,7 +2014,9 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
               "opacity": 1,
               "layers": "NRM_2017",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "esri-mapServer",
@@ -1809,7 +2033,9 @@
               "opacity": 1,
               "clipToRectangle": true,
               "layers": "ahgf_hrr:RiverRegion",
-              "ignoreUnknownTileErrors": true
+              "tileErrorHandlingOptions": {
+                "ignoreUnknownTileErrors": true
+              }
             },
             {
               "type": "group",
@@ -1823,7 +2049,9 @@
                   "hideLegendInWorkbench": true,
                   "clipToRectangle": true,
                   "layers": "admin_bnds:MB_2011_ACT,admin_bnds:MB_2011_NSW,admin_bnds:MB_2011_NT,admin_bnds:MB_2011_OT,admin_bnds:MB_2011_QLD,admin_bnds:MB_2011_SA,admin_bnds:MB_2011_TAS,admin_bnds:MB_2011_VIC,admin_bnds:MB_2011_WA",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "esri-mapServer",
@@ -1904,7 +2132,9 @@
                   "url": "http://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wms",
                   "opacity": 1,
                   "layers": "VMPROP_PROPERTY_ADDRESS",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 },
                 {
                   "type": "esri-mapServer",
@@ -1933,7 +2163,9 @@
                   "opacity": 1,
                   "clipToRectangle": true,
                   "layers": "wofs_filtered_summary",
-                  "ignoreUnknownTileErrors": true
+                  "tileErrorHandlingOptions": {
+                    "ignoreUnknownTileErrors": true
+                  }
                 }
               ]
             }
@@ -2072,7 +2304,10 @@
       "description": "The Analysis Tools provide time-series data for selected points (pixels) or regions (polygons). \n\nThe \"Mean for point or region\" function returns the mean value for the vegetation fractional cover fractions and precipitation for a given region or pixel.\n\nThe \"Proportion of region within a Total Vegetation Cover range\" function returns the proportion of a given region within a range of Total Vegetation Cover that you can select. \n\nSimply click on the function and follow the instructions. "
     }
   ],
-  "corsDomains": ["gibs.earthdata.nasa.gov", "data-cbr.it.csiro.au"],
+  "corsDomains": [
+    "gibs.earthdata.nasa.gov",
+    "data-cbr.it.csiro.au"
+  ],
   "homeCamera": {
     "west": -170,
     "south": -50,
