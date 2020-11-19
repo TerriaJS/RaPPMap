@@ -348,7 +348,7 @@
               "name": "Global Administrative Areas Level 0 (Countries)",
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
               "opacity": 0.75,
-              "hideLegendInWorkbench": true,
+              "isOpenInWorkbench": false,
               "showInWorkbenchOnLoad": false,
               "layers": "Global administrative areas V3.6 level 0",
               "tileErrorHandlingOptions": {
@@ -360,7 +360,7 @@
               "name": "Global Administrative Areas Level 1 (Province, State)",
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
               "opacity": 0.75,
-              "hideLegendInWorkbench": true,
+              "isOpenInWorkbench": false,
               "showInWorkbenchOnLoad": false,
               "layers": "Global administrative areas V3.6 level 1",
               "tileErrorHandlingOptions": {
@@ -372,7 +372,7 @@
               "name": "Global Administrative Areas Level 2 (Shire, County)",
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
               "opacity": 0.75,
-              "hideLegendInWorkbench": true,
+              "isOpenInWorkbench": false,
               "showInWorkbenchOnLoad": false,
               "layers": "Global administrative areas V3.6 level 2",
               "tileErrorHandlingOptions": {
@@ -390,7 +390,7 @@
               ],
               "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi",
               "opacity": 1,
-              "hideLegendInWorkbench": true,
+              "isOpenInWorkbench": false,
               "showInWorkbenchOnLoad": true,
               "layers": "Reference_Labels",
               "tileErrorHandlingOptions": {
@@ -408,7 +408,7 @@
               ],
               "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi",
               "opacity": 1,
-              "hideLegendInWorkbench": true,
+              "isOpenInWorkbench": false,
               "showInWorkbenchOnLoad": true,
               "layers": "Reference_Features",
               "tileErrorHandlingOptions": {
@@ -2052,7 +2052,7 @@
                   "name": "Mesh Blocks (Australian Bureau of Statistics)",
                   "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
                   "opacity": 1,
-                  "hideLegendInWorkbench": true,
+                  "isOpenInWorkbench": false,
                   "clipToRectangle": true,
                   "layers": "admin_bnds:MB_2011_ACT,admin_bnds:MB_2011_NSW,admin_bnds:MB_2011_NT,admin_bnds:MB_2011_OT,admin_bnds:MB_2011_QLD,admin_bnds:MB_2011_SA,admin_bnds:MB_2011_TAS,admin_bnds:MB_2011_VIC,admin_bnds:MB_2011_WA",
                   "tileErrorHandlingOptions": {
@@ -2064,7 +2064,7 @@
                   "name": "Suburbs (SSC) (Australian Bureau of Statistics)",
                   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SSC/MapServer/0",
                   "opacity": 1,
-                  "hideLegendInWorkbench": true,
+                  "isOpenInWorkbench": false,
                   "clipToRectangle": true,
                   "layers": "17"
                 },
@@ -2073,7 +2073,7 @@
                   "name": "Statistical area level 1 (SA1) (Australian Bureau of Statistics)",
                   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA1/MapServer/1",
                   "opacity": 1,
-                  "hideLegendInWorkbench": true,
+                  "isOpenInWorkbench": false,
                   "clipToRectangle": true,
                   "layers": "12"
                 },
@@ -2082,7 +2082,7 @@
                   "name": "Statistical area level 2 (SA2) (Australian Bureau of Statistics)",
                   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA2/MapServer/1",
                   "opacity": 1,
-                  "hideLegendInWorkbench": true,
+                  "isOpenInWorkbench": false,
                   "clipToRectangle": true,
                   "layers": "13"
                 },
@@ -2091,7 +2091,7 @@
                   "name": "Statistical area level 3 (SA3) (Australian Bureau of Statistics)",
                   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA3/MapServer/1",
                   "opacity": 1,
-                  "hideLegendInWorkbench": true,
+                  "isOpenInWorkbench": false,
                   "clipToRectangle": true,
                   "layers": "14"
                 },
@@ -2100,7 +2100,7 @@
                   "name": "Statistical area level 4 (SA4) (Australian Bureau of Statistics)",
                   "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2016/SA4/MapServer/1",
                   "opacity": 1,
-                  "hideLegendInWorkbench": true,
+                  "isOpenInWorkbench": false,
                   "clipToRectangle": true,
                   "layers": "15"
                 }
