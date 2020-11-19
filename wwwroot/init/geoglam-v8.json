@@ -2310,6 +2310,7 @@
       "description": "The Analysis Tools provide time-series data for selected points (pixels) or regions (polygons). \n\nThe \"Mean for point or region\" function returns the mean value for the vegetation fractional cover fractions and precipitation for a given region or pixel.\n\nThe \"Proportion of region within a Total Vegetation Cover range\" function returns the proportion of a given region within a range of Total Vegetation Cover that you can select. \n\nSimply click on the function and follow the instructions. "
     }
   ],
+  "baseMapId": "basemap-positron",
   "corsDomains": [
     "gibs.earthdata.nasa.gov",
     "data-cbr.it.csiro.au"
