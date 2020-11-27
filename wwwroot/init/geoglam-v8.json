@@ -1,4 +1,9 @@
 {
+  "workbench": [
+    "tN2nrg",
+    "LfaYaM",
+    "idvaI5"
+  ],
   "catalog": [
     {
       "type": "group",
@@ -380,6 +385,7 @@
               }
             },
             {
+              "id": "tN2nrg",
               "type": "wms",
               "name": "Place Labels",
               "info": [
@@ -398,6 +404,7 @@
               }
             },
             {
+              "id": "LfaYaM",
               "type": "wms",
               "name": "Coastlines / Borders / Roads",
               "info": [
@@ -447,6 +454,7 @@
                   }
                 },
                 {
+                  "id": "idvaI5",
                   "type": "wms",
                   "name": "Total Vegetation Cover (PV+NPV, Monthly)",
                   "url": "http://gsky.nci.org.au/ows/geoglam",
