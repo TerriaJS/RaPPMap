@@ -354,7 +354,6 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
               "opacity": 0.75,
               "isOpenInWorkbench": false,
-              "showInWorkbenchOnLoad": false,
               "layers": "Global administrative areas V3.6 level 0",
               "tileErrorHandlingOptions": {
                 "ignoreUnknownTileErrors": true
@@ -366,7 +365,6 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
               "opacity": 0.75,
               "isOpenInWorkbench": false,
-              "showInWorkbenchOnLoad": false,
               "layers": "Global administrative areas V3.6 level 1",
               "tileErrorHandlingOptions": {
                 "ignoreUnknownTileErrors": true
@@ -378,7 +376,6 @@
               "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
               "opacity": 0.75,
               "isOpenInWorkbench": false,
-              "showInWorkbenchOnLoad": false,
               "layers": "Global administrative areas V3.6 level 2",
               "tileErrorHandlingOptions": {
                 "ignoreUnknownTileErrors": true
@@ -397,7 +394,6 @@
               "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi",
               "opacity": 1,
               "isOpenInWorkbench": false,
-              "showInWorkbenchOnLoad": true,
               "layers": "Reference_Labels",
               "tileErrorHandlingOptions": {
                 "ignoreUnknownTileErrors": true
@@ -416,7 +412,6 @@
               "url": "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi",
               "opacity": 1,
               "isOpenInWorkbench": false,
-              "showInWorkbenchOnLoad": true,
               "layers": "Reference_Features",
               "tileErrorHandlingOptions": {
                 "ignoreUnknownTileErrors": true
@@ -462,7 +457,6 @@
                   "opacity": 1,
                   "dateFormat": "yyyy",
                   "initialTimeSource": "stop",
-                  "showInWorkbenchOnLoad": true,
                   "layers": "modis_tot_cov_monthly",
                   "linkedWcsUrl": "http://gsky.nci.org.au/ows/geoglam",
                   "linkedWcsCoverage": "modis_tot_cov_monthly",
