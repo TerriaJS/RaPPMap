@@ -1324,8 +1324,8 @@
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
+                "currentTime": "yyyy mmm",
+                "timelineTic": "yyyy mmm"
               },
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
@@ -1340,11 +1340,26 @@
               "initialTimeSource": "end",
               "useOwnClock": true,
               "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
+                "currentTime": "yyyy mmmm",
+                "timelineTic": "yyyy mmmm"
               },
               "clipToRectangle": true,
               "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "Seasonal Total Cover (green + non-green)- Landsat, JRSRP algorithm",
+              "type": "wms",
+              "url": "http://qld.auscover.org.au/geoserver/aus/wms",
+              "layers": "total_cover",
+              "opacity": 1,
+              "initialTimeSource": "end",
+              "useOwnClock": true,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true,
+              "dateFormat": {
+                "currentTime": "yyyy mmm",
+                "timelineTic": "yyyy mmm"
+              }
             },
             {
               "id": "25aec031-b165-4f9f-a346-e338c2a332fa",
@@ -1356,12 +1371,27 @@
               "legendUrl": "https://vegmachine.net/assets/images/persistent_green_legend.png",
               "initialTimeSource": "end",
               "useOwnClock": true,
-              "dateFormat": {
-                "currentTime": "mmmm yyyy",
-                "timelineTic": "mmm yyyy"
-              },
               "clipToRectangle": true,
-              "ignoreUnknownTileErrors": true
+              "ignoreUnknownTileErrors": true,
+              "dateFormat": {
+                "currentTime": "yyyy mmm",
+                "timelineTic": "yyyy mmm"
+              }
+            },
+            {
+              "name": "Fractional Cover (Landsat) - daily",
+              "type": "wms",
+              "url": "https://ows.dev.dea.ga.gov.au/",
+              "layers": "ga_ls_fc_3",
+              "opacity": 1,
+              "useOwnClock": true,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true,
+              "featureTimesProperty": "data_available_for_dates",
+              "dateFormat": {
+                "currentTime": "yyyy mmm dd",
+                "timelineTic": "yyyy mmm dd"
+              }
             }
           ]
         },
