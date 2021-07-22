@@ -173,7 +173,7 @@
             {
               "name": "Land Cover (GlobCover, 2009)",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
               "layers": "GLOBCOVER",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
@@ -184,7 +184,7 @@
             {
               "name": "Terrestrial Ecoregions of the World",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
               "layers": "Terrestrial Ecoregions of the World",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
@@ -203,7 +203,7 @@
             {
               "name": "Global Livestock Production Systems",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
               "layers": "Livestock-prodsys",
               "opacity": 1,
               "ignoreUnknownTileErrors": true,
@@ -219,7 +219,7 @@
                 {
                   "name": "Cattle Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "Cattle-density",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true,
@@ -236,7 +236,7 @@
                 {
                   "name": "Sheep Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "Sheep-density",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true,
@@ -253,7 +253,7 @@
                 {
                   "name": "Goat Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "Goat-density",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true,
@@ -270,7 +270,7 @@
                 {
                   "name": "Cattle Equivalents",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "Cattle-equivalents",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true,
@@ -294,7 +294,7 @@
                 {
                   "name": "Cattle Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "cattle_density_2010",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true
@@ -302,7 +302,7 @@
                 {
                   "name": "Sheep Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "sheep_density_2010",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true
@@ -310,7 +310,7 @@
                 {
                   "name": "Goat Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "goat_density_2010",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true
@@ -318,7 +318,7 @@
                 {
                   "name": "Buffalo Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "buf_density_2010",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true
@@ -326,7 +326,7 @@
                 {
                   "name": "Horse Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "horse_density_2010",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true
@@ -334,7 +334,7 @@
                 {
                   "name": "Pig Density",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/global/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/global/wms",
                   "layers": "pig_density_2010",
                   "opacity": 1,
                   "ignoreUnknownTileErrors": true
@@ -350,7 +350,7 @@
             {
               "name": "Global Administrative Areas Level 0 (Countries)",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/wms?",
               "layers": "Global administrative areas V3.6 level 0",
               "opacity": 0.75,
               "ignoreUnknownTileErrors": true,
@@ -361,7 +361,7 @@
             {
               "name": "Global Administrative Areas Level 1 (Province, State)",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/wms?",
               "layers": "Global administrative areas V3.6 level 1",
               "opacity": 0.75,
               "ignoreUnknownTileErrors": true,
@@ -372,7 +372,7 @@
             {
               "name": "Global Administrative Areas Level 2 (Shire, County)",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/wms?",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/wms?",
               "layers": "Global administrative areas V3.6 level 2",
               "opacity": 0.75,
               "ignoreUnknownTileErrors": true,
@@ -563,7 +563,7 @@
                     {
                       "name": "Annual - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "annual_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -572,7 +572,7 @@
                     {
                       "name": "January - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jan_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -581,7 +581,7 @@
                     {
                       "name": "February - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Feb_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -590,7 +590,7 @@
                     {
                       "name": "March - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Mar_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -599,7 +599,7 @@
                     {
                       "name": "April - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Apr_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -608,7 +608,7 @@
                     {
                       "name": "May - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "May_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -617,7 +617,7 @@
                     {
                       "name": "June - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jun_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -626,7 +626,7 @@
                     {
                       "name": "July - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jul_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -635,7 +635,7 @@
                     {
                       "name": "August - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Aug_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -644,7 +644,7 @@
                     {
                       "name": "September - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Sep_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -653,7 +653,7 @@
                     {
                       "name": "October - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Oct_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -662,7 +662,7 @@
                     {
                       "name": "November - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Nov_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -671,7 +671,7 @@
                     {
                       "name": "December - Tot Cov below 30%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Dec_30",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_30.png",
@@ -688,7 +688,7 @@
                     {
                       "name": "Annual - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "annual_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -697,7 +697,7 @@
                     {
                       "name": "January - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jan_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -706,7 +706,7 @@
                     {
                       "name": "February - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Feb_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -715,7 +715,7 @@
                     {
                       "name": "March - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Mar_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -724,7 +724,7 @@
                     {
                       "name": "April - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Apr_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -733,7 +733,7 @@
                     {
                       "name": "May - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "May_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -742,7 +742,7 @@
                     {
                       "name": "June - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jun_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -751,7 +751,7 @@
                     {
                       "name": "July - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jul_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -760,7 +760,7 @@
                     {
                       "name": "August - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Aug_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -769,7 +769,7 @@
                     {
                       "name": "September - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Sep_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -778,7 +778,7 @@
                     {
                       "name": "October - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Oct_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -787,7 +787,7 @@
                     {
                       "name": "November - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Nov_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -796,7 +796,7 @@
                     {
                       "name": "December - Tot Cov below 50%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Dec_50",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_50.png",
@@ -813,7 +813,7 @@
                     {
                       "name": "Annual - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "annual_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -822,7 +822,7 @@
                     {
                       "name": "January - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jan_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -831,7 +831,7 @@
                     {
                       "name": "February - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Feb_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -840,7 +840,7 @@
                     {
                       "name": "March - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Mar_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -849,7 +849,7 @@
                     {
                       "name": "April - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Apr_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -858,7 +858,7 @@
                     {
                       "name": "May - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "May_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -867,7 +867,7 @@
                     {
                       "name": "June - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jun_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -876,7 +876,7 @@
                     {
                       "name": "July - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jul_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -885,7 +885,7 @@
                     {
                       "name": "August - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Aug_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -894,7 +894,7 @@
                     {
                       "name": "September - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Sep_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -903,7 +903,7 @@
                     {
                       "name": "October - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Oct_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -912,7 +912,7 @@
                     {
                       "name": "November - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Nov_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -921,7 +921,7 @@
                     {
                       "name": "December - Tot Cov below 70%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Dec_70",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_70.png",
@@ -938,7 +938,7 @@
                     {
                       "name": "Annual - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "annual_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -947,7 +947,7 @@
                     {
                       "name": "January - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jan_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -956,7 +956,7 @@
                     {
                       "name": "February - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Feb_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -965,7 +965,7 @@
                     {
                       "name": "March - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Mar_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -974,7 +974,7 @@
                     {
                       "name": "April - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Apr_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -983,7 +983,7 @@
                     {
                       "name": "May - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "May_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -992,7 +992,7 @@
                     {
                       "name": "June - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jun_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1001,7 +1001,7 @@
                     {
                       "name": "July - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jul_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1010,7 +1010,7 @@
                     {
                       "name": "August - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Aug_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1019,7 +1019,7 @@
                     {
                       "name": "September - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Sep_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1028,7 +1028,7 @@
                     {
                       "name": "October - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Oct_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1037,7 +1037,7 @@
                     {
                       "name": "November - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Nov_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1046,7 +1046,7 @@
                     {
                       "name": "December - Tot Cov below 80%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Dec_80",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_80.png",
@@ -1063,7 +1063,7 @@
                     {
                       "name": "Annual - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "annual_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1072,7 +1072,7 @@
                     {
                       "name": "January - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jan_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1081,7 +1081,7 @@
                     {
                       "name": "February - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Feb_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1090,7 +1090,7 @@
                     {
                       "name": "March - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Mar_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1099,7 +1099,7 @@
                     {
                       "name": "April - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Apr_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1108,7 +1108,7 @@
                     {
                       "name": "May - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "May_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1117,7 +1117,7 @@
                     {
                       "name": "June - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jun_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1126,7 +1126,7 @@
                     {
                       "name": "July - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jul_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1135,7 +1135,7 @@
                     {
                       "name": "August - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Aug_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1144,7 +1144,7 @@
                     {
                       "name": "September - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Sep_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1153,7 +1153,7 @@
                     {
                       "name": "October - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Oct_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1162,7 +1162,7 @@
                     {
                       "name": "November - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Nov_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1171,7 +1171,7 @@
                     {
                       "name": "December - Tot Cov below 90%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Dec_90",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_90.png",
@@ -1188,7 +1188,7 @@
                     {
                       "name": "Annual - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "annual_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1197,7 +1197,7 @@
                     {
                       "name": "January - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jan_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1206,7 +1206,7 @@
                     {
                       "name": "February - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Feb_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1215,7 +1215,7 @@
                     {
                       "name": "March - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Mar_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1224,7 +1224,7 @@
                     {
                       "name": "April - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Apr_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1233,7 +1233,7 @@
                     {
                       "name": "May - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "May_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1242,7 +1242,7 @@
                     {
                       "name": "June - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jun_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1251,7 +1251,7 @@
                     {
                       "name": "July - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Jul_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1260,7 +1260,7 @@
                     {
                       "name": "August - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Aug_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1269,7 +1269,7 @@
                     {
                       "name": "September - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Sep_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1278,7 +1278,7 @@
                     {
                       "name": "October - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Oct_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1287,7 +1287,7 @@
                     {
                       "name": "November - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Nov_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1296,7 +1296,7 @@
                     {
                       "name": "December - Tot Cov below 95%",
                       "type": "wms",
-                      "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                      "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                       "layers": "Dec_95",
                       "opacity": 1,
                       "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/frec_below_95.png",
@@ -1403,7 +1403,7 @@
             {
               "name": "Catchment Scale Land Use and Forests of Australia (2018) [13 classes]",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
               "layers": "aus_forest_landuse2018",
               "opacity": 1,
               "clipToRectangle": true,
@@ -1447,7 +1447,7 @@
                 {
                   "name": "Forests of Australia 2018 [by forest type-condensed]",
                   "type": "wms",
-                  "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+                  "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
                   "layers": "aus_forest2018_3class",
                   "legendUrl": "https://eo-data.csiro.au/remotesensing/misc/sItMvgy5pEf_uRU5JcKvSOw.png",
                   "opacity": 1,
@@ -1604,7 +1604,7 @@
             {
               "name": "NRM Regions 2017",
               "type": "wms",
-              "url": "https://geoglam.ternlandscapes.net.au/geoserver/aust/wms",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/aust/wms",
               "layers": "NRM_2017",
               "opacity": 1,
               "ignoreUnknownTileErrors": true
