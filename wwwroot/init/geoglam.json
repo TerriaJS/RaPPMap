@@ -1381,7 +1381,7 @@
             {
               "name": "Fractional Cover (Landsat) - daily",
               "type": "wms",
-              "url": "https://ows.dev.dea.ga.gov.au/",
+              "url": "https://ows.dea.ga.gov.au/",
               "layers": "ga_ls_fc_3",
               "opacity": 1,
               "useOwnClock": true,
