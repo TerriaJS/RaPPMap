@@ -1379,7 +1379,23 @@
               }
             },
             {
-              "name": "Fractional Cover (Landsat) - daily",
+              "name": "Monthly Landsat Fractional Cover (experimental)",
+              "type": "wms",
+              "url": "https://geoglam.ternlandscapes.org.au/geoserver/test/wms",
+              "layers": "aust_monthly_median_frac_cover",
+              "opacity": 1,
+              "legendUrl": " http://gsky.nci.org.au/ows/geoglam?service=WMS&version=1.1.0&request=GetLegendGraphic&format=image%2Fpng&transparent=True&layer=modis_fract_cov_8day&srs=EPSG%3A3857",
+              "initialTimeSource": "end",
+              "useOwnClock": true,
+              "clipToRectangle": true,
+              "ignoreUnknownTileErrors": true,
+              "dateFormat": {
+                "currentTime": "yyyy mmm",
+                "timelineTic": "yyyy mmm"
+              }
+            },
+            {
+              "name": "Daily Fractional Cover Landsat",
               "type": "wms",
               "url": "https://ows.dea.ga.gov.au/",
               "layers": "ga_ls_fc_3",
