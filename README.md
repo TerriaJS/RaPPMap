@@ -1,7 +1,14 @@
 GEOGLAM RAPP
 ============
 
-[GEOGLAM RAPP](http://map.geo-rapp.org/) is a website for map-based access to information about the state and condition of global rangelands. It provides time-based data on the resources used by livestock, allowing country and regional tracking of livestock production including production of meat, wool, and milk.
+
+**[GEOGLAM RAPP](https://map.geo-rapp.org/) no longer uses code in this repo. It is developed in 
+[simple-saas-terria-map](https://github.com/TerriaJS/simple-saas-terria-map), configured in 
+[saas-catalogs-public](https://github.com/TerriaJS/saas-catalogs-public/tree/main/geo-rapp) and released from 
+[saas](https://github.com/TerriaJS/saas).**
+
+[GEOGLAM RAPP](https://map.geo-rapp.org/) is a website for map-based access to information about the state and condition of global 
+rangelands. It provides time-based data on the resources used by livestock, allowing country and regional tracking of livestock production including production of meat, wool, and milk.
 
 The main datasets are:
 * Rangeland and pasture cover
